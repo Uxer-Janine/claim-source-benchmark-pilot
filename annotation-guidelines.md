@@ -83,6 +83,8 @@ Save your own assessment before seeing other judgments, and record any known exp
 
 A single human assessment can serve as a provisional reference after individual confirmation of its evidence and annotations. For a compound reference, confirm its subclaim judgments and resolve any discrepancy in the combined verdict before scoring. Approval of the method and approval of a particular reference are separate decisions.
 
+For agreement, record the same verdict from at least two distinct, identified human assessors. Each assessment must be confirmed and record that the assessor had seen neither other human assessments nor AI output. If independence is unknown, leave agreement pending. For an adjudicated decision, record the adjudicator’s identifier, the decision date, and the rationale. Cite the confirmed human assessments used and explain any difference between the decision and those judgments.
+
 ## Technical conventions and special cases
 
 - **Verdict keys in table order:** `contradicted`, `supported`, `partially_supported`, `compatible_not_confirmed`, `not_supported`.

@@ -106,7 +106,24 @@
         "adjudicator_id": { "type": ["string", "null"] },
         "adjudicated_on": { "$ref": "#/definitions/dateOrNull" },
         "rationale": { "type": ["string", "null"] }
-      }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "const": "agreed" } } },
+          "then": { "properties": { "reference_assessment_ids": { "minItems": 2, "uniqueItems": true } } }
+        },
+        {
+          "if": { "properties": { "status": { "const": "adjudicated" } } },
+          "then": {
+            "required": ["adjudicator_id", "adjudicated_on", "rationale"],
+            "properties": {
+              "adjudicator_id": { "type": "string", "pattern": "\\S" },
+              "adjudicated_on": { "type": "string", "pattern": "^\\d{4}-\\d{2}-\\d{2}$" },
+              "rationale": { "type": "string", "pattern": "\\S" }
+            }
+          }
+        }
+      ]
     },
     "needs_review_items": {
       "type": "array",

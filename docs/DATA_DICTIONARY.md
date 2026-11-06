@@ -59,4 +59,5 @@ Required fields must appear even when their value is unknown. Use `null` only wh
 | --- | --- |
 | `reference_eligible`, `review_status` | Required per assessment. Status is `needs_review` or `confirmed`. AI assessments have `reference_eligible: false`. |
 | `adjudication` | Required. Includes `status`, `reference_label`, and `reference_assessment_ids`. Status is `provisional_single_assessor`, `agreed`, `adjudicated`, `contested_unresolved`, or `needs_review`. |
+| `adjudicator_id`, `adjudicated_on`, `rationale` | Required when status is `adjudicated`. Give a stable identifier, a valid date in `YYYY-MM-DD` format, and the reason for the decision. |
 | `needs_review_items` | Required list of open items, which can be empty. Each item gives `field` and `reason`. |

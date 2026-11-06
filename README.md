@@ -82,4 +82,8 @@ This is an exploratory pilot. All five original human assessments await independ
 
 See the [roadmap](docs/NEXT_STEPS.md) and [open review work](docs/MAINTAINER.md#open-review-work). If a source link fails or an explanation is unclear, [share feedback](CONTRIBUTING.md).
 
-Janine Makorre prepared the report and original assessments. See the [attribution and licensing notice](NOTICE.md) for Wikipedia credits, source rights, and the scope of the [MIT License](LICENSE).
+## Contribution and AI assistance
+
+Janine Makorre prepared the research report and original human assessments, guided the methodology and learning design, and reviewed the presentation. AI assistance was used to implement the validation and evaluation tools and Evidence Desk, and to draft and edit documentation. The records identify historical AI assessments separately from the original human judgments.
+
+See the [attribution and licensing notice](NOTICE.md) for Wikipedia credits, source rights, and the scope of the [MIT License](LICENSE).
