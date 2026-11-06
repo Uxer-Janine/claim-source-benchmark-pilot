@@ -24,3 +24,5 @@ Before publishing, review the public files and reachable Git history for sensiti
 - Recover original AI run details and A08’s search notes if available. A01 ChatGPT has no explicit verdict, and A08 Gemini’s response is recorded as an abstention.
 
 The [case files](../records/) retain the 46 individual review items.
+
+For reviewer recruitment, send the [standalone review packet](BLIND_REVIEW_KIT.md) without the existing assessments. The [public evidence map](RESEARCH_NOTES.md#public-evidence-map) records the available locators and their limits.

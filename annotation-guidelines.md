@@ -61,7 +61,7 @@ Keep the individual judgments and their evidence alongside the overall verdict. 
 4. Otherwise, if any is **Contradicted**, use **Contradicted**.
 5. Otherwise, use **Not supported**.
 
-When support and contradiction coexist, retain and flag the contradicted subclaim even if the overall verdict is partial. The evaluator reports that flag from the recorded label. Investigate discrepancies between the combined result and a historical overall verdict while preserving the historical assessment.
+Keep each contradicted subclaim visible and flag it even when the overall verdict uses another label. The evaluator reports that flag from the recorded label in its unscored diagnostics. Investigate discrepancies between the combined result and a historical overall verdict while preserving the historical assessment.
 
 ## Confidence and uncertainty
 

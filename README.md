@@ -80,7 +80,7 @@ A04 is the only playable Evidence Desk investigation in the current release. The
 
 This is an exploratory pilot. All five original human assessments await independent review and are excluded from scoring. The five cases cannot establish how well a verification tool performs. Original Wikipedia revisions and some AI run details are missing. Public records use labeled claim summaries and passage locations. The full *Claim Verification Report* remains with the private research materials.
 
-See the [roadmap](docs/NEXT_STEPS.md) and [open review work](docs/MAINTAINER.md#open-review-work). If a source link fails or an explanation is unclear, [share feedback](CONTRIBUTING.md).
+See [research coverage and evidence](docs/RESEARCH_NOTES.md) for the five-case evidence map, what can be reproduced, and the limits of the historical human–AI comparison. See the [roadmap](docs/NEXT_STEPS.md) for next steps. If a source link fails or an explanation is unclear, [share feedback](CONTRIBUTING.md).
 
 ## Contribution and AI assistance
 
