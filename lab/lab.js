@@ -87,16 +87,16 @@ function human(record) {
   return record.assessments.find((assessment) => assessment.kind === "human_original");
 }
 
-function evidencePanel(record) {
+function evidencePanel(record, evidenceOpen) {
   const panel = node("div", undefined, "card");
   panel.append(node("p", "Public claim summary", "label"), node("p", record.claim.text, "claim"));
   const details = node("details");
-  details.open = current === "A01";
+  details.open = evidenceOpen;
   details.append(
     node("summary", "Explore the evidence"),
-    node("p", "Instructional paraphrase", "label"),
+    node("p", "Evidence summary", "label"),
     node("p", lessons[current].evidence),
-    node("p", "Use the links to read the original sources. The public record points to the passages without reproducing them.", "muted")
+    node("p", "This summary describes the cited source in our own words. Follow the source link and passage location to read the original.", "muted")
   );
   for (const source of record.sources) {
     const link = node("a", `Open cited source for ${record.claim_id}`);
@@ -175,7 +175,7 @@ function assessmentPanel(record, answer, openInvestigation) {
     if (!openInvestigation && !Object.hasOwn(verdicts, verdict)) return;
     saved[record.claim_id] = { verdict, reason: text, submitted: true };
     remember();
-    render(false);
+    render(false, workspace.querySelector("details").open);
     document.querySelector("#comparison-title").focus();
   });
   panel.append(form);
@@ -216,7 +216,7 @@ function comparison(record, answer) {
   actions.append(button("Revise my reasoning", () => {
     answer.submitted = false;
     remember();
-    render(false);
+    render(false, workspace.querySelector("details").open);
     document.querySelector("#reason").focus();
   }, "secondary"));
   panel.append(
@@ -230,7 +230,7 @@ function comparison(record, answer) {
   return panel;
 }
 
-function render(focus = true) {
+function render(focus = true, evidenceOpen = current === "A01") {
   const record = records[current];
   const answer = saved[current] || {};
   const guided = current === "A01";
@@ -239,7 +239,7 @@ function render(focus = true) {
     : current === "A04" ? (answer.submitted ? "Starter complete · 2 of 2" : "Starter · Step 2 of 2 · Independent assessment")
     : "Optional challenge";
   const columns = node("div", undefined, answer.submitted ? "" : "columns");
-  columns.append(evidencePanel(record));
+  columns.append(evidencePanel(record, evidenceOpen));
   if (guided) {
     const guide = node("div", undefined, "card");
     guide.append(
@@ -281,7 +281,11 @@ function renderChallenges() {
     );
     list.append(card);
   }
-  explore.replaceChildren(heading("h2", "Explore more cases", "explore-title"), list);
+  explore.replaceChildren(
+    heading("h2", "Explore more cases", "explore-title"),
+    node("p", "Suggested order: start with A03, then try A08 and B09. You can open any challenge."),
+    list
+  );
 }
 
 function go(id) {
@@ -290,9 +294,6 @@ function go(id) {
 }
 
 async function start() {
-  if (["localhost", "127.0.0.1"].includes(location.hostname)) {
-    document.querySelector(".site-header a").href = "../learn/README.md";
-  }
   try {
     await Promise.all(Object.keys(lessons).map(async (id) => {
       const response = await fetch(`../records/pilot-${id.toLowerCase()}.json`);
