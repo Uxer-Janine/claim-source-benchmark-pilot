@@ -2,9 +2,11 @@
 
 **An exploratory five-case pilot from Janine Makorre’s Wiki Education Outreachy contribution**
 
-Does the source cited by a Wikipedia sentence support what that sentence says? Try the check with real cases, then explore the sources and reasoning behind the recorded judgments.
+Does the source cited by a Wikipedia sentence support what that sentence says? Evidence Desk is an interactive learning experience built on this exploratory five-case research pilot. Play the A04 investigation to sort evidence and explain your judgment, then explore the sources and reasoning behind the recorded assessments.
 
-**[Start the five-minute lesson](learn/README.md)** · [Browse the cases](#browse-the-five-cases) · [Give feedback](CONTRIBUTING.md) · [Explore the data](docs/DATA_DICTIONARY.md)
+**[Play Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)** · [Start the five-minute Markdown lesson](learn/README.md)
+
+[Browse the cases](#browse-the-five-cases) · [Methodology](annotation-guidelines.md) · [Give feedback](CONTRIBUTING.md) · [Explore the data](docs/DATA_DICTIONARY.md) · [Roadmap](docs/NEXT_STEPS.md)
 
 ## How verification works
 
