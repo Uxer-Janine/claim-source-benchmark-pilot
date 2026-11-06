@@ -1,0 +1,14 @@
+{"claim_id": "A01", "system_name": "Claude", "system_version": "Sonnet 5.5 Medium", "predicted_verdict": "supported"}
+{"claim_id": "A01", "system_name": "Gemini", "system_version": "Auto (Gemini 3 models)", "predicted_verdict": "supported"}
+{"claim_id": "A03", "system_name": "ChatGPT", "system_version": "GPT 6.1 Sol Light", "predicted_verdict": "not_supported"}
+{"claim_id": "A03", "system_name": "Claude", "system_version": "Sonnet 5.5 Medium", "predicted_verdict": "compatible_not_confirmed"}
+{"claim_id": "A03", "system_name": "Gemini", "system_version": "Auto (Gemini 3 models)", "predicted_verdict": "contradicted"}
+{"claim_id": "A04", "system_name": "ChatGPT", "system_version": "GPT 6.1 Sol Light", "predicted_verdict": "partially_supported"}
+{"claim_id": "A04", "system_name": "Claude", "system_version": "Sonnet 5.5 Medium", "predicted_verdict": "partially_supported"}
+{"claim_id": "A04", "system_name": "Gemini", "system_version": "Auto (Gemini 3 models)", "predicted_verdict": "supported"}
+{"claim_id": "A08", "system_name": "ChatGPT", "system_version": "GPT 6.1 Sol Light", "predicted_verdict": "not_supported"}
+{"claim_id": "A08", "system_name": "Claude", "system_version": "Sonnet 5.5 Medium", "predicted_verdict": "not_supported"}
+{"claim_id": "A08", "system_name": "Gemini", "system_version": "Auto (Gemini 3 models)", "predicted_verdict": "abstain"}
+{"claim_id": "B09", "system_name": "ChatGPT", "system_version": "GPT 6.1 Sol Light", "predicted_verdict": "partially_supported"}
+{"claim_id": "B09", "system_name": "Claude", "system_version": "Sonnet 5.5 Medium", "predicted_verdict": "partially_supported"}
+{"claim_id": "B09", "system_name": "Gemini", "system_version": "Auto (Gemini 3 models)", "predicted_verdict": "partially_supported"}

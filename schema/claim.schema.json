@@ -1,0 +1,271 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Claim-source verification annotation record (pilot, v0.1.0)",
+  "description": "One record = one Wikipedia claim checked against its cited source(s). A record holds the claim, its sub-claims, the sources, and one or more assessments (original human, independent human review, or AI-generated). Fields listed under 'required' must be present, but most can be null or 'needs_review' so missing information is recorded honestly instead of invented.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "record_id", "claim_id", "article", "claim", "sub_claims", "sources", "assessments", "adjudication", "needs_review_items"],
+  "properties": {
+    "schema_version": { "const": "0.1.0", "description": "Required. Version of this schema." },
+    "record_id": { "$ref": "#/definitions/id" },
+    "claim_id": { "type": "string", "minLength": 1, "description": "Required. The claim's label in the original report, for example 'A01'." },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["source_document", "entry_id"],
+      "description": "Optional. Where the information came from, so every field can be traced back.",
+      "properties": {
+        "source_document": { "type": "string", "description": "File name or title of the report this record was converted from." },
+        "entry_id": { "type": "string", "description": "Entry label inside that report." },
+        "notes": { "type": ["string", "null"] }
+      }
+    },
+    "article": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "revision_id", "url"],
+      "description": "Required. The Wikipedia article containing the claim.",
+      "properties": {
+        "title": { "type": "string", "minLength": 1 },
+        "revision_id": { "type": ["string", "null"], "description": "Wikipedia revision the claim was taken from. null = not recorded." },
+        "url": { "$ref": "#/definitions/urlOrNull" }
+      }
+    },
+    "claim": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["text", "text_status"],
+      "description": "Required. The claim as it appears in Wikipedia.",
+      "properties": {
+        "text": { "type": "string", "minLength": 1, "description": "Original wording or an explicitly labeled public summary." },
+        "text_status": { "enum": ["verbatim", "completed_needs_review", "needs_review", "public_summary"], "description": "'public_summary' identifies a release paraphrase of the original claim." },
+        "text_note": { "type": ["string", "null"] },
+        "location_in_article": { "type": ["string", "null"], "description": "Optional. Section and paragraph of the claim in the article." },
+        "paragraph_context": { "type": ["string", "null"], "description": "Optional. The surrounding paragraph, needed for paragraph-level context." }
+      }
+    },
+    "sub_claims": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Required. At least one. A claim that is not split has exactly one sub-claim whose text equals the claim.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["sub_claim_id", "text", "split_type"],
+        "properties": {
+          "sub_claim_id": { "$ref": "#/definitions/id" },
+          "text": { "type": "string", "minLength": 1, "description": "Claim fragment or whole claim if unsplit. Public summaries use corresponding paraphrases." },
+          "split_type": { "enum": ["none", "attribution", "quantity", "scope", "causal_link", "other"], "description": "Why this part was separated." },
+          "note": { "type": ["string", "null"] }
+        }
+      }
+    },
+    "sources": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Required. The cited source(s) the claim is checked against.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "citation_text", "url", "access"],
+        "properties": {
+          "source_id": { "$ref": "#/definitions/id" },
+          "citation_text": { "type": "string", "minLength": 1, "description": "Citation as recorded." },
+          "url": { "$ref": "#/definitions/urlOrNull" },
+          "url_note": { "type": ["string", "null"] },
+          "access": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["status", "note"],
+            "description": "How the source could be reached. Describes access only; it is not a verdict.",
+            "properties": {
+              "status": { "enum": ["accessible", "partially_accessible", "inaccessible", "needs_review"] },
+              "note": { "type": ["string", "null"], "description": "What was tried and how the source was reached, in the assessor's words." },
+              "checked_on": { "$ref": "#/definitions/dateOrNull" }
+            }
+          }
+        }
+      }
+    },
+    "assessments": {
+      "type": "array",
+      "minItems": 1,
+      "description": "Required. One entry per assessor (and per context level if the same assessor repeats the check). Original human, independent human review and AI-generated assessments are told apart by 'kind'.",
+      "items": { "$ref": "#/definitions/assessment" }
+    },
+    "adjudication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "reference_label", "reference_assessment_ids"],
+      "description": "Required. How the human reference for this record was settled. Disagreement is kept visible, never averaged away.",
+      "properties": {
+        "status": { "enum": ["provisional_single_assessor", "agreed", "adjudicated", "contested_unresolved", "needs_review"] },
+        "reference_label": { "anyOf": [{ "$ref": "#/definitions/verdictLabel" }, { "type": "null" }], "description": "The label used as the human reference. null = none yet." },
+        "reference_assessment_ids": { "type": "array", "items": { "$ref": "#/definitions/id" }, "description": "Human assessments the reference is based on. AI assessments must never be listed (checked by the validation script)." },
+        "disagreement_causes": { "type": "array", "items": { "enum": ["guideline_unclear", "different_evidence", "different_sub_claim_split", "different_reading_of_claim", "different_context_level", "source_access_differed", "other"] } },
+        "adjudicator_id": { "type": ["string", "null"] },
+        "adjudicated_on": { "$ref": "#/definitions/dateOrNull" },
+        "rationale": { "type": ["string", "null"] }
+      }
+    },
+    "needs_review_items": {
+      "type": "array",
+      "description": "Required (may be empty). Everything the record's owner must still decide or fill in.",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["field", "reason"],
+        "properties": {
+          "field": { "type": "string", "description": "Path of the field, for example 'assessments[0].confidence'." },
+          "reason": { "type": "string" }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9._-]*$", "description": "Stable lowercase identifier. Never reused or renumbered." },
+    "urlOrNull": { "type": ["string", "null"], "pattern": "^https?://", "description": "Web address, or null if not recorded. Never guessed." },
+    "dateOrNull": { "type": ["string", "null"], "pattern": "^\\d{4}-\\d{2}-\\d{2}$", "description": "YYYY-MM-DD, or null if not recorded." },
+    "verdictLabel": { "enum": ["supported", "partially_supported", "compatible_not_confirmed", "not_supported", "contradicted", "needs_review"], "description": "Five support verdicts plus needs_review, a workflow sentinel excluded from scoring." },
+    "location": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["page", "section", "paragraph", "line", "raw"],
+      "description": "Where the passage is in the source. null = that level was not recorded.",
+      "properties": {
+        "page": { "type": ["string", "null"] },
+        "section": { "type": ["string", "null"] },
+        "paragraph": { "type": ["string", "null"] },
+        "line": { "type": ["string", "null"] },
+        "raw": { "type": ["string", "null"], "description": "The location exactly as originally written." }
+      }
+    },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidence_id", "source_id", "role", "passage_text", "location"],
+      "properties": {
+        "evidence_id": { "$ref": "#/definitions/id" },
+        "source_id": { "$ref": "#/definitions/id" },
+        "role": { "enum": ["decisive", "contradicting", "nearest_topical", "context"], "description": "'decisive' = the smallest passage that settles the verdict; 'nearest_topical' = closest passage when nothing supports the claim." },
+        "passage_text": { "type": ["string", "null"], "description": "Verbatim source quote when included. Null when unavailable or withheld from the public snapshot." },
+        "location": { "$ref": "#/definitions/location" },
+        "supports_sub_claims": { "type": "array", "items": { "$ref": "#/definitions/id" } },
+        "note": { "type": ["string", "null"] }
+      }
+    },
+    "assessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["assessment_id", "kind", "assessor", "assessed_on", "context_level", "assessability", "overall_verdict", "reasoning", "evidence_status", "evidence", "confidence", "uncertainty_note", "independence", "reference_eligible", "review_status"],
+      "properties": {
+        "assessment_id": { "$ref": "#/definitions/id" },
+        "kind": { "enum": ["human_original", "human_independent_review", "ai_generated"], "description": "Who produced this assessment. Keeps the three types distinguishable." },
+        "assessor": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["id", "type"],
+          "properties": {
+            "id": { "type": "string", "minLength": 1, "description": "Pseudonymous stable id, or 'needs_review' if not yet decided." },
+            "type": { "enum": ["human", "ai"] },
+            "product": { "type": ["string", "null"], "description": "AI only. The assistant's product name." },
+            "model_as_recorded": { "type": ["string", "null"], "description": "AI only. Model name exactly as written in the report. Not guessed." }
+          }
+        },
+        "assessed_on": { "$ref": "#/definitions/dateOrNull" },
+        "context_level": { "enum": ["sentence", "paragraph", "article_and_other_sources", "needs_review"], "description": "Widest Wikipedia context actually used. Wider-world truth is NOT a level; use outside_knowledge_note." },
+        "assessability": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "note"],
+          "description": "Could the claim be assessed at all? This is separate from the verdict.",
+          "properties": {
+            "status": { "enum": ["assessable", "source_inaccessible", "source_insufficient", "needs_review"] },
+            "note": { "type": ["string", "null"], "description": "What was tried, and what was missing." }
+          }
+        },
+        "overall_verdict": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["label", "as_stated"],
+          "properties": {
+            "label": { "anyOf": [{ "$ref": "#/definitions/verdictLabel" }, { "type": "null" }], "description": "Standard label. Must be null when the claim could not be assessed." },
+            "as_stated": { "type": ["string", "null"], "description": "The verdict exactly as the assessor worded it. null if no explicit verdict was given." }
+          }
+        },
+        "sub_claim_judgments": {
+          "type": "array",
+          "description": "Optional. One label per sub-claim when the claim was split.",
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["sub_claim_id", "label", "review_status"],
+            "properties": {
+              "sub_claim_id": { "$ref": "#/definitions/id" },
+              "label": { "$ref": "#/definitions/verdictLabel" },
+              "evidence_ids": { "type": "array", "items": { "$ref": "#/definitions/id" } },
+              "note": { "type": ["string", "null"] },
+              "review_status": { "enum": ["needs_review", "confirmed"] }
+            }
+          }
+        },
+        "reasoning": { "type": ["string", "null"], "description": "The assessor's reasoning, copied unchanged." },
+        "outside_knowledge_note": { "type": ["string", "null"], "description": "Optional. What the assessor knows from outside the source. Never changes the label." },
+        "evidence_status": { "enum": ["recorded", "locator_only", "none_found_after_search", "not_recorded", "needs_review"], "description": "'locator_only' retains source references and passage locations without reproducing the passages. 'none_found_after_search' requires a search note." },
+        "search_note": { "type": ["string", "null"], "description": "Optional. What was searched for when no supporting passage exists." },
+        "evidence": { "type": "array", "items": { "$ref": "#/definitions/evidence" }, "description": "Passages this assessor relied on. Must have at least one item when evidence_status is 'recorded'." },
+        "confidence": { "enum": ["high", "medium", "low", "not_recorded", "needs_review"] },
+        "uncertainty_note": { "type": ["string", "null"], "description": "What could change this verdict." },
+        "independence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["saw_other_human_assessments", "saw_ai_output"],
+          "description": "Whether this assessment was made before seeing others. null = not recorded.",
+          "properties": {
+            "saw_other_human_assessments": { "type": ["boolean", "null"] },
+            "saw_ai_output": { "type": ["boolean", "null"] },
+            "note": { "type": ["string", "null"] }
+          }
+        },
+        "ai_run_details": {
+          "type": "object",
+          "additionalProperties": false,
+          "description": "Optional, AI only.",
+          "properties": {
+            "prompt": { "type": ["string", "null"] },
+            "inputs_provided": { "type": ["string", "null"], "description": "For example 'claim and excerpt only'." }
+          }
+        },
+        "reference_eligible": { "type": "boolean", "description": "Candidate human reference. Scoring also requires individual confirmation and resolved evidence. Always false for AI." },
+        "review_status": { "enum": ["needs_review", "confirmed"], "description": "'needs_review' = provisional, not yet approved by the record's owner." }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "kind": { "const": "ai_generated" } }, "required": ["kind"] },
+          "then": {
+            "properties": {
+              "reference_eligible": { "const": false },
+              "assessor": { "properties": { "type": { "const": "ai" } }, "required": ["model_as_recorded"] }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "kind": { "enum": ["human_original", "human_independent_review"] } }, "required": ["kind"] },
+          "then": { "properties": { "assessor": { "properties": { "type": { "const": "human" } } } } }
+        },
+        {
+          "if": { "properties": { "assessability": { "properties": { "status": { "enum": ["source_inaccessible", "source_insufficient", "needs_review"] } }, "required": ["status"] } }, "required": ["assessability"] },
+          "then": { "properties": { "overall_verdict": { "properties": { "label": { "type": "null" } } } } }
+        },
+        {
+          "if": { "properties": { "assessability": { "properties": { "status": { "const": "assessable" } }, "required": ["status"] } }, "required": ["assessability"] },
+          "then": { "properties": { "overall_verdict": { "properties": { "label": { "type": "string" } } } } }
+        },
+        {
+          "if": { "properties": { "evidence_status": { "const": "recorded" } }, "required": ["evidence_status"] },
+          "then": { "properties": { "evidence": { "minItems": 1 } } }
+        }
+      ]
+    }
+  }
+}

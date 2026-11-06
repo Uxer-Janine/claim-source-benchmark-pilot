@@ -1,0 +1,265 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "pilot-b09",
+  "claim_id": "B09",
+  "provenance": {
+    "source_document": "Claim Verification Report",
+    "entry_id": "B09",
+    "notes": "Public release of the corresponding detailed assessment. Claim and reasoning fields summarize the private originals. Source links and recorded evidence locations are retained."
+  },
+  "article": {
+    "title": "Reliability of Wikipedia",
+    "revision_id": null,
+    "url": null
+  },
+  "claim": {
+    "text": "Wikipedia permits editing anonymously without asking for identification or email. A study attributed to Dartmouth College in 2009 reportedly found, unexpectedly, that anonymous editors ranked among the leading producers of valid material on English Wikipedia.",
+    "text_status": "public_summary",
+    "text_note": "Public paraphrase. The original Wikipedia revision remains unrecorded.",
+    "location_in_article": null,
+    "paragraph_context": null
+  },
+  "sub_claims": [
+    {
+      "sub_claim_id": "b09-sc1",
+      "text": "Wikipedia permits editing anonymously without asking for identification or email. A study attributed to Dartmouth College in 2009 reportedly found, unexpectedly, that anonymous editors ranked among the leading producers of valid material on English Wikipedia.",
+      "split_type": "none"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "b09-src1",
+      "citation_text": "Anthony, Denise; Smith, Sean W.; Williamson, Timothy (July 20, 2009). \"Reputation and Reliability in Collective Goods\". Rationality and Society. 21 (3): 283–306.",
+      "url": "https://journals.sagepub.com/doi/10.1177/1043463109336804",
+      "url_note": "Link from the detailed assessment table.",
+      "access": {
+        "status": "accessible",
+        "note": "Accessible through Link provided in the Wikipedia article reference list.",
+        "checked_on": null
+      }
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_id": "b09-h1",
+      "kind": "human_original",
+      "assessor": {
+        "id": "needs_review",
+        "type": "human",
+        "product": null,
+        "model_as_recorded": null
+      },
+      "assessed_on": "2026-10-18",
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "partially_supported",
+        "as_stated": "Partially supported "
+      },
+      "reasoning": "The excerpt addresses how reliable contributions were, while the claim concerns how much anonymous editors produced. It also does not establish the editing or registration policy.",
+      "evidence_status": "locator_only",
+      "evidence": [
+        {
+          "evidence_id": "b09-h1-ev1",
+          "source_id": "b09-src1",
+          "role": "decisive",
+          "passage_text": null,
+          "location": {
+            "page": null,
+            "section": "Abstract",
+            "paragraph": null,
+            "line": "4, 5",
+            "raw": "Page: NA | Section: Abstract | Paragraph: not recorded | Line: 4, 5"
+          },
+          "supports_sub_claims": [
+            "b09-sc1"
+          ],
+          "note": "The report gives a shared location for both passages."
+        },
+        {
+          "evidence_id": "b09-h1-ev2",
+          "source_id": "b09-src1",
+          "role": "context",
+          "passage_text": null,
+          "location": {
+            "page": null,
+            "section": "Abstract",
+            "paragraph": null,
+            "line": "4, 5",
+            "raw": "Page: NA | Section: Abstract | Paragraph: not recorded | Line: 4, 5"
+          },
+          "supports_sub_claims": [],
+          "note": "The report gives a shared location for both passages."
+        }
+      ],
+      "confidence": "medium",
+      "uncertainty_note": "The excerpt does not mention anonymous editing, which the claim states. Additional context could change this verdict.",
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "reference_eligible": true,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "b09-ai1",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-chatgpt",
+        "type": "ai",
+        "product": "ChatGPT",
+        "model_as_recorded": "GPT 6.1 Sol Light"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "partially_supported",
+        "as_stated": "Partially supported, with a mismatch between reliability and productivity."
+      },
+      "reasoning": "The evidence supports contribution quality, while output volume and the policy and study details require other evidence. The unexpected result does not establish a specific social expectation.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "b09-ai2",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-claude",
+        "type": "ai",
+        "product": "Claude",
+        "model_as_recorded": "Sonnet 5.5 Medium"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "partially_supported",
+        "as_stated": "Partially supported."
+      },
+      "reasoning": "The response distinguished the reliability of single-edit anonymous contributors from output volume. The excerpt did not establish the policy, date or affiliation.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "b09-ai3",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-gemini",
+        "type": "ai",
+        "product": "Gemini",
+        "model_as_recorded": "Auto (Gemini 3 models)"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "partially_supported",
+        "as_stated": "Partially supported."
+      },
+      "reasoning": "The response took the reliability finding as partial support for the claim about productive anonymous contributors. It could not verify Dartmouth College, the date or the English Wikipedia scope from the excerpt.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    }
+  ],
+  "adjudication": {
+    "status": "provisional_single_assessor",
+    "reference_label": "partially_supported",
+    "reference_assessment_ids": [
+      "b09-h1"
+    ],
+    "adjudicator_id": null,
+    "adjudicated_on": null,
+    "rationale": "Recorded human verdict, pending approval for provisional reference use."
+  },
+  "needs_review_items": [
+    {
+      "field": "sub_claims",
+      "reason": "Review the proposed split in docs/HANDOFF.md. Compare the claim's English Wikipedia scope with publisher note 5 and keep reliability separate from productivity."
+    },
+    {
+      "field": "article.revision_id",
+      "reason": "The original Wikipedia revision and article URL are unrecorded."
+    },
+    {
+      "field": "assessments[0].assessor.id",
+      "reason": "Choose a stable public assessor identifier."
+    },
+    {
+      "field": "assessments[0].review_status",
+      "reason": "Confirm this transcription for provisional reference use."
+    },
+    {
+      "field": "assessments[0].context_level",
+      "reason": "The Wikipedia context level used for this assessment is unrecorded."
+    },
+    {
+      "field": "assessments[0].independence",
+      "reason": "Record per-assessment exposure to other judgments if known."
+    },
+    {
+      "field": "assessments[1].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[2].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[3].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    }
+  ]
+}

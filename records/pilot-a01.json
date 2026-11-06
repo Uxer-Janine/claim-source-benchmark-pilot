@@ -1,0 +1,249 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "pilot-a01",
+  "claim_id": "A01",
+  "provenance": {
+    "source_document": "Claim Verification Report",
+    "entry_id": "A01",
+    "notes": "Public release of the corresponding detailed assessment. Claim and reasoning fields summarize the private originals. Source links and recorded evidence locations are retained."
+  },
+  "article": {
+    "title": "American Pika",
+    "revision_id": null,
+    "url": null
+  },
+  "claim": {
+    "text": "Young American pikas typically first open their eyes at approximately nine days old.",
+    "text_status": "public_summary",
+    "text_note": "Public paraphrase. The original Wikipedia revision remains unrecorded.",
+    "location_in_article": null,
+    "paragraph_context": null
+  },
+  "sub_claims": [
+    {
+      "sub_claim_id": "a01-sc1",
+      "text": "Young American pikas typically first open their eyes at approximately nine days old.",
+      "split_type": "none"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "a01-src1",
+      "citation_text": "Smith, Andrew T.; Weston, Marla L. (1990-04-26). \"Ochotona princeps\" (PDF). Mammalian Species (352). The American Society of Mammalogists: 1–8. doi:10.2307/3504319. JSTOR 3504319. Retrieved 2009-10-02. ",
+      "url": "https://academic.oup.com/mspecies/article-pdf/doi/10.2307/3504319/8071137/352-1.pdf",
+      "url_note": "Link from the detailed assessment table.",
+      "access": {
+        "status": "accessible",
+        "note": "The link provided in the Wikipedia exercise was inaccessible, therefore I used an alternative website (Oxford Academic Page) to access the full text. ",
+        "checked_on": null
+      }
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_id": "a01-h1",
+      "kind": "human_original",
+      "assessor": {
+        "id": "needs_review",
+        "type": "human",
+        "product": null,
+        "model_as_recorded": null
+      },
+      "assessed_on": "2026-10-15",
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "supported",
+        "as_stated": "Supported "
+      },
+      "reasoning": "The recorded age in the source agrees with the claim. The age is typical and can vary across individual animals.",
+      "evidence_status": "locator_only",
+      "evidence": [
+        {
+          "evidence_id": "a01-h1-ev1",
+          "source_id": "a01-src1",
+          "role": "decisive",
+          "passage_text": null,
+          "location": {
+            "page": "4",
+            "section": "Ontogeny and reproduction",
+            "paragraph": "6",
+            "line": "3",
+            "raw": "Page: 4 | Section: Ontogeny and reproduction | Paragraph: 6 | Line: 3"
+          },
+          "supports_sub_claims": [
+            "a01-sc1"
+          ]
+        }
+      ],
+      "confidence": "high",
+      "uncertainty_note": "The source credits Whitworth for the 9-day figure. However, I've only read parts of it, so additional context could change my assessment.",
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "reference_eligible": true,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a01-ai1",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-chatgpt",
+        "type": "ai",
+        "product": "ChatGPT",
+        "model_as_recorded": "GPT 6.1 Sol Light"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "needs_review",
+        "as_stated": null
+      },
+      "reasoning": "The comparison treats a stated average and the claim's approximate timing as equivalent. The response gives reasoning without an explicit verdict and did not independently check the full source.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a01-ai2",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-claude",
+        "type": "ai",
+        "product": "Claude",
+        "model_as_recorded": "Sonnet 5.5 Medium"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "supported",
+        "as_stated": "Fully supported."
+      },
+      "reasoning": "The timing and scope agree despite differences in wording. The source credits an earlier study, and the response could not verify the wider article context or source location.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a01-ai3",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-gemini",
+        "type": "ai",
+        "product": "Gemini",
+        "model_as_recorded": "Auto (Gemini 3 models)"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "supported",
+        "as_stated": "Fully supported."
+      },
+      "reasoning": "The approximation fits the average in the supplied evidence. The figure relies on an earlier citation that was outside the supplied evidence.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    }
+  ],
+  "adjudication": {
+    "status": "provisional_single_assessor",
+    "reference_label": "supported",
+    "reference_assessment_ids": [
+      "a01-h1"
+    ],
+    "adjudicator_id": null,
+    "adjudicated_on": null,
+    "rationale": "Recorded human verdict, pending approval for provisional reference use."
+  },
+  "needs_review_items": [
+    {
+      "field": "article.revision_id",
+      "reason": "The original Wikipedia revision and article URL are unrecorded."
+    },
+    {
+      "field": "assessments[0].assessor.id",
+      "reason": "Choose a stable public assessor identifier."
+    },
+    {
+      "field": "assessments[0].review_status",
+      "reason": "Confirm this transcription for provisional reference use."
+    },
+    {
+      "field": "assessments[0].context_level",
+      "reason": "The Wikipedia context level used for this assessment is unrecorded."
+    },
+    {
+      "field": "assessments[0].independence",
+      "reason": "Record per-assessment exposure to other judgments if known."
+    },
+    {
+      "field": "assessments[1].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[2].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[3].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[1].overall_verdict.label",
+      "reason": "ChatGPT gave reasoning without an explicit verdict."
+    }
+  ]
+}

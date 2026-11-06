@@ -1,0 +1,297 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "pilot-a04",
+  "claim_id": "A04",
+  "provenance": {
+    "source_document": "Claim Verification Report",
+    "entry_id": "A04",
+    "notes": "Public release of the corresponding detailed assessment. Claim and reasoning fields summarize the private originals. Source links and recorded evidence locations are retained."
+  },
+  "article": {
+    "title": "Surrogacy in India",
+    "revision_id": null,
+    "url": null
+  },
+  "claim": {
+    "text": "The claim cites industry organizations for an estimate of over US$2 billion in annual surrogacy revenue and describes India as having thousands of IVF clinics.",
+    "text_status": "public_summary",
+    "text_note": "Public paraphrase. The original Wikipedia revision remains unrecorded.",
+    "location_in_article": null,
+    "paragraph_context": null
+  },
+  "sub_claims": [
+    {
+      "sub_claim_id": "a04-sc1",
+      "text": "The estimate was attributed to multiple industry organizations.",
+      "split_type": "attribution"
+    },
+    {
+      "sub_claim_id": "a04-sc2",
+      "text": "Annual surrogacy revenue was estimated at over US$2 billion.",
+      "split_type": "quantity"
+    },
+    {
+      "sub_claim_id": "a04-sc3",
+      "text": "The claim describes a nationwide total in the thousands for IVF clinics.",
+      "split_type": "quantity"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "a04-src1",
+      "citation_text": "Hibino, Y. (2023). The advantages and disadvantages of altruistic and commercial surrogacy in India. Philosophy, Ethics, and Humanities in Medicine, 18(1). https://doi.org/10.1186/s13010-023-00130-y",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC10327345/",
+      "url_note": "Link from the detailed assessment table.",
+      "access": {
+        "status": "accessible",
+        "note": "Accessible through Link provided in the Wikipedia exercise. ",
+        "checked_on": null
+      }
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_id": "a04-h1",
+      "kind": "human_original",
+      "assessor": {
+        "id": "needs_review",
+        "type": "human",
+        "product": null,
+        "model_as_recorded": null
+      },
+      "assessed_on": "2026-10-15",
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "partially_supported",
+        "as_stated": "Partially supported "
+      },
+      "reasoning": "The cited source names one industry body, which only partly supports the plural attribution. The revenue figure meets the threshold. The source describes clinics without establishing a count in the thousands.",
+      "evidence_status": "locator_only",
+      "evidence": [
+        {
+          "evidence_id": "a04-h1-ev1",
+          "source_id": "a04-src1",
+          "role": "decisive",
+          "passage_text": null,
+          "location": {
+            "page": "2",
+            "section": "Background",
+            "paragraph": "3",
+            "line": "1",
+            "raw": "Page: 2 | Section: Background | Paragraph: 3 | Line: 1"
+          },
+          "supports_sub_claims": [
+            "a04-sc1",
+            "a04-sc2"
+          ]
+        }
+      ],
+      "confidence": "medium",
+      "uncertainty_note": "The claim’s wording is open to interpretation, particularly “industry groups” and “thousands”. Additional context could also change this verdict.",
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "reference_eligible": true,
+      "review_status": "needs_review",
+      "sub_claim_judgments": [
+        {
+          "sub_claim_id": "a04-sc1",
+          "label": "partially_supported",
+          "evidence_ids": [
+            "a04-h1-ev1"
+          ],
+          "review_status": "needs_review",
+          "note": "Structured mapping of the original human reasoning, paragraph 282 in the Claim Verification Report."
+        },
+        {
+          "sub_claim_id": "a04-sc2",
+          "label": "supported",
+          "evidence_ids": [
+            "a04-h1-ev1"
+          ],
+          "review_status": "needs_review",
+          "note": "Structured mapping of the original human reasoning, paragraph 283 in the Claim Verification Report."
+        },
+        {
+          "sub_claim_id": "a04-sc3",
+          "label": "not_supported",
+          "evidence_ids": [
+            "a04-h1-ev1"
+          ],
+          "review_status": "needs_review",
+          "note": "Structured mapping of the original human reasoning, paragraph 284 in the Claim Verification Report."
+        }
+      ]
+    },
+    {
+      "assessment_id": "a04-ai1",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-chatgpt",
+        "type": "ai",
+        "product": "ChatGPT",
+        "model_as_recorded": "GPT 6.1 Sol Light"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "partially_supported",
+        "as_stated": "Partially supported."
+      },
+      "reasoning": "The response treated the revenue threshold as supported and distinguished a single named organization and an unquantified clinic count from the broader claim. The original monetary wording is flagged for verification.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a04-ai2",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-claude",
+        "type": "ai",
+        "product": "Claude",
+        "model_as_recorded": "Sonnet 5.5 Medium"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "partially_supported",
+        "as_stated": "Partially supported."
+      },
+      "reasoning": "The response accepted the revenue threshold but distinguished clinics offering surrogacy from all IVF clinics and found no support for the stated scale. The original monetary wording is flagged for verification.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a04-ai3",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-gemini",
+        "type": "ai",
+        "product": "Gemini",
+        "model_as_recorded": "Auto (Gemini 3 models)"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "supported",
+        "as_stated": "Fully supported."
+      },
+      "reasoning": "The response accepted the revenue threshold and treated differences in wording about clinic count and geographic scope as minor.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    }
+  ],
+  "adjudication": {
+    "status": "provisional_single_assessor",
+    "reference_label": "partially_supported",
+    "reference_assessment_ids": [
+      "a04-h1"
+    ],
+    "adjudicator_id": null,
+    "adjudicated_on": null,
+    "rationale": "Recorded human verdict, pending approval for provisional reference use."
+  },
+  "needs_review_items": [
+    {
+      "field": "article.revision_id",
+      "reason": "The original Wikipedia revision and article URL are unrecorded."
+    },
+    {
+      "field": "assessments[0].assessor.id",
+      "reason": "Choose a stable public assessor identifier."
+    },
+    {
+      "field": "assessments[0].review_status",
+      "reason": "Confirm this transcription for provisional reference use."
+    },
+    {
+      "field": "assessments[0].context_level",
+      "reason": "The Wikipedia context level used for this assessment is unrecorded."
+    },
+    {
+      "field": "assessments[0].independence",
+      "reason": "Record per-assessment exposure to other judgments if known."
+    },
+    {
+      "field": "assessments[1].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[2].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[3].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[0].sub_claim_judgments",
+      "reason": "Confirm the structured mapping of the three human subclaim judgments."
+    },
+    {
+      "field": "assessments[1].reasoning",
+      "reason": "Monetary quotation is corrupted in the Claim Verification Report. Check original AI transcript before correction."
+    },
+    {
+      "field": "assessments[2].reasoning",
+      "reason": "Monetary quotation is corrupted in the Claim Verification Report. Check original AI transcript before correction."
+    }
+  ]
+}

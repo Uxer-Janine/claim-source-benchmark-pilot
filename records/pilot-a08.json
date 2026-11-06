@@ -1,0 +1,247 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "pilot-a08",
+  "claim_id": "A08",
+  "provenance": {
+    "source_document": "Claim Verification Report",
+    "entry_id": "A08",
+    "notes": "Public release of the corresponding detailed assessment. Claim and reasoning fields summarize the private originals. Source links and recorded evidence locations are retained."
+  },
+  "article": {
+    "title": "Curly Girl Method",
+    "revision_id": null,
+    "url": null
+  },
+  "claim": {
+    "text": "The claim links more visible natural curls in media, fashion and workplaces to broader acceptance of textured hair in beauty standards.",
+    "text_status": "public_summary",
+    "text_note": "Public paraphrase. The original Wikipedia revision remains unrecorded.",
+    "location_in_article": null,
+    "paragraph_context": null
+  },
+  "sub_claims": [
+    {
+      "sub_claim_id": "a08-sc1",
+      "text": "The claim links more visible natural curls in media, fashion and workplaces to broader acceptance of textured hair in beauty standards.",
+      "split_type": "none"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "a08-src1",
+      "citation_text": "\"Is the Curly Girl Method right for your hair? An expert breaks it down\". TODAY.com. 2024-08-12. Retrieved 2026-01-28.",
+      "url": "https://www.today.com/shop/curly-girl-method-products-rcna100025",
+      "url_note": "Link from the detailed assessment table.",
+      "access": {
+        "status": "accessible",
+        "note": "Accessible through Link provided in the Wikipedia exercise. ",
+        "checked_on": null
+      }
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_id": "a08-h1",
+      "kind": "human_original",
+      "assessor": {
+        "id": "needs_review",
+        "type": "human",
+        "product": null,
+        "model_as_recorded": null
+      },
+      "assessed_on": "2026-10-15",
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "not_supported",
+        "as_stated": "Not supported "
+      },
+      "reasoning": "The article establishes the method's longstanding popularity but does not examine the claimed rise in visibility or inclusivity across media, fashion and workplaces.",
+      "evidence_status": "locator_only",
+      "evidence": [
+        {
+          "evidence_id": "a08-h1-ev1",
+          "source_id": "a08-src1",
+          "role": "nearest_topical",
+          "passage_text": null,
+          "location": {
+            "page": null,
+            "section": null,
+            "paragraph": "1",
+            "line": "1",
+            "raw": "Page: NA | Section: NA | Paragraph: 1 | Line: 1"
+          },
+          "supports_sub_claims": []
+        }
+      ],
+      "confidence": "high",
+      "uncertainty_note": "The passage I recorded concerns Lorraine Massey’s book and the method’s popularity, not media, fashion or professional settings, so this verdict rests on what the source does not say. Unchecked secondary citations could change it.",
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "reference_eligible": true,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a08-ai1",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-chatgpt",
+        "type": "ai",
+        "product": "ChatGPT",
+        "model_as_recorded": "GPT 6.1 Sol Light"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "not_supported",
+        "as_stated": "Not supported by the supplied article."
+      },
+      "reasoning": "The article covers a hair-care routine and its popularity. It does not provide evidence for the broader claim about representation or changing standards.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a08-ai2",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-claude",
+        "type": "ai",
+        "product": "Claude",
+        "model_as_recorded": "Sonnet 5.5 Medium"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "not_supported",
+        "as_stated": "Not supported (no contradiction)."
+      },
+      "reasoning": "The article gives practical advice and evidence of interest in the method on one platform. The response found no link to the broader social claim and allowed that another source might address it.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a08-ai3",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-gemini",
+        "type": "ai",
+        "product": "Gemini",
+        "model_as_recorded": "Auto (Gemini 3 models)"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "source_insufficient",
+        "note": "Unable to assess."
+      },
+      "overall_verdict": {
+        "label": null,
+        "as_stated": "Unable to assess."
+      },
+      "reasoning": "The response abstained because the supplied practical guide did not contain material on representation or changing standards.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    }
+  ],
+  "adjudication": {
+    "status": "provisional_single_assessor",
+    "reference_label": "not_supported",
+    "reference_assessment_ids": [
+      "a08-h1"
+    ],
+    "adjudicator_id": null,
+    "adjudicated_on": null,
+    "rationale": "Recorded human verdict, pending approval for provisional reference use."
+  },
+  "needs_review_items": [
+    {
+      "field": "article.revision_id",
+      "reason": "The original Wikipedia revision and article URL are unrecorded."
+    },
+    {
+      "field": "assessments[0].assessor.id",
+      "reason": "Choose a stable public assessor identifier."
+    },
+    {
+      "field": "assessments[0].review_status",
+      "reason": "Confirm this transcription for provisional reference use."
+    },
+    {
+      "field": "assessments[0].context_level",
+      "reason": "The Wikipedia context level used for this assessment is unrecorded."
+    },
+    {
+      "field": "assessments[0].independence",
+      "reason": "Record per-assessment exposure to other judgments if known."
+    },
+    {
+      "field": "assessments[1].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[2].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[3].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[0].search_note",
+      "reason": "No claim-specific search log is recorded. The nearest topical passage and location are recorded."
+    }
+  ]
+}

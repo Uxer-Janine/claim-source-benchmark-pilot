@@ -1,0 +1,243 @@
+{
+  "schema_version": "0.1.0",
+  "record_id": "pilot-a03",
+  "claim_id": "A03",
+  "provenance": {
+    "source_document": "Claim Verification Report",
+    "entry_id": "A03",
+    "notes": "Public release of the corresponding detailed assessment. Claim and reasoning fields summarize the private originals. Source links and recorded evidence locations are retained."
+  },
+  "article": {
+    "title": "Extensive farming",
+    "revision_id": null,
+    "url": null
+  },
+  "claim": {
+    "text": "Some regions raise livestock using seasonal movement or herding systems that are wholly or partly nomadic.",
+    "text_status": "public_summary",
+    "text_note": "Public paraphrase. The original Wikipedia revision remains unrecorded.",
+    "location_in_article": null,
+    "paragraph_context": null
+  },
+  "sub_claims": [
+    {
+      "sub_claim_id": "a03-sc1",
+      "text": "Some regions raise livestock using seasonal movement or herding systems that are wholly or partly nomadic.",
+      "split_type": "none"
+    }
+  ],
+  "sources": [
+    {
+      "source_id": "a03-src1",
+      "citation_text": "Morales‐Reyes, Z., Barbosa, J. M., Sánchez‐Zapata, J. A., & Pérez-Ibarra, I. (2025). Farmer perceptions of the vulnerabilities of traditional livestock farming systems under global change. Ambio, 54(8), 1353–1371. https://doi.org/10.1007/s13280-025-02150-8",
+      "url": "https://doi.org/10.1007/s13280-025-02150-8",
+      "url_note": "Link from the detailed assessment table.",
+      "access": {
+        "status": "accessible",
+        "note": "Accessible through Link provided in the Wikipedia exercise. ",
+        "checked_on": null
+      }
+    }
+  ],
+  "assessments": [
+    {
+      "assessment_id": "a03-h1",
+      "kind": "human_original",
+      "assessor": {
+        "id": "needs_review",
+        "type": "human",
+        "product": null,
+        "model_as_recorded": null
+      },
+      "assessed_on": "2026-10-15",
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "not_supported",
+        "as_stated": "Not supported "
+      },
+      "reasoning": "The source does not establish seasonal or nomadic herding in Mongolia today. It discusses a historical period and leaves the practice elsewhere open.",
+      "evidence_status": "locator_only",
+      "evidence": [
+        {
+          "evidence_id": "a03-h1-ev1",
+          "source_id": "a03-src1",
+          "role": "nearest_topical",
+          "passage_text": null,
+          "location": {
+            "page": "11",
+            "section": null,
+            "paragraph": "1",
+            "line": "2",
+            "raw": "Page: 11 | Section: not recorded | Paragraph: 1 | Line: 2"
+          },
+          "supports_sub_claims": []
+        }
+      ],
+      "confidence": "high",
+      "uncertainty_note": "The claim and the source may describe different periods (the present versus the 1960s). Unread parts of the source and other secondary sources could also change this verdict.",
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "reference_eligible": true,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a03-ai1",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-chatgpt",
+        "type": "ai",
+        "product": "ChatGPT",
+        "model_as_recorded": "GPT 6.1 Sol Light"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "not_supported",
+        "as_stated": "Not supported by the provided excerpt."
+      },
+      "reasoning": "The Mongolia example concerns a practice that was replaced. The excerpt neither establishes current seasonal or nomadic management nor rules it out elsewhere.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a03-ai2",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-claude",
+        "type": "ai",
+        "product": "Claude",
+        "model_as_recorded": "Sonnet 5.5 Medium"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "compatible_not_confirmed",
+        "as_stated": "Compatible but not explicitly confirmed (leaning toward partially supported)."
+      },
+      "reasoning": "The historical example is compatible with the broad claim but does not confirm current practice. Other cited work might clarify the issue.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    },
+    {
+      "assessment_id": "a03-ai3",
+      "kind": "ai_generated",
+      "assessor": {
+        "id": "ai-gemini",
+        "type": "ai",
+        "product": "Gemini",
+        "model_as_recorded": "Auto (Gemini 3 models)"
+      },
+      "assessed_on": null,
+      "context_level": "needs_review",
+      "assessability": {
+        "status": "assessable",
+        "note": null
+      },
+      "overall_verdict": {
+        "label": "contradicted",
+        "as_stated": "Contradicted."
+      },
+      "reasoning": "The model treated Mongolia's transition away from partially nomadic herding as conflicting with a claim it read as describing current practice.",
+      "evidence_status": "not_recorded",
+      "evidence": [],
+      "confidence": "not_recorded",
+      "uncertainty_note": null,
+      "independence": {
+        "saw_other_human_assessments": null,
+        "saw_ai_output": null,
+        "note": "Exposure timing is not recorded for this assessment."
+      },
+      "ai_run_details": {
+        "prompt": null,
+        "inputs_provided": null
+      },
+      "reference_eligible": false,
+      "review_status": "needs_review"
+    }
+  ],
+  "adjudication": {
+    "status": "provisional_single_assessor",
+    "reference_label": "not_supported",
+    "reference_assessment_ids": [
+      "a03-h1"
+    ],
+    "adjudicator_id": null,
+    "adjudicated_on": null,
+    "rationale": "Recorded human verdict, pending approval for provisional reference use."
+  },
+  "needs_review_items": [
+    {
+      "field": "article.revision_id",
+      "reason": "The original Wikipedia revision and article URL are unrecorded."
+    },
+    {
+      "field": "assessments[0].assessor.id",
+      "reason": "Choose a stable public assessor identifier."
+    },
+    {
+      "field": "assessments[0].review_status",
+      "reason": "Confirm this transcription for provisional reference use."
+    },
+    {
+      "field": "assessments[0].context_level",
+      "reason": "The Wikipedia context level used for this assessment is unrecorded."
+    },
+    {
+      "field": "assessments[0].independence",
+      "reason": "Record per-assessment exposure to other judgments if known."
+    },
+    {
+      "field": "assessments[1].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[2].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    },
+    {
+      "field": "assessments[3].ai_run_details",
+      "reason": "Exact prompt, input bundle, run date and Wikipedia context level are unrecorded."
+    }
+  ]
+}
