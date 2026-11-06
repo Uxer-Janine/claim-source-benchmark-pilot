@@ -1,0 +1,35 @@
+name: Publish Evidence Desk
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: evidence-desk-pages
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/configure-pages@v5
+      - name: Stage reviewed public files
+        run: |
+          mkdir -p _site/lab/game _site/records
+          cp lab/game/index.html lab/game/game.css lab/game/game.js _site/lab/game/
+          cp records/pilot-{a01,a03,a04,a08,b09}.json _site/records/
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - id: deploy
+        uses: actions/deploy-pages@v4
