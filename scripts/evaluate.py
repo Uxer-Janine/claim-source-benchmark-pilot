@@ -8,9 +8,9 @@ from pathlib import Path
 from jsonschema.exceptions import SchemaError
 
 if __package__:
-    from .validate_records import ROOT, RECORDS, SCHEMA, has_evidence, load_records, read_json, rollup, validate
+    from .validate_records import ROOT, RECORDS, SCHEMA, has_evidence, load_records, read_json, reference_decision_errors, rollup, validate
 else:
-    from validate_records import ROOT, RECORDS, SCHEMA, has_evidence, load_records, read_json, rollup, validate
+    from validate_records import ROOT, RECORDS, SCHEMA, has_evidence, load_records, read_json, reference_decision_errors, rollup, validate
 
 BANNER = "SMOKE TEST ONLY — Five provisional pilot records. Not a measure of model performance."
 CATEGORIES = ("match", "mismatch", "abstention", "skipped")
@@ -49,18 +49,13 @@ def reference_for(record):
         return None, f"reference status is {ref['status']}"
     if ref["reference_label"] in {None, "needs_review"}:
         return None, "reference label is unresolved"
+    decision_errors = reference_decision_errors(record)
+    if decision_errors:
+        return None, "; ".join(decision_errors)
     by_id = {assessment["assessment_id"]: assessment for assessment in record["assessments"]}
-    assessments = [by_id.get(identifier) for identifier in ref["reference_assessment_ids"]]
-    if not assessments:
-        return None, "no human reference assessment"
+    assessments = [by_id[identifier] for identifier in ref["reference_assessment_ids"]]
     subclaim_ids = {subclaim["sub_claim_id"] for subclaim in record["sub_claims"]}
     for assessment in assessments:
-        if (
-            assessment is None or assessment["kind"] == "ai_generated"
-            or not assessment["reference_eligible"]
-            or assessment["assessor"]["type"] != "human"
-        ):
-            return None, "reference assessment is not an eligible human"
         if assessment["review_status"] != "confirmed":
             return None, "human reference approval is pending"
         if (
@@ -69,6 +64,9 @@ def reference_for(record):
             or not has_evidence(assessment)
         ):
             return None, "reference verdict or evidence is unresolved"
+        if ref["status"] == "agreed":
+            # The shared decision check already verified complete, matching subclaim verdicts.
+            continue
         judgments = assessment.get("sub_claim_judgments", [])
         if any(j["review_status"] != "confirmed" or j["label"] == "needs_review" for j in judgments):
             return None, "reference subclaim review is pending"
@@ -77,6 +75,8 @@ def reference_for(record):
             return None, "reference subclaim judgments are incomplete"
         if expected is not None and expected != assessment["overall_verdict"]["label"]:
             return None, "reference subclaims and overall verdict disagree"
+    if ref["status"] not in {"agreed", "adjudicated"}:
+        return None, "scoring requires agreement or adjudication based on two independent human assessments"
     return (ref["reference_label"], assessments), None
 
 

@@ -61,7 +61,7 @@ Keep the individual judgments and their evidence alongside the overall verdict. 
 4. Otherwise, if any is **Contradicted**, use **Contradicted**.
 5. Otherwise, use **Not supported**.
 
-When support and contradiction coexist, retain and flag the contradicted subclaim even if the overall verdict is partial. The evaluator reports that flag from the recorded label. Investigate discrepancies between the combined result and a historical overall verdict while preserving the historical assessment.
+Keep each contradicted subclaim visible and flag it even when the overall verdict uses another label. The evaluator reports that flag from the recorded label in its unscored diagnostics. Investigate discrepancies between the combined result and a historical overall verdict while preserving the historical assessment.
 
 ## Confidence and uncertainty
 
@@ -81,7 +81,13 @@ The surrogacy assessment illustrates how these fields fit together. Its source c
 
 Save your own assessment before seeing other judgments, and record any known exposure to human or AI assessments. Add each review separately. Compare verdicts, subclaims, evidence, and context. Keep disagreements and their reasons visible. If reviewers reach agreement or a decision is made to resolve the disagreement, document that result and its rationale separately. Mark open disagreements as unresolved.
 
-A single human assessment can serve as a provisional reference after individual confirmation of its evidence and annotations. For a compound reference, confirm its subclaim judgments and resolve any discrepancy in the combined verdict before scoring. Approval of the method and approval of a particular reference are separate decisions.
+A single human assessment remains a provisional reference candidate even after its evidence and annotations are confirmed. Benchmark scoring requires agreement or adjudication based on at least two distinct, identified human assessors. Each must complete the assessment independently and have it confirmed. For a compound reference, confirm its subclaim judgments and resolve any discrepancy in the combined verdict before scoring. Approval of the method and approval of a particular reference are separate decisions.
+
+For either decision, record that each assessor had seen neither other human assessments nor AI output. If independence is undocumented or unresolved, leave the reference pending.
+
+For agreement, the assessors must match the overall reference verdict and agree on every applicable subclaim verdict using the same breakdown. If verdicts or the breakdown differ, keep the case pending until adjudication. Record differences in how the claim was split using `different_sub_claim_split`.
+
+For adjudication, record the adjudicator’s identifier, decision date, and rationale. Cite the confirmed human assessments used and explain how the decision resolves the disagreement, including any differences in the breakdown. Keep this decision separate from the original assessments.
 
 ## Technical conventions and special cases
 

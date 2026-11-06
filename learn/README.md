@@ -14,7 +14,7 @@ The claims and evidence below are summaries. Follow the source links to read the
 
 - **Claim summary.** Young American pikas open their eyes at about nine days old.
 - **Evidence summary.** In *Ontogeny and reproduction*, page 4, paragraph 6, line 3, the paper gives an average age of nine days and credits earlier work. [Open the paper at page 4](https://academic.oup.com/mspecies/article-pdf/doi/10.2307/3504319/8071137/352-1.pdf#page=4).
-- **Compare.** An average gives a typical age. “About nine days” leaves room for individual variation, so the source backs the claim’s wording.
+- **Compare.** The reported average matches the age in the claim. “About nine days” leaves room for individual variation, so the source backs that approximate wording.
 - **Documented assessment.** **Supported**, with high confidence. Janine noted that the paper credits an earlier study and that further context could affect the assessment. It awaits independent review.
 
 ## A04 · Surrogacy in India

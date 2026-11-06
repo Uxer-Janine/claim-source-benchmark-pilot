@@ -59,4 +59,7 @@ Required fields must appear even when their value is unknown. Use `null` only wh
 | --- | --- |
 | `reference_eligible`, `review_status` | Required per assessment. Status is `needs_review` or `confirmed`. AI assessments have `reference_eligible: false`. |
 | `adjudication` | Required. Includes `status`, `reference_label`, and `reference_assessment_ids`. Status is `provisional_single_assessor`, `agreed`, `adjudicated`, `contested_unresolved`, or `needs_review`. |
+| `reference_assessment_ids` | For `agreed` or `adjudicated`, cite at least two confirmed assessments from distinct, identified human assessors. Both independence flags must be `false` for each assessment used. For `agreed`, the overall and all applicable subclaim verdicts must match on the same breakdown. |
+| `disagreement_causes` | Use `different_sub_claim_split` when reviewers divide the claim differently. This requires documented adjudication before scoring. |
+| `adjudicator_id`, `adjudicated_on`, `rationale` | Required when status is `adjudicated`. Give a stable identifier, a valid date in `YYYY-MM-DD` format, and the reason for the decision. |
 | `needs_review_items` | Required list of open items, which can be empty. Each item gives `field` and `reason`. |

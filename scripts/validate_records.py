@@ -1,6 +1,7 @@
 """Validate the draft-07 records and relationships within the collection."""
 
 import argparse
+from datetime import date
 import json
 from pathlib import Path
 
@@ -52,6 +53,94 @@ def has_evidence(assessment):
     )
 
 
+def reference_decision_errors(record):
+    """Check decision metadata and its links to the supporting assessments."""
+    decision = record["adjudication"]
+    status = decision["status"]
+    label = decision["reference_label"]
+    refs = decision["reference_assessment_ids"]
+    by_id = {assessment["assessment_id"]: assessment for assessment in record["assessments"]}
+    errors = []
+    identified_assessors = set()
+    agreed_judgments = None
+    subclaim_ids = {subclaim["sub_claim_id"] for subclaim in record["sub_claims"]}
+    is_split = any(subclaim["split_type"] != "none" for subclaim in record["sub_claims"])
+    finalized = status in {"agreed", "adjudicated"}
+    resolved = label not in {None, "needs_review"}
+
+    if len(refs) != len(set(refs)):
+        errors.append("duplicate reference assessment IDs")
+    if (resolved or finalized) and not refs:
+        errors.append("reference label needs a human assessment")
+    if finalized and not resolved:
+        errors.append("agreed or adjudicated reference needs a resolved verdict")
+    if status == "provisional_single_assessor" and len(refs) != 1:
+        errors.append("a provisional single-assessor reference needs exactly one assessment")
+    if status == "agreed" and "different_sub_claim_split" in decision.get("disagreement_causes", []):
+        errors.append("different subclaim decompositions require documented adjudication")
+
+    for identifier in refs:
+        assessment = by_id.get(identifier)
+        if assessment is None:
+            errors.append(f"unknown reference assessment {identifier}")
+            continue
+        if (
+            assessment["kind"] == "ai_generated" or not assessment["reference_eligible"]
+            or assessment["assessor"]["type"] != "human"
+        ):
+            errors.append(f"reference assessment {identifier} must be an eligible human")
+            continue
+        if finalized and assessment["review_status"] != "confirmed":
+            errors.append(f"reference assessment {identifier} must be confirmed")
+        if finalized and (
+            assessment["assessability"]["status"] != "assessable"
+            or assessment["overall_verdict"]["label"] in {None, "needs_review"}
+        ):
+            errors.append(f"reference assessment {identifier} needs a resolved verdict")
+        if resolved and status in {"agreed", "provisional_single_assessor"}:
+            if assessment["overall_verdict"]["label"] != label:
+                errors.append(f"reference label differs from {identifier}'s verdict")
+        if status == "agreed":
+            judgments = assessment.get("sub_claim_judgments", [])
+            labels = {judgment["sub_claim_id"]: judgment["label"] for judgment in judgments}
+            if (is_split or judgments) and (
+                labels.keys() != subclaim_ids or len(labels) != len(judgments)
+            ):
+                errors.append(f"{identifier} needs complete judgments on the shared subclaim decomposition")
+            elif any(j["review_status"] != "confirmed" or j["label"] == "needs_review" for j in judgments):
+                errors.append(f"{identifier} needs confirmed subclaim verdicts")
+            elif judgments and rollup(assessment, subclaim_ids) != label:
+                errors.append(f"{identifier}'s subclaim roll-up differs from the reference verdict")
+            elif agreed_judgments is None:
+                agreed_judgments = labels
+            elif labels != agreed_judgments:
+                errors.append(f"{identifier}'s subclaim verdicts differ and require documented adjudication")
+        if finalized:
+            assessor_id = assessment["assessor"]["id"].strip().casefold()
+            if assessor_id and assessor_id != "needs_review":
+                identified_assessors.add(assessor_id)
+            else:
+                errors.append(f"reference decision needs an identified assessor for {identifier}")
+            independence = assessment["independence"]
+            if any(independence[field] is not False for field in ("saw_other_human_assessments", "saw_ai_output")):
+                errors.append(f"reference decision needs documented independent assessment for {identifier}")
+
+    if finalized and len(identified_assessors) < 2:
+        errors.append("reference decision needs at least two distinct assessors")
+    if status == "adjudicated":
+        if (decision.get("adjudicator_id") or "").strip().casefold() in {"", "needs_review"}:
+            errors.append("adjudication needs an identified adjudicator")
+        if not (decision.get("rationale") or "").strip():
+            errors.append("adjudication needs a documented rationale")
+        try:
+            decision_date = decision.get("adjudicated_on")
+            if date.fromisoformat(decision_date).isoformat() != decision_date:
+                raise ValueError
+        except (TypeError, ValueError):
+            errors.append("adjudication needs a valid decision date (YYYY-MM-DD)")
+    return errors
+
+
 def validate(records, schema):
     """Return errors and advisory roll-up warnings without modifying records."""
     Draft7Validator.check_schema(schema)
@@ -92,12 +181,10 @@ def validate(records, schema):
         ):
             errors.append(f"{filename}: an unsplit claim must have one identical subclaim")
 
-        assessments = {}
         for assessment in record["assessments"]:
             identifier = assessment["assessment_id"]
             where = f"{filename}/{identifier}"
             register("assessment_id", identifier, filename)
-            assessments[identifier] = assessment
             label = assessment["overall_verdict"]["label"]
             if assessment["assessability"]["status"] != "assessable" and label is not None:
                 errors.append(f"{where}: unassessable or unresolved assessment must have a null verdict")
@@ -140,26 +227,7 @@ def validate(records, schema):
                     f"{where}: rubric roll-up gives {expected}, recorded overall verdict is {label}"
                 )
 
-        adjudication = record["adjudication"]
-        refs = adjudication["reference_assessment_ids"]
-        label = adjudication["reference_label"]
-        status = adjudication["status"]
-        if len(refs) != len(set(refs)):
-            errors.append(f"{filename}: duplicate reference assessment IDs")
-        if label not in {None, "needs_review"} and not refs:
-            errors.append(f"{filename}: reference label needs a human assessment")
-        if status == "provisional_single_assessor" and len(refs) != 1:
-            errors.append(f"{filename}: a provisional single-assessor reference needs exactly one assessment")
-        for identifier in refs:
-            assessment = assessments.get(identifier)
-            if assessment is None:
-                errors.append(f"{filename}: unknown reference assessment {identifier}")
-                continue
-            if assessment["kind"] == "ai_generated" or not assessment["reference_eligible"]:
-                errors.append(f"{filename}: reference assessment {identifier} must be an eligible human")
-            if label not in {None, "needs_review"} and status in {"agreed", "provisional_single_assessor"}:
-                if assessment["overall_verdict"]["label"] != label:
-                    errors.append(f"{filename}: reference label differs from {identifier}'s verdict")
+        errors.extend(f"{filename}: {error}" for error in reference_decision_errors(record))
     return errors, warnings
 
 

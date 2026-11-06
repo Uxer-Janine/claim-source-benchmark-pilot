@@ -6,7 +6,7 @@ For contributors editing data and researchers trying the evaluator. The [library
 | --- | --- |
 | [Schema](../schema/claim.schema.json) | Data contributors use these rules when adding or changing a record. Read the [Data Dictionary](DATA_DICTIONARY.md) for field meanings. |
 | [Validator](../scripts/validate_records.py) | Maintainers run it after editing records to check required fields, links between IDs, and review rules. |
-| [Evaluator](../scripts/evaluate.py) | Reports why predictions are skipped and shows recorded disagreements. It can compare predictions with approved human reference judgments when those are available. |
+| [Evaluator](../scripts/evaluate.py) | Reports why predictions are skipped and flags recorded contradictions and disagreements between subclaim labels. It can compare predictions with approved human reference judgments when those are available. |
 | [Validation tests](../tests/test_validate.py) and [evaluator tests](../tests/test_evaluate.py) | Maintainers run both before merging changes or releasing data. Tests include examples of invalid records and in-memory confirmed references. |
 | [Example predictions](../predictions/example-predictions.jsonl) | Researchers use these historical AI labels to try the evaluator. They include one abstention. Each line has a case ID, system name, system version, and predicted verdict. |
 | [Requirements](../requirements.txt) | Maintainers install the Python dependency before running the checks. |
@@ -25,7 +25,7 @@ python -m venv .venv
 
 On macOS and Linux, use `.venv/bin/python` as the environment’s Python executable. The checks do not call model APIs or require credentials.
 
-The example processes 14 historical predictions and scores zero because all five original human assessments are awaiting independent review and reference approval. Skipped rows show why they were excluded. Submitted abstentions are counted separately. The example checks the workflow and cannot reproduce the original model runs or measure model performance.
+The example processes 14 historical predictions and scores zero. All five original human assessments await independent review. Scoring requires at least two distinct human assessors with confirmed, documented independent assessments. Agreement requires matching overall and subclaim verdicts on the same breakdown. Differences require documented adjudication. Skipped rows show why they were excluded. Submitted abstentions are counted separately. The example checks the workflow and cannot reproduce the original model runs or measure model performance.
 
 ## Licensing
 

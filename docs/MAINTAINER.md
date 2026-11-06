@@ -11,7 +11,7 @@ For maintainers who review contributions, edit case files, and prepare releases.
 
 ## Review and release
 
-Keep each reference pending until a reviewer confirms the evidence and annotations. An approved single-assessor reference remains provisional. Record agreement, adjudication, or unresolved disagreement separately. Historical AI assessments stay ineligible as references.
+Keep each reference pending until its evidence and annotations are confirmed. Scoring requires agreement or adjudication based on two or more distinct human assessors with confirmed, documented independent assessments. A single-assessor reference remains provisional and unscored. Record the decision or unresolved disagreement separately. Historical AI assessments stay ineligible as references.
 
 Before publishing, review the public files and reachable Git history for sensitive or private material. Check article attribution, source reuse terms, and the [license notices](../NOTICE.md). Keep source citations and locators where quotations cannot be shared. Summarize data changes and review status in release notes.
 
@@ -24,3 +24,5 @@ Before publishing, review the public files and reachable Git history for sensiti
 - Recover original AI run details and A08’s search notes if available. A01 ChatGPT has no explicit verdict, and A08 Gemini’s response is recorded as an abstention.
 
 The [case files](../records/) retain the 46 individual review items.
+
+For reviewer recruitment, send the [standalone review packet](BLIND_REVIEW_KIT.md) without the existing assessments. The [public evidence map](RESEARCH_NOTES.md#public-evidence-map) records the available locators and their limits.

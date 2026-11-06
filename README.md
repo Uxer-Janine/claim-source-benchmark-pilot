@@ -38,7 +38,7 @@ A claim can be true even when the cited source fails to support it. Finding out 
 - **Verdict** — A label for how the cited source relates to the claim, such as **Partially supported**.
 - **Confidence** — How sure an assessor is about their judgment.
 - **Uncertainty** — What might change the judgment, such as missing context or ambiguous wording.
-- **Reference assessment** — A human assessment confirmed through review for use in evaluation. A confirmed single-assessor reference remains provisional. The five pilot assessments still await review.
+- **Reference assessment** — A human assessment considered for evaluation. Scoring requires agreement or adjudication based on at least two distinct, independent, confirmed human assessments. The five pilot assessments still await review.
 
 <a name="what-the-verdicts-mean"></a>
 
@@ -80,6 +80,13 @@ A04 is the only playable Evidence Desk investigation in the current release. The
 
 This is an exploratory pilot. All five original human assessments await independent review and are excluded from scoring. The five cases cannot establish how well a verification tool performs. Original Wikipedia revisions and some AI run details are missing. Public records use labeled claim summaries and passage locations. The full *Claim Verification Report* remains with the private research materials.
 
-See the [roadmap](docs/NEXT_STEPS.md) and [open review work](docs/MAINTAINER.md#open-review-work). If a source link fails or an explanation is unclear, [share feedback](CONTRIBUTING.md).
+See [research coverage and evidence](docs/RESEARCH_NOTES.md) for the five-case evidence map, what can be reproduced, and the limits of the historical human–AI comparison. See the [roadmap](docs/NEXT_STEPS.md) for next steps. If a source link fails or an explanation is unclear, [share feedback](CONTRIBUTING.md).
 
-Janine Makorre prepared the report and original assessments. See the [attribution and licensing notice](NOTICE.md) for Wikipedia credits, source rights, and the scope of the [MIT License](LICENSE).
+- **Independent reviewers:** Start with the [Blind Review Kit](docs/BLIND_REVIEW_KIT.md) before opening the existing assessments.
+- **Mentors and portfolio readers:** See the [Portfolio Handover](docs/PORTFOLIO_HANDOVER.md) for a public summary of the contribution, deliverables, and limitations.
+
+## Contribution and AI assistance
+
+Janine Makorre prepared the research report and original human assessments, guided the methodology and learning design, and reviewed the presentation. AI assistance was used to implement the validation and evaluation tools and Evidence Desk, and to draft and edit documentation. The records identify historical AI assessments separately from the original human judgments.
+
+See the [attribution and licensing notice](NOTICE.md) for Wikipedia credits, source rights, and the scope of the [MIT License](LICENSE).
