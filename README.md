@@ -4,9 +4,9 @@
 
 Does the source cited by a Wikipedia sentence support what that sentence says? Evidence Desk is an interactive learning experience built on this exploratory five-case research pilot. Play the A04 investigation to sort evidence and explain your judgment, then explore the sources and reasoning behind the recorded assessments.
 
-**[Play Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)** · [Start the five-minute Markdown lesson](learn/README.md)
+[![Evidence Desk interactive claim verification lab. Become an evidence investigator. Start investigating.](assets/evidence-desk-banner.svg)](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)
 
-[Browse the cases](#browse-the-five-cases) · [Methodology](annotation-guidelines.md) · [Give feedback](CONTRIBUTING.md) · [Explore the data](docs/DATA_DICTIONARY.md) · [Roadmap](docs/NEXT_STEPS.md)
+[Start the five-minute Markdown lesson](learn/README.md) · [Browse the case records](records/) · [Methodology](annotation-guidelines.md) · [Contribution guide](CONTRIBUTING.md) · [Explore the data](docs/DATA_DICTIONARY.md) · [Roadmap](docs/NEXT_STEPS.md)
 
 ## How verification works
 

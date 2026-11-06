@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="336" viewBox="0 0 960 336" role="img" aria-labelledby="title description">
+  <title id="title">Evidence Desk — Become an Evidence Investigator</title>
+  <desc id="description">Interactive Claim Verification Lab. Examine clues. Evaluate evidence. Build your case. Start Investigating.</desc>
+  <defs>
+    <linearGradient id="desk" x2="1" y2="1">
+      <stop stop-color="#1b292d"/>
+      <stop offset="1" stop-color="#121b1e"/>
+    </linearGradient>
+  </defs>
+  <rect x="1" y="1" width="958" height="334" rx="20" fill="url(#desk)" stroke="#617977" stroke-width="2"/>
+  <g font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="42" y="49" fill="#f2ca82" font-size="25" font-weight="750">Evidence Desk</text>
+    <text x="42" y="79" fill="#a2e2c7" font-size="20">Interactive Claim Verification Lab</text>
+    <text x="42" y="139" fill="#f5f1e7" font-size="46" font-weight="800" letter-spacing="-1.5">Become an Evidence</text>
+    <text x="42" y="190" fill="#f5f1e7" font-size="46" font-weight="800" letter-spacing="-1.5">Investigator</text>
+    <text x="42" y="230" fill="#b9cac6" font-size="23">Examine clues. Evaluate evidence. Build your case.</text>
+    <rect x="42" y="259" width="252" height="48" rx="8" fill="#f2ca82"/>
+    <text x="61" y="291" fill="#232017" font-size="23" font-weight="750">Start Investigating</text>
+    <path d="M262 283h15m-6-6 6 6-6 6" fill="none" stroke="#232017" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  </g>
+  <g aria-hidden="true">
+    <rect x="655" y="45" width="264" height="245" rx="13" fill="#121b1e" stroke="#617977"/>
+    <path d="M655 82h264" stroke="#617977"/>
+    <circle cx="674" cy="64" r="3.5" fill="#f2ca82"/>
+    <circle cx="688" cy="64" r="3.5" fill="#a2e2c7"/>
+    <circle cx="702" cy="64" r="3.5" fill="#617977"/>
+    <rect x="673" y="99" width="108" height="169" rx="8" fill="#1b292d" stroke="#617977" stroke-dasharray="4 4"/>
+    <rect x="793" y="99" width="108" height="169" rx="8" fill="#173b34" stroke="#a2e2c7"/>
+    <path d="M686 116h43m77 0h41" stroke="#b9cac6" stroke-linecap="round" stroke-width="3"/>
+    <rect x="683" y="133" width="87" height="43" rx="5" fill="#23363a" stroke="#617977"/>
+    <path d="M694 147h54m-54 12h34" stroke="#b9cac6" stroke-linecap="round" stroke-width="3"/>
+    <path d="M721 186v34h65m-7-7 7 7-7 7" fill="none" stroke="#f2ca82" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+    <rect x="803" y="197" width="87" height="48" rx="6" fill="#23363a" stroke="#a2e2c7"/>
+    <path d="m814 220 5 5 9-11m10 7h36" fill="none" stroke="#a2e2c7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5"/>
+  </g>
+</svg>
