@@ -109,7 +109,7 @@
       },
       "allOf": [
         {
-          "if": { "properties": { "status": { "const": "agreed" } } },
+          "if": { "properties": { "status": { "enum": ["agreed", "adjudicated"] } } },
           "then": { "properties": { "reference_assessment_ids": { "minItems": 2, "uniqueItems": true } } }
         },
         {

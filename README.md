@@ -38,7 +38,7 @@ A claim can be true even when the cited source fails to support it. Finding out 
 - **Verdict** — A label for how the cited source relates to the claim, such as **Partially supported**.
 - **Confidence** — How sure an assessor is about their judgment.
 - **Uncertainty** — What might change the judgment, such as missing context or ambiguous wording.
-- **Reference assessment** — A human assessment confirmed through review for use in evaluation. A confirmed single-assessor reference remains provisional. The five pilot assessments still await review.
+- **Reference assessment** — A human assessment considered for evaluation. Scoring requires agreement or adjudication based on at least two distinct, independent, confirmed human assessments. The five pilot assessments still await review.
 
 <a name="what-the-verdicts-mean"></a>
 

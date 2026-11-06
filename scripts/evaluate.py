@@ -72,6 +72,8 @@ def reference_for(record):
             return None, "reference subclaim judgments are incomplete"
         if expected is not None and expected != assessment["overall_verdict"]["label"]:
             return None, "reference subclaims and overall verdict disagree"
+    if ref["status"] not in {"agreed", "adjudicated"}:
+        return None, "scoring requires agreement or adjudication based on two independent human assessments"
     return (ref["reference_label"], assessments), None
 
 

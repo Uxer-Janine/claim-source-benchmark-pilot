@@ -95,18 +95,18 @@ def reference_decision_errors(record):
         if resolved and status in {"agreed", "provisional_single_assessor"}:
             if assessment["overall_verdict"]["label"] != label:
                 errors.append(f"reference label differs from {identifier}'s verdict")
-        if status == "agreed":
+        if finalized:
             assessor_id = assessment["assessor"]["id"].strip().casefold()
             if assessor_id and assessor_id != "needs_review":
                 identified_assessors.add(assessor_id)
             else:
-                errors.append(f"agreement needs an identified assessor for {identifier}")
+                errors.append(f"reference decision needs an identified assessor for {identifier}")
             independence = assessment["independence"]
             if any(independence[field] is not False for field in ("saw_other_human_assessments", "saw_ai_output")):
-                errors.append(f"agreement needs documented independent assessment for {identifier}")
+                errors.append(f"reference decision needs documented independent assessment for {identifier}")
 
-    if status == "agreed" and len(identified_assessors) < 2:
-        errors.append("agreement needs at least two distinct assessors")
+    if finalized and len(identified_assessors) < 2:
+        errors.append("reference decision needs at least two distinct assessors")
     if status == "adjudicated":
         if (decision.get("adjudicator_id") or "").strip().casefold() in {"", "needs_review"}:
             errors.append("adjudication needs an identified adjudicator")

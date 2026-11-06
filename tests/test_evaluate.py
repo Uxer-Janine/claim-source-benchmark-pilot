@@ -25,14 +25,34 @@ class EvaluationTests(unittest.TestCase):
         for verdict in ("supported", "abstain"):
             self.assertEqual(self.result(verdict)[:2], ("skipped", "human reference approval is pending"))
 
-    def test_confirmed_fixture_can_match_mismatch_and_abstain(self):
-        # In-memory fixture only. It does not record real owner approval.
+    def add_confirmed_independent_assessments(self):
+        # In-memory fixtures only. They do not record real owner approval.
         self.human["review_status"] = "confirmed"
+        self.human["assessor"]["id"] = "reviewer-one"
+        self.human["independence"].update(saw_other_human_assessments=False, saw_ai_output=False)
+        other = deepcopy(self.human)
+        other.update(assessment_id="a01-h2", kind="human_independent_review")
+        other["assessor"]["id"] = "reviewer-two"
+        other["evidence"][0]["evidence_id"] = "a01-h2-ev1"
+        self.record["assessments"].append(other)
+        self.record["adjudication"]["reference_assessment_ids"] = ["a01-h1", "a01-h2"]
+        return other
+
+    def test_confirmed_single_assessor_reference_is_excluded_from_scoring(self):
+        self.human["review_status"] = "confirmed"
+        self.assertEqual(validate([("fixture.json", self.record)], read_json(SCHEMA)), ([], []))
+        category, reason, _ = self.result("supported")
+        self.assertEqual(category, "skipped")
+        self.assertIn("two independent human assessments", reason)
+
+    def test_agreed_fixture_can_match_mismatch_and_abstain(self):
+        self.add_confirmed_independent_assessments()
+        self.record["adjudication"]["status"] = "agreed"
         self.assertEqual(self.result("supported")[0], "match")
         category, detail, evidence = self.result("not_supported")
         self.assertEqual(category, "mismatch")
         self.assertIn("supported", detail)
-        self.assertIn("provisional_single_assessor", detail)
+        self.assertIn("(agreed)", detail)
         self.assertIn("consult the cited passage", evidence[0])
         self.assertIn(self.record["sources"][0]["url"], evidence[0])
         self.assertIn(self.human["evidence"][0]["location"]["raw"], evidence[0])
@@ -48,16 +68,9 @@ class EvaluationTests(unittest.TestCase):
         self.assertIn("two distinct assessors", reason)
 
     def test_agreement_requires_distinct_confirmed_independent_assessors(self):
-        self.human["review_status"] = "confirmed"
-        self.human["assessor"]["id"] = "reviewer-one"
-        self.human["independence"].update(saw_other_human_assessments=False, saw_ai_output=False)
-        other = deepcopy(self.human)
-        other.update(assessment_id="a01-h2", kind="human_independent_review")
-        other["evidence"][0]["evidence_id"] = "a01-h2-ev1"
-        self.record["assessments"].append(other)
-        self.record["adjudication"].update(
-            status="agreed", reference_assessment_ids=["a01-h1", "a01-h2"]
-        )
+        other = self.add_confirmed_independent_assessments()
+        self.record["adjudication"]["status"] = "agreed"
+        other["assessor"]["id"] = "reviewer-one"
 
         def check(expected_error):
             errors, _ = validate([("fixture.json", self.record)], read_json(SCHEMA))
@@ -81,7 +94,7 @@ class EvaluationTests(unittest.TestCase):
         self.assertEqual(self.result("supported")[0], "match")
 
     def test_undocumented_adjudicated_override_is_rejected(self):
-        self.human["review_status"] = "confirmed"
+        self.add_confirmed_independent_assessments()
         decision = self.record["adjudication"]
         decision.update(status="adjudicated", reference_label="contradicted", rationale=None)
         errors, _ = validate([("fixture.json", self.record)], read_json(SCHEMA))
@@ -93,7 +106,8 @@ class EvaluationTests(unittest.TestCase):
             self.assertIn(requirement, reason)
 
     def test_adjudicated_decision_requires_valid_metadata_and_confirmed_evidence(self):
-        self.human["review_status"] = "confirmed"
+        other = self.add_confirmed_independent_assessments()
+        other["overall_verdict"]["label"] = "contradicted"
         decision = self.record["adjudication"]
         decision.update(status="adjudicated", reference_label="contradicted",
                         adjudicator_id="fixture-reviewer", adjudicated_on="2026-02-30",
@@ -104,9 +118,33 @@ class EvaluationTests(unittest.TestCase):
         decision["adjudicated_on"] = "2026-02-28"
         self.assertEqual(validate([("fixture.json", self.record)], read_json(SCHEMA)), ([], []))
         self.assertEqual(self.result("contradicted")[0], "match")
+        self.assertEqual(self.human["overall_verdict"]["label"], "supported")
+        self.assertEqual(other["overall_verdict"]["label"], "contradicted")
         self.human["evidence_status"] = "not_recorded"
         self.human["evidence"] = []
         self.assertEqual(self.result("contradicted")[0], "skipped")
+
+    def test_adjudication_rejects_insufficient_or_unresolved_independent_assessments(self):
+        other = self.add_confirmed_independent_assessments()
+        decision = self.record["adjudication"]
+        decision.update(status="adjudicated", reference_label="contradicted",
+                        adjudicator_id="fixture-reviewer", adjudicated_on="2026-02-28",
+                        rationale="Synthetic adjudication for a test case.")
+        for refs, assessor_id, exposure, expected in (
+            (["a01-h1"], "reviewer-two", False, "two distinct assessors"),
+            (["a01-h1", "a01-h2"], "reviewer-one", False, "two distinct assessors"),
+            (["a01-h1", "a01-h2"], "reviewer-two", None, "documented independent assessment"),
+            (["a01-h1", "a01-h2"], "reviewer-two", True, "documented independent assessment"),
+        ):
+            with self.subTest(refs=refs, assessor_id=assessor_id, exposure=exposure):
+                decision["reference_assessment_ids"] = refs
+                other["assessor"]["id"] = assessor_id
+                other["independence"]["saw_other_human_assessments"] = exposure
+                errors, _ = validate([("fixture.json", self.record)], read_json(SCHEMA))
+                self.assertTrue(errors)
+                category, reason, _ = self.result("contradicted")
+                self.assertEqual(category, "skipped")
+                self.assertIn(expected, reason)
 
     def test_contested_and_unknown_references_skip(self):
         self.human["review_status"] = "confirmed"
