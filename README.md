@@ -58,6 +58,10 @@ The five cases come from Janine Makorre’s *Claim Verification Report*. Each re
 
 All five original human assessments are awaiting independent review and are excluded from scoring. The pilot has no independently validated reference set or mentor approval. Original Wikipedia revision IDs and some AI run details are still missing. See [release notes](RELEASE_NOTES.md) and the [Maintainer Guide](docs/MAINTAINER.md) for the remaining limitations.
 
+## Project status and roadmap
+
+See [Next Steps and Future Development](docs/NEXT_STEPS.md) for what comes before publication and what could follow.
+
 ## Find your way around
 
 | Location | What’s inside |
