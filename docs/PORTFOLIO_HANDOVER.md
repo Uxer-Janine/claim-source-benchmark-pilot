@@ -21,6 +21,6 @@ The pilot checks source support rather than factual truth in general. It records
 
 The five original human assessments remain provisional. Exact Wikipedia revisions, some source access, and the original AI inputs and run details remain unresolved. Public evidence is inspectable through citations, locations, and labeled summaries where quotations are withheld.
 
-Invite independent reviews using the standalone packet, recover verified revisions or better locators where possible, and test Evidence Desk with first-time learners and a screen reader. Guided onboarding and more playable cases are future public development. Decide how to treat subclaim disagreements before using compound cases for scored evaluation. See the [research notes](RESEARCH_NOTES.md) and [roadmap](NEXT_STEPS.md).
+Invite independent reviews using the standalone packet, recover verified revisions or better locators where possible, and test Evidence Desk with first-time learners and a screen reader. Guided onboarding and more playable cases are future public development. Agreement requires matching overall and subclaim verdicts on the same breakdown. Any disagreement requires documented adjudication before scoring. See the [research notes](RESEARCH_NOTES.md) and [roadmap](NEXT_STEPS.md).
 
 [Published repository](https://github.com/Uxer-Janine/claim-source-benchmark-pilot) · [Live Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)

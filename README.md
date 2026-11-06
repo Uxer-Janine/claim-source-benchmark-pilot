@@ -82,6 +82,9 @@ This is an exploratory pilot. All five original human assessments await independ
 
 See [research coverage and evidence](docs/RESEARCH_NOTES.md) for the five-case evidence map, what can be reproduced, and the limits of the historical human–AI comparison. See the [roadmap](docs/NEXT_STEPS.md) for next steps. If a source link fails or an explanation is unclear, [share feedback](CONTRIBUTING.md).
 
+- **Independent reviewers:** Start with the [Blind Review Kit](docs/BLIND_REVIEW_KIT.md) before opening the existing assessments.
+- **Mentors and portfolio readers:** See the [Portfolio Handover](docs/PORTFOLIO_HANDOVER.md) for a public summary of the contribution, deliverables, and limitations.
+
 ## Contribution and AI assistance
 
 Janine Makorre prepared the research report and original human assessments, guided the methodology and learning design, and reviewed the presentation. AI assistance was used to implement the validation and evaluation tools and Evidence Desk, and to draft and edit documentation. The records identify historical AI assessments separately from the original human judgments.

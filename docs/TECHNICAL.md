@@ -25,7 +25,7 @@ python -m venv .venv
 
 On macOS and Linux, use `.venv/bin/python` as the environment’s Python executable. The checks do not call model APIs or require credentials.
 
-The example processes 14 historical predictions and scores zero. All five original human assessments await independent review. Scoring requires agreement or adjudication based on at least two distinct human assessors with confirmed, documented independent assessments. Skipped rows show why they were excluded. Submitted abstentions are counted separately. The example checks the workflow and cannot reproduce the original model runs or measure model performance.
+The example processes 14 historical predictions and scores zero. All five original human assessments await independent review. Scoring requires at least two distinct human assessors with confirmed, documented independent assessments. Agreement requires matching overall and subclaim verdicts on the same breakdown. Differences require documented adjudication. Skipped rows show why they were excluded. Submitted abstentions are counted separately. The example checks the workflow and cannot reproduce the original model runs or measure model performance.
 
 ## Licensing
 

@@ -64,6 +64,9 @@ def reference_for(record):
             or not has_evidence(assessment)
         ):
             return None, "reference verdict or evidence is unresolved"
+        if ref["status"] == "agreed":
+            # The shared decision check already verified complete, matching subclaim verdicts.
+            continue
         judgments = assessment.get("sub_claim_judgments", [])
         if any(j["review_status"] != "confirmed" or j["label"] == "needs_review" for j in judgments):
             return None, "reference subclaim review is pending"

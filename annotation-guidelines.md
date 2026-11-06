@@ -83,7 +83,11 @@ Save your own assessment before seeing other judgments, and record any known exp
 
 A single human assessment remains a provisional reference candidate even after its evidence and annotations are confirmed. Benchmark scoring requires agreement or adjudication based on at least two distinct, identified human assessors. Each must complete the assessment independently and have it confirmed. For a compound reference, confirm its subclaim judgments and resolve any discrepancy in the combined verdict before scoring. Approval of the method and approval of a particular reference are separate decisions.
 
-For either decision, record that each assessor had seen neither other human assessments nor AI output. If independence is undocumented or unresolved, leave the reference pending. For agreement, the assessors’ verdicts must match the reference verdict. For adjudication, record the adjudicator’s identifier, the decision date, and the rationale. Cite the confirmed human assessments used and explain any difference between the decision and those judgments. Record the decision separately from the original verdicts.
+For either decision, record that each assessor had seen neither other human assessments nor AI output. If independence is undocumented or unresolved, leave the reference pending.
+
+For agreement, the assessors must match the overall reference verdict and agree on every applicable subclaim verdict using the same breakdown. If verdicts or the breakdown differ, keep the case pending until adjudication. Record differences in how the claim was split using `different_sub_claim_split`.
+
+For adjudication, record the adjudicator’s identifier, decision date, and rationale. Cite the confirmed human assessments used and explain how the decision resolves the disagreement, including any differences in the breakdown. Keep this decision separate from the original assessments.
 
 ## Technical conventions and special cases
 

@@ -62,6 +62,9 @@ def reference_decision_errors(record):
     by_id = {assessment["assessment_id"]: assessment for assessment in record["assessments"]}
     errors = []
     identified_assessors = set()
+    agreed_judgments = None
+    subclaim_ids = {subclaim["sub_claim_id"] for subclaim in record["sub_claims"]}
+    is_split = any(subclaim["split_type"] != "none" for subclaim in record["sub_claims"])
     finalized = status in {"agreed", "adjudicated"}
     resolved = label not in {None, "needs_review"}
 
@@ -73,6 +76,8 @@ def reference_decision_errors(record):
         errors.append("agreed or adjudicated reference needs a resolved verdict")
     if status == "provisional_single_assessor" and len(refs) != 1:
         errors.append("a provisional single-assessor reference needs exactly one assessment")
+    if status == "agreed" and "different_sub_claim_split" in decision.get("disagreement_causes", []):
+        errors.append("different subclaim decompositions require documented adjudication")
 
     for identifier in refs:
         assessment = by_id.get(identifier)
@@ -95,6 +100,21 @@ def reference_decision_errors(record):
         if resolved and status in {"agreed", "provisional_single_assessor"}:
             if assessment["overall_verdict"]["label"] != label:
                 errors.append(f"reference label differs from {identifier}'s verdict")
+        if status == "agreed":
+            judgments = assessment.get("sub_claim_judgments", [])
+            labels = {judgment["sub_claim_id"]: judgment["label"] for judgment in judgments}
+            if (is_split or judgments) and (
+                labels.keys() != subclaim_ids or len(labels) != len(judgments)
+            ):
+                errors.append(f"{identifier} needs complete judgments on the shared subclaim decomposition")
+            elif any(j["review_status"] != "confirmed" or j["label"] == "needs_review" for j in judgments):
+                errors.append(f"{identifier} needs confirmed subclaim verdicts")
+            elif judgments and rollup(assessment, subclaim_ids) != label:
+                errors.append(f"{identifier}'s subclaim roll-up differs from the reference verdict")
+            elif agreed_judgments is None:
+                agreed_judgments = labels
+            elif labels != agreed_judgments:
+                errors.append(f"{identifier}'s subclaim verdicts differ and require documented adjudication")
         if finalized:
             assessor_id = assessment["assessor"]["id"].strip().casefold()
             if assessor_id and assessor_id != "needs_review":

@@ -30,12 +30,22 @@ class EvaluationTests(unittest.TestCase):
         self.human["review_status"] = "confirmed"
         self.human["assessor"]["id"] = "reviewer-one"
         self.human["independence"].update(saw_other_human_assessments=False, saw_ai_output=False)
+        claim_id = self.record["claim_id"].lower()
         other = deepcopy(self.human)
-        other.update(assessment_id="a01-h2", kind="human_independent_review")
+        other.update(assessment_id=f"{claim_id}-h2", kind="human_independent_review")
         other["assessor"]["id"] = "reviewer-two"
-        other["evidence"][0]["evidence_id"] = "a01-h2-ev1"
+        original_evidence_id = other["evidence"][0]["evidence_id"]
+        evidence_id = f"{claim_id}-h2-ev1"
+        other["evidence"][0]["evidence_id"] = evidence_id
+        for judgment in other.get("sub_claim_judgments", []):
+            judgment["evidence_ids"] = [
+                evidence_id if item == original_evidence_id else item
+                for item in judgment["evidence_ids"]
+            ]
         self.record["assessments"].append(other)
-        self.record["adjudication"]["reference_assessment_ids"] = ["a01-h1", "a01-h2"]
+        self.record["adjudication"]["reference_assessment_ids"] = [
+            self.human["assessment_id"], other["assessment_id"]
+        ]
         return other
 
     def test_confirmed_single_assessor_reference_is_excluded_from_scoring(self):
@@ -165,6 +175,56 @@ class EvaluationTests(unittest.TestCase):
         self.assertEqual(self.result("supported", "A04")[:2], ("skipped", "reference subclaim review is pending"))
         human["sub_claim_judgments"] = []
         self.assertEqual(self.result("supported", "A04")[:2], ("skipped", "reference subclaim judgments are incomplete"))
+
+    def compound_agreement(self):
+        self.record = read_json(RECORDS / "pilot-a04.json")
+        self.human = self.record["assessments"][0]
+        for judgment in self.human["sub_claim_judgments"]:
+            judgment["review_status"] = "confirmed"
+        other = self.add_confirmed_independent_assessments()
+        self.record["adjudication"]["status"] = "agreed"
+        return other
+
+    def check_compound_agreement_rejected(self, expected):
+        errors, _ = validate([("fixture.json", self.record)], read_json(SCHEMA))
+        self.assertIn(expected, "\n".join(errors))
+        category, reason, _ = self.result("partially_supported", "A04")
+        self.assertEqual(category, "skipped")
+        self.assertIn(expected, reason)
+
+    def test_compound_agreement_compares_labels_by_subclaim_id(self):
+        other = self.compound_agreement()
+        other["sub_claim_judgments"].reverse()
+        self.assertEqual(validate([("fixture.json", self.record)], read_json(SCHEMA)), ([], []))
+        self.assertEqual(self.result("partially_supported", "A04")[0], "match")
+
+    def test_same_overall_verdict_with_subclaim_disagreement_requires_adjudication(self):
+        other = self.compound_agreement()
+        other["sub_claim_judgments"][-1]["label"] = "contradicted"
+        self.check_compound_agreement_rejected("subclaim verdicts differ")
+        decision = self.record["adjudication"]
+        decision.update(status="adjudicated", adjudicator_id="fixture-reviewer",
+                        adjudicated_on="2026-02-28",
+                        rationale="Synthetic decision resolving the clinic-count disagreement.")
+        self.assertEqual(validate([("fixture.json", self.record)], read_json(SCHEMA)), ([], []))
+        self.assertEqual(self.result("partially_supported", "A04")[0], "match")
+        self.assertEqual(self.human["sub_claim_judgments"][-1]["label"], "not_supported")
+        self.assertEqual(other["sub_claim_judgments"][-1]["label"], "contradicted")
+
+    def test_different_subclaim_decompositions_require_adjudication(self):
+        other = self.compound_agreement()
+        self.record["adjudication"]["disagreement_causes"] = ["different_sub_claim_split"]
+        self.check_compound_agreement_rejected("different subclaim decompositions require documented adjudication")
+        self.record["adjudication"]["disagreement_causes"] = []
+        other["sub_claim_judgments"][-1]["sub_claim_id"] = "alternative-split"
+        self.check_compound_agreement_rejected("complete judgments on the shared subclaim decomposition")
+
+    def test_compound_agreement_requires_complete_confirmed_judgments(self):
+        other = self.compound_agreement()
+        other["sub_claim_judgments"][-1]["review_status"] = "needs_review"
+        self.check_compound_agreement_rejected("confirmed subclaim verdicts")
+        other["sub_claim_judgments"].pop()
+        self.check_compound_agreement_rejected("complete judgments on the shared subclaim decomposition")
 
     def test_diagnostics_flag_recorded_contradictions_and_differences(self):
         record = read_json(RECORDS / "pilot-a04.json")
