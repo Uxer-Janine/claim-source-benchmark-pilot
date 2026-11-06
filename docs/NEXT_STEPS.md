@@ -1,25 +1,20 @@
 # Next Steps and Future Development
 
-The library is a five-case pilot with a beginner lesson, structured records, and tools for checking the data and trying the evaluation process. All five original human assessments still await independent review. The example evaluator can process predictions, but it produces no scores while the human references remain unapproved.
+[Back to the library](../README.md)
 
-This pilot is a separate Outreachy contribution. The official Outreachy application and the compulsory claim-verification microtask each have their own submission process.
+[Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/) is published. **The Missing Evidence**, the surrogacy case identified as A04, is playable. The other four game missions are previews. The [written lesson](../learn/README.md) and [case summaries](INVESTIGATIONS.md) remain available. The five original human assessments still await independent review.
 
-## Prepare the submission and publication
+This pilot is a separate Outreachy contribution. The official application and compulsory claim-verification microtask have their own submission processes.
 
-1. Review the final snapshot and confirm which repository link and commit to share with mentors. Describe the five cases, the learning exercise, and the limits of the evidence and review completed so far.
-2. After the project owner approves publication, push the reviewed changes. If a new release is needed, describe the changes since the existing release and verify the public links and lesson.
+## Next improvements
 
-## Improve the pilot with reviewers and learners
+- **Test the experience with first-time learners.** Observe whether learners find the source, explain their judgment before revealing the documented assessment, and understand its review status. Check phone use, keyboard navigation, and screen-reader announcements.
+- **Extend guided learning and the playable cases.** Guided practice with the pika case and additional investigations are future public updates. Keep the written route available as the game grows.
+- **Invite independent reviews.** Keep each assessment and disagreement visible. Record the reasons for any review decision. See [how to contribute](../CONTRIBUTING.md#submit-an-independent-assessment).
+- **Improve evidence traceability.** Recover original Wikipedia revisions where possible, confirm recorded passage locations, and document remaining source-access and reuse limits. See the [open review work](MAINTAINER.md#open-review-work).
 
-- **Invite independent assessments.** Ask reviewers to read the claim and source before seeing the recorded judgment. Keep their assessments separate and show where their reasoning differs. If a disagreement is resolved, record who made the decision and why. See [how to contribute](../CONTRIBUTING.md).
-- **Make evidence easier to find.** Recover the original Wikipedia revisions where possible and verify that each citation and passage location leads readers to the intended evidence. Keep uncertain or unavailable details visible.
-- **Try the lesson with first-time readers.** See whether they can explain the difference between source support and truth, attempt A04 before opening the assessment, and find a way to give feedback. Use what they struggle with to improve the wording and check whether five minutes is realistic.
+## Future research
 
-## Explore future research
+Once human references are reviewed, document which cases can be scored and examine how tools handle partial support, contradictions, and missing evidence. Keep abstentions separate from incorrect predictions and report the limits of the sample.
 
-- **Improve benchmarking once references are reviewed.** Document which cases can be scored, keep abstentions separate from incorrect predictions, and compare how tools handle partial support, contradictions, and missing evidence. Report the limits of a five-case sample.
-- **Explore multilingual verification.** A future study could examine how language editions differ in claim wording, citations, and access to evidence. This is a research direction to investigate with reviewers who know the relevant languages.
-
-A standalone website, major dataset expansion, and a more advanced scoring interface are lower priorities. Revisit them if learner feedback or research needs point to a clear benefit.
-
-For day-to-day record and release procedures, see the [Maintainer Guide](MAINTAINER.md). For commands and evaluator details, see the [Technical Guide](TECHNICAL.md).
+Multilingual verification is a research possibility. A future study could ask how claim wording, citations, and evidence access vary across language editions. A separate standalone site, major dataset expansion, and a more advanced scoring interface remain lower priorities.

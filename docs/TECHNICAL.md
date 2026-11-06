@@ -1,6 +1,6 @@
 # Technical Guide
 
-For contributors editing data and researchers trying the evaluator. You can skip this page to take the [beginner lesson](../learn/README.md).
+For contributors editing data and researchers trying the evaluator. The [library homepage](../README.md) links to the learning paths and case findings.
 
 | File | Who uses it and when |
 | --- | --- |

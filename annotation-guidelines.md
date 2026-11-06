@@ -1,61 +1,83 @@
-# Annotation Guidelines for Claim–Source Verification
+# How to Assess a Claim
 
-This rubric asks whether a Wikipedia claim is supported by its cited source. Evaluate what that source establishes. Facts known from elsewhere can be recorded separately as context.
+[Back to the library](README.md) · [Practice on a case](learn/README.md)
 
-## Assessability
+Check what the cited source establishes. A statement might be true for other reasons even if its citation does not support it. Record facts you know from elsewhere separately as context.
 
-Record access for each source and assessability for each assessment. An alternative route to the source can make an assessment possible even if the original link fails.
+## Terms used in an assessment
 
-- Use `assessable` when you can read enough to judge source support.
-- Use `source_inaccessible` when you cannot access the source, or `source_insufficient` when the material available is inadequate to make a judgment. Set the verdict to null and record the limitation.
-- Use `needs_review` as a workflow status for unresolved assessability. An assessable historical output that gives no explicit verdict can use the `needs_review` verdict sentinel. Neither use is a support label.
+A **claim** is the statement being checked. Its **cited source** is the work it points to, and **evidence** is the specific part of that work relevant to the check. A **subclaim** is an independently checkable part of a larger claim. An **assessment** records the evidence, reasoning, verdict, confidence, and uncertainty. A **reference assessment** is a human assessment confirmed for use in evaluation. See the [beginner glossary](README.md#words-youll-see) for examples.
 
-A source can be silent on a claim even after the assessor has read enough to judge it. Use `not_supported` in that case. A08 illustrates the distinction. The human and Gemini made different assessments of the available material.
+## Work through the claim
 
-## Verdicts
-
-Apply the first applicable rule to each subclaim.
-
-| Verdict | What the source establishes |
-| --- | --- |
-| `contradicted` | It directly conflicts with the statement. |
-| `supported` | It establishes the statement's meaning, including its substantive details. |
-| `partially_supported` | It establishes part of the statement or a weaker, narrower or differently attributed version. |
-| `compatible_not_confirmed` | Its content provides a basis for a cautious inference without directly confirming the statement. |
-| `not_supported` | It offers no basis for the statement and gives no directly conflicting evidence. |
-
-Consider quantities, dates, attribution, scope and causal language when deciding which details are substantive. A03 distinguishes evidence about historical practice from evidence about current practice. A04 distinguishes a numerical threshold from the identity of the estimator and the number of clinics.
+1. Read the claim and note the article context you used.
+2. Separate the details that can be checked independently.
+3. Locate the evidence and compare it with each detail.
+4. Record the verdict, reasoning, and limits. Save your independent assessment before reading someone else’s.
 
 ## Compound claims
 
-Keep the complete claim verbatim. Split substantive statements that can be checked independently. Record each subclaim with a stable ID and the relevant verbatim fragment. Ellipses can mark cuts. Agree on the split before comparing independent reviews. For a single unsplit statement, record one subclaim with identical text.
+Keep the complete claim verbatim in the research record. Split substantive statements that can be checked independently. Give each subclaim a stable ID and its relevant verbatim fragment. Use ellipses to mark cuts. For a single unsplit claim, record one subclaim with identical text. Agree on the split before comparing independent reviews. Public copies can use labeled summaries where verbatim material is withheld.
 
-Record individual judgments and evidence links alongside the overall verdict. Apply this order when all subclaims have verdicts:
-
-1. All supported → `supported`.
-2. Otherwise, any supported or partially supported → `partially_supported`.
-3. Otherwise, any compatible but unconfirmed → `compatible_not_confirmed`.
-4. Otherwise, any contradicted → `contradicted`.
-5. Otherwise → `not_supported`.
-
-When support and contradiction coexist, retain the contradicted subclaim and flag the conflict explicitly in the assessment. The evaluator surfaces that flag from the recorded subclaim label, even when the overall verdict is partial. Compare the roll-up with the recorded overall verdict and investigate any discrepancy without rewriting the historical assessment.
-
-A04 records attribution as partially supported, revenue magnitude as supported and clinic count as not supported. The overall verdict is partially supported. The mapping awaits individual review. B09's proposed split is in the handoff and has no assigned subclaim judgments.
+[The surrogacy case](docs/INVESTIGATIONS.md#a04--the-missing-evidence-surrogacy-in-india) separates attribution, revenue, and clinic count. The original assessment judged them partially supported, supported, and not supported, respectively. Its mapping awaits individual review. [The Wikipedia reliability case](docs/INVESTIGATIONS.md#b09--reliability-of-wikipedia) has three subclaims with no individual verdicts. Its original overall verdict remains separate.
 
 ## Evidence and uncertainty
 
-Quote the smallest relevant passage verbatim. Record the source ID and its role as decisive, contradicting, nearest topical or context. Link supporting passages to the relevant subclaims. A subclaim judgment can also cite an evidence item that explains a contradiction or lack of support.
+### Find and document evidence
 
-For public sharing, use `locator_only` when withholding source quotations. Retain the source ID and recorded location and set `passage_text` to null. A locator identifies what an assessor used. It still requires individual review before the assessment can serve as a reference. Label any public claim paraphrase `public_summary`.
+Record the source and the smallest relevant passage. Give the page, section, paragraph, and line where available. In the research record, quote the passage verbatim. Keep the original location wording and preserve a shared location when it applies to multiple passages. Link each evidence item to the relevant subclaims or judgments.
 
-Record page, section, paragraph and line where available. Keep the original location in `raw` and use null for missing or inapplicable components. If the report gives a shared location for multiple passages, preserve that shared location. For an unsuccessful full-source search without a passage, use `none_found_after_search` with a search note. Leave unknown search details unrecorded.
+Identify the role of each passage. It might settle a judgment, directly conflict with the claim, provide context, or simply be the closest relevant material you found. A subclaim judgment can cite an item that explains a contradiction or lack of support.
 
-Record the Wikipedia context used and keep confidence and uncertainty separate from the verdict. High means you expect a second assessor to reach the same conclusion. Medium allows a reasonable difference in interpretation. Low reflects unclear or incomplete evidence. Preserve the original confidence and uncertainty text from the Claim Verification Report.
+### Record access and context
+
+Record access for each source and whether each assessment had enough material to judge. A different route to the same source may let you complete the check. If the source is inaccessible or the material is insufficient, explain the limitation and leave the verdict unset. If you read enough to judge that the source gives no basis for the claim, **Not supported** may apply. [The Curly Girl Method case](docs/INVESTIGATIONS.md#a08--curly-girl-method) includes differing historical judgments about the material available.
+
+Keep the Wikipedia context you used with the assessment. Use a labeled **Claim summary** for public paraphrases and a labeled **Evidence summary** for explanatory paraphrases. Where quotation rights are unresolved, retain the citation and passage location. See the [attribution notice](NOTICE.md).
+
+## Verdicts
+
+Apply the first applicable rule to each subclaim. Check quantities, dates, who made an estimate, the places or groups involved, and whether a statement implies cause and effect. [The farming case](docs/INVESTIGATIONS.md#a03--extensive-farming) illustrates how evidence about the past can differ from a claim about current practice.
+
+| Verdict | What the cited source establishes |
+| --- | --- |
+| Contradicted | It directly conflicts with the statement. |
+| Supported | It establishes the statement’s meaning, including its substantive details. |
+| Partially supported | It establishes part of the statement or a weaker, narrower, or differently attributed version. |
+| Compatible but unconfirmed | It gives a basis for a cautious inference without directly confirming the statement. |
+| Not supported | It gives no basis for the statement and no directly conflicting evidence. |
+
+### Combine subclaim verdicts
+
+Keep the individual judgments and their evidence alongside the overall verdict. Once all subclaims have verdicts, apply the first rule that fits:
+
+1. If all are **Supported**, use **Supported**.
+2. Otherwise, if any is **Supported** or **Partially supported**, use **Partially supported**.
+3. Otherwise, if any is **Compatible but unconfirmed**, use **Compatible but unconfirmed**.
+4. Otherwise, if any is **Contradicted**, use **Contradicted**.
+5. Otherwise, use **Not supported**.
+
+When support and contradiction coexist, retain and flag the contradicted subclaim even if the overall verdict is partial. The evaluator reports that flag from the recorded label. Investigate discrepancies between the combined result and a historical overall verdict while preserving the historical assessment.
+
+## Confidence and uncertainty
+
+Confidence is separate from the verdict. **High** means you expect a second assessor to reach the same conclusion. **Medium** allows reasonable differences in interpretation. **Low** reflects unclear or incomplete evidence. Describe what might change the judgment in the uncertainty note. Preserve the original confidence and uncertainty text from the *Claim Verification Report*.
+
+## Read an assessment
+
+Check who made it, which source and passage it uses, what its verdict applies to, and what the assessor says remains uncertain. The five original human judgments still await independent review. Historical AI assessments show how other systems responded and cannot serve as reference assessments.
 
 ## Independent review and adjudication
 
-Write and save your assessment before seeing other judgments. Record exposure to other human and AI assessments where known. Use `human_original`, `human_independent_review` or `ai_generated`, and add a new assessment for each review.
+Save your own assessment before seeing other judgments, and record any known exposure to human or AI assessments. Add each review separately. Compare verdicts, subclaims, evidence, and context. Keep disagreements and their reasons visible. If reviewers reach agreement or a decision is made to resolve the disagreement, document that result and its rationale separately. Mark open disagreements as unresolved.
 
-Compare labels, subclaim judgments, evidence and context. Preserve disagreements and record their causes. Document the agreed or adjudicated result and its rationale separately. Use `contested_unresolved` when a disagreement remains open.
+A single human assessment can serve as a provisional reference after individual confirmation of its evidence and annotations. For a compound reference, confirm its subclaim judgments and resolve any discrepancy in the combined verdict before scoring. Approval of the method and approval of a particular reference are separate decisions.
 
-A single human assessment can serve as a provisional reference after its evidence and annotations are individually confirmed. For a compound reference, confirm its subclaim judgments and resolve roll-up discrepancies before scoring. Approval of the rubric applies to the method. Approval of a reference applies to a specific assessment. AI assessments are comparison material and always have `reference_eligible: false`. Preserve explicit abstentions and leave unlabeled historical responses unmapped.
+## Technical conventions and special cases
+
+- **Verdict keys in table order:** `contradicted`, `supported`, `partially_supported`, `compatible_not_confirmed`, `not_supported`.
+- **Assessability:** Use `assessable` when there is enough material. Use `source_inaccessible`, `source_insufficient`, or `needs_review` for the corresponding limitation, with a null verdict. An assessable historical output with no explicit verdict can use the `needs_review` verdict placeholder. Keep explicit abstentions and leave unlabeled historical responses unmapped.
+- **Evidence:** Use `decisive`, `contradicting`, `nearest_topical`, or `context` for passage roles. Retain the original location in `raw` and use null for unknown or inapplicable parts. When withholding a quotation, use `locator_only`, keep its source ID and location, and set `passage_text` to null. A locator still requires individual review for reference use. Use `public_summary` for public claim paraphrases. When a full-source search finds no passage, use `none_found_after_search` with a search note and leave unknown details unrecorded.
+- **Review:** Use `human_original`, `human_independent_review`, or `ai_generated` to identify the assessment. AI assessments always have `reference_eligible: false`. Use `contested_unresolved` for an unresolved disagreement.
+
+See the [Data Dictionary](docs/DATA_DICTIONARY.md) for field requirements and the [Technical Guide](docs/TECHNICAL.md) for checks.

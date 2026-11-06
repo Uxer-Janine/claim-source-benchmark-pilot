@@ -1,10 +1,10 @@
 # Try claim–source verification in five minutes
 
-[Back to the library](../README.md) · [Give feedback](../CONTRIBUTING.md)
+**Prefer to play? [Open Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)** to sort evidence and file a deduction in the surrogacy investigation.
 
-A **claim** is a statement to check. A **cited source** is the work it points to. **Evidence** is the part of that work you can use to assess the statement.
+In this written lesson, you’ll work through an example, check another claim on your own, and compare your reasoning with the documented assessment. You can use the same steps whenever you want to check a Wikipedia citation.
 
-Ask **“Does this source support the claim?”** To answer **“Is the claim true?”** you may need other evidence. If a source leaves out a detail, you can say it does not support that detail without concluding the detail is false.
+A **claim** is a statement to check. Its **cited source** is the work it points to. **Evidence** is the part of that work that bears on the claim. Ask what this source supports. Deciding whether the claim is true may require other evidence.
 
 The claims and evidence below are summaries. Follow the source links to read the passages in context. If a publisher blocks access, you can continue the lesson with the evidence summaries.
 
@@ -13,15 +13,15 @@ The claims and evidence below are summaries. Follow the source links to read the
 **Learn to compare an approximate claim with an average.**
 
 - **Claim summary.** Young American pikas open their eyes at about nine days old.
-- **Find the evidence.** In *Ontogeny and reproduction*, page 4, paragraph 6, line 3, the paper gives an average age of nine days and credits earlier work. [Open the paper at page 4](https://academic.oup.com/mspecies/article-pdf/doi/10.2307/3504319/8071137/352-1.pdf#page=4).
+- **Evidence summary.** In *Ontogeny and reproduction*, page 4, paragraph 6, line 3, the paper gives an average age of nine days and credits earlier work. [Open the paper at page 4](https://academic.oup.com/mspecies/article-pdf/doi/10.2307/3504319/8071137/352-1.pdf#page=4).
 - **Compare.** An average gives a typical age. “About nine days” leaves room for individual variation, so the source backs the claim’s wording.
-- **Documented assessment.** **Supported**, with high confidence. Janine noted that the paper credits an earlier study and that further context could affect the assessment.
+- **Documented assessment.** **Supported**, with high confidence. Janine noted that the paper credits an earlier study and that further context could affect the assessment. It awaits independent review.
 
 ## A04 · Surrogacy in India
 
 **Practice checking who made an estimate and what the numbers mean.**
 
-The claim summary attributes an estimate of more than US$2 billion in annual surrogacy revenue to industry groups and describes India as having thousands of IVF clinics.
+**Claim summary.** Industry groups estimated more than US$2 billion in annual surrogacy revenue, and India had thousands of IVF clinics.
 
 Read the paragraph in *Background* that mentions the Confederation of Indian Industry. The report locates it on page 2, paragraph 3, line 1. [Open Hibino’s article](https://link.springer.com/article/10.1186/s13010-023-00130-y).
 
@@ -32,7 +32,7 @@ Before revealing the assessment:
 1. Check how many organizations the passage names.
 2. Does the estimate exceed US$2 billion?
 3. Does the passage say there were thousands of clinics?
-4. Choose a verdict from the [verdict key](../README.md#what-the-verdicts-mean). Write one sentence explaining which details the source supports and which remain uncertain.
+4. Choose a verdict from the [verdict key](../annotation-guidelines.md#verdicts). Write one sentence explaining which details the source supports and which remain uncertain.
 
 <details>
 <summary>Reveal Janine’s documented assessment</summary>
@@ -45,11 +45,13 @@ Before revealing the assessment:
 | Revenue | Supported | US$2.3 billion is more than US$2 billion. |
 | Clinic count | Not supported | The passage discusses clinics that offer surrogacy programs. It does not establish a count in the thousands. |
 
-Janine noted that wording about industry groups and clinic numbers leaves room for interpretation and that more context could change her assessment. If you reached a different verdict, compare which detail drove your decision and what evidence would change it. The documented assessment still awaits individual review.
+Janine noted that wording about industry groups and clinic numbers leaves room for interpretation and that more context could change her assessment. The documented assessment still awaits independent review.
 
 [Inspect the structured A04 record](../records/pilot-a04.json)
 
 </details>
+
+**Reflect.** Which detail mattered most to your verdict? What additional evidence would make you revise your reasoning?
 
 ## Explore another case
 
@@ -73,4 +75,4 @@ Try these in order. Read the source and note the evidence before opening the cas
 
 **Original overall assessment:** Partially supported, with medium confidence. This applies to the full claim. The notes above were added later, and none of the three subclaims has an individual verdict.
 
-[Browse all five case files](../records/) · [Tell us what was confusing](../CONTRIBUTING.md)
+[Explore the five case summaries](../docs/INVESTIGATIONS.md) · [Share feedback](../CONTRIBUTING.md) · [Back to the library](../README.md)

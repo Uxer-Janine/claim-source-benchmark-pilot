@@ -1,19 +1,20 @@
-# Give feedback or contribute
+# Share Feedback or Contribute
 
-A GitHub **issue** is a public discussion thread for a question, correction, or suggestion. You can read the lesson without an account. To post an issue, sign in to a free GitHub account.
+[Open a GitHub issue](https://github.com/Uxer-Janine/claim-source-benchmark-pilot/issues/new). Include the page or case ID and enough detail for someone else to follow your report.
 
-1. [Open a new issue](https://github.com/Uxer-Janine/claim-source-benchmark-pilot/issues/new).
-2. Add a short title, such as **A04: I couldn’t find the evidence paragraph**.
-3. Say which page, step, or case you were using, what you expected, and what you found confusing or incorrect. If you’re suggesting a correction, include a source link or passage location where possible.
-4. Select **Submit new issue** or **Create** to post. Keep personal information out of the public thread.
+| What you want to do | What to include |
+| --- | --- |
+| Report confusion or a broken link | The heading, step, or link you tried, what happened, and what you expected. |
+| Suggest a correction | The exact detail to change, your proposed correction, and a citation or passage location. |
+| Propose a new case | A Wikipedia revision link, the claim, its cited source, and why the case would be useful to check. |
+| Contribute code or documentation | Describe the change in an issue or pull request. Run the [relevant checks](docs/TECHNICAL.md#run-the-checks) when editing records or tools. |
+
+Keep private material and quotations with unresolved reuse rights out of public issues. Citations and passage locations are enough to identify the evidence.
 
 ## Submit an independent assessment
 
-1. Read the claim and cited source before opening the existing assessment.
-2. Record the case ID, source link, passage location, verdict, and reasoning. Say what you are uncertain about and whether you had seen another assessment.
-3. For a compound claim, explain what the source supports for each part. If you could not access enough of the source, say what you could access.
-4. Open an issue. Use citations and locations for passages whose reuse rights are unclear.
+1. Read the claim and cited source **before opening the existing verdict or reasoning**.
+2. Save your own judgment first. Include the case ID, source link, passage location, verdict if you could reach one, reasoning, confidence, and uncertainty. For a claim with several checkable details, record what the source supports for each. If access was limited, say what you could read.
+3. Mention any prior exposure to another assessment. Open an issue with your assessment. If you disagree with an existing judgment, explain which evidence or interpretation led you to a different view.
 
-Janine’s **documented assessment** records her original reasoning. Your **independent review** is a separate entry pending review. A **reviewed reference** requires confirmed evidence and a documented review decision. If reviewers disagree, keep their reasoning visible and record any later resolution separately.
-
-For a new case, include a Wikipedia revision link, the claim, and its cited source. For a correction, explain what should change and how you checked it. See the [annotation guidelines](annotation-guidelines.md) and [Maintainer Guide](docs/MAINTAINER.md).
+Independent assessments are recorded separately and await review. Review decisions document agreement or disagreement without replacing the original assessment. See [How to Assess a Claim](annotation-guidelines.md) or return to the [library](README.md).

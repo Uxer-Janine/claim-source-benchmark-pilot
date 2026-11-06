@@ -1,6 +1,6 @@
 # Maintainer Guide
 
-For the people who review contributions, edit case files, and prepare releases. For feedback or a first assessment, start with [Contributing](../CONTRIBUTING.md).
+For maintainers who review contributions, edit case files, and prepare releases. For feedback or a first assessment, start with [Share Feedback or Contribute](../CONTRIBUTING.md). See the [public roadmap](NEXT_STEPS.md) for development priorities.
 
 ## Update a case
 
