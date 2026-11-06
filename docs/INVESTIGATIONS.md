@@ -36,6 +36,8 @@ Try the check before opening each assessment. These are Janine Makorre’s origi
 
 **Partially supported · Medium confidence.** The source names one organization, so the plural attribution has partial support. The amount clears the threshold. The clinic count is unsupported by the passage. The original assessment notes that the wording and additional context could affect the judgment.
 
+![A04 splits into three checks. Attribution is partially supported, revenue is supported, and the clinic count is not supported. The overall assessment is Partially supported with medium confidence and awaits independent review.](../assets/illustrations/a04-compound-claim.svg)
+
 </details>
 
 ## A03 · Extensive farming

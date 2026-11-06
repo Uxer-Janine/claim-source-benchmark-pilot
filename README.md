@@ -26,6 +26,8 @@ Wikipedia articles often point to sources so readers can check what they say. So
 
 A claim can be true even when the cited source fails to support it. Finding out whether it is true may require other evidence.
 
+![Four linked steps lead from a Wikipedia claim to its cited source, relevant evidence, and an assessment. Deciding whether the claim is true may require other evidence.](assets/illustrations/verification-chain.svg)
+
 ## Words you’ll see
 
 - **Claim** — A statement you can check, such as an approximate age.
@@ -71,6 +73,8 @@ A04 is the only playable Evidence Desk investigation in the current release. The
 - **Wikipedia contributors:** Use the [farming case](docs/INVESTIGATIONS.md#a03--extensive-farming) to practice checking time and place before suggesting a narrower sentence or a stronger citation.
 - **Researchers:** Compare the recorded human and AI reasoning in the [case files](records/), or use the [review method](annotation-guidelines.md#independent-review-and-adjudication) to document an independent judgment.
 - **Developers:** Use the [Technical Guide](docs/TECHNICAL.md) to validate the JSON files and run the example evaluation.
+
+![Five paths through the same library. Learners practice, educators teach, Wikipedia contributors check citations, researchers compare reasoning, and developers validate records.](assets/illustrations/audience-paths.svg)
 
 ## Project status and roadmap
 

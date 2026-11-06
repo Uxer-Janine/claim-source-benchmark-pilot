@@ -8,12 +8,16 @@ Check what the cited source establishes. A statement might be true for other rea
 
 A **claim** is the statement being checked. Its **cited source** is the work it points to, and **evidence** is the specific part of that work relevant to the check. A **subclaim** is an independently checkable part of a larger claim. An **assessment** records the evidence, reasoning, verdict, confidence, and uncertainty. A **reference assessment** is a human assessment confirmed for use in evaluation. See the [beginner glossary](README.md#words-youll-see) for examples.
 
+![A fictional trail claim has two subclaims, length and shade. A park survey measures the length but leaves shade open. The illustrative verdict is Partially supported, with high confidence in that judgment.](assets/illustrations/definitions-example.svg)
+
 ## Work through the claim
 
 1. Read the claim and note the article context you used.
 2. Separate the details that can be checked independently.
 3. Locate the evidence and compare it with each detail.
 4. Record the verdict, reasoning, and limits. Save your independent assessment before reading someone else’s.
+
+![Seven steps from identifying the claim through independent review. Record uncertainty with the verdict and confidence. If you cannot access enough of the source to judge, record that limit and leave the verdict unset.](assets/illustrations/assessment-workflow.svg)
 
 ## Compound claims
 
@@ -63,9 +67,15 @@ When support and contradiction coexist, retain and flag the contradicted subclai
 
 Confidence is separate from the verdict. **High** means you expect a second assessor to reach the same conclusion. **Medium** allows reasonable differences in interpretation. **Low** reflects unclear or incomplete evidence. Describe what might change the judgment in the uncertainty note. Preserve the original confidence and uncertainty text from the *Claim Verification Report*.
 
+![Five verdicts describe source support or conflict. Insufficient source material leaves the verdict unset. High, medium, and low confidence describe how sure the assessor is, separately from the verdict.](assets/illustrations/verdicts-confidence.svg)
+
 ## Read an assessment
 
 Check who made it, which source and passage it uses, what its verdict applies to, and what the assessor says remains uncertain. The five original human judgments still await independent review. Historical AI assessments show how other systems responded and cannot serve as reference assessments.
+
+The surrogacy assessment illustrates how these fields fit together. Its source citation and passage location lead back to Hibino’s article, while its revenue judgment applies to just one subclaim. The overall verdict is **Partially supported**, with **medium confidence** and review still pending.
+
+![Annotated A04 assessment showing the claim summary, source citation, passage location, revenue subclaim judgment, overall verdict, confidence, reasoning, and review status.](assets/illustrations/assessment-card.svg)
 
 ## Independent review and adjudication
 
