@@ -16,10 +16,11 @@ const files = [
   { id: "a04-sc3", title: "Where is the clinic count?", clue: "The passage describes IVF clinics across India that offer surrogacy programs without giving a total." }
 ];
 
-const readings = {
-  backs: "The passage backs this detail",
-  narrower: "The passage backs a narrower detail",
-  missing: "This detail needs more evidence"
+const lanes = {
+  unsorted: "Unsorted",
+  backs: "Supported",
+  narrower: "Narrower support",
+  missing: "Needs more evidence"
 };
 const verdicts = {
   supported: "Supported",
@@ -164,13 +165,11 @@ function evidenceFile(file, index, update) {
   const status = el("span", state.found[file.id] ? "Opened" : "Unopened", "status");
   summary.append(el("span", `0${index + 1}`, "file-number"), el("span", file.title), status);
   const body = el("div", undefined, "file-body");
-  const choice = selectInput(`reading-${file.id}`, "What does this evidence establish?", readings, state.readings[file.id]);
-  choice.select.disabled = state.filed;
   body.append(
     el("p", "Evidence summary", "eyebrow"),
     el("p", file.clue),
     el("p", `Claim detail · ${claimDetail(file.id)}`, "muted"),
-    choice.field
+    el("p", "Classify this detail using its card on the investigation board.", "muted")
   );
   disclosure.append(summary, body);
   disclosure.addEventListener("toggle", () => {
@@ -180,17 +179,123 @@ function evidenceFile(file, index, update) {
     save();
     update();
   });
-  choice.select.addEventListener("change", () => {
-    state.readings[file.id] = choice.select.value;
+  return disclosure;
+}
+
+function investigationBoard(update) {
+  const board = el("section", undefined, "board");
+  const progress = el("p", "", "status");
+  const announcement = el("p", "", "sr-only");
+  const grid = el("div", undefined, "lanes");
+  let selected;
+  let moved;
+  progress.setAttribute("role", "status");
+  announcement.setAttribute("role", "status");
+  board.append(
+    el("h2", "Investigation board"),
+    el("p", state.filed
+      ? "Your board is filed. Revise your deduction to move cards again."
+      : "Open a file to add its card. Drag cards between categories, or select a card and use a Move here button.", "muted"),
+    progress, announcement, grid
+  );
+
+  function move(id, category) {
+    if (state.filed || !state.found[id] || !Object.hasOwn(lanes, category)) return;
+    if (category === "unsorted") delete state.readings[id];
+    else state.readings[id] = category;
+    selected = undefined;
+    moved = id;
     save();
     update();
-  });
-  return disclosure;
+    announcement.textContent = `${files.find((file) => file.id === id).title} Moved to ${lanes[category]}.`;
+    grid.querySelector(`[data-card="${id}"]`).focus({ preventScroll: true });
+  }
+
+  function refresh() {
+    const discovered = files.filter((file) => state.found[file.id]).length;
+    const examined = files.filter((file) => state.readings[file.id]).length;
+    const text = `${discovered}/3 files opened · ${examined}/3 details examined${examined === files.length && !state.filed ? " · Deduction ready" : ""}`;
+    if (progress.textContent !== text) progress.textContent = text;
+    grid.replaceChildren(...Object.entries(lanes).map(([category, name]) => {
+      const lane = el("section", undefined, "lane");
+      lane.dataset.category = category;
+      const heading = el("h3", name);
+      heading.id = `lane-${category}`;
+      lane.setAttribute("aria-labelledby", heading.id);
+      lane.append(heading);
+      const inLane = files.filter((file) => state.found[file.id] && (state.readings[file.id] || "unsorted") === category);
+      if (!inLane.length) lane.append(el("p", "No cards yet", "empty-lane"));
+      for (const file of inLane) {
+        let pointerStart;
+        let ghost;
+        let target;
+        let suppressClick = false;
+        const card = button(file.title, () => {
+          if (suppressClick) return;
+          selected = selected === file.id ? undefined : file.id;
+          refresh();
+          grid.querySelector(`[data-card="${file.id}"]`).focus({ preventScroll: true });
+        }, `evidence-card${moved === file.id ? " just-moved" : ""}`);
+        card.dataset.card = file.id;
+        card.disabled = state.filed;
+        card.setAttribute("aria-pressed", String(selected === file.id));
+        card.addEventListener("pointerdown", (event) => {
+          if (state.filed || event.button !== 0 || !event.isPrimary) return;
+          pointerStart = { x: event.clientX, y: event.clientY, id: event.pointerId };
+          card.setPointerCapture(event.pointerId);
+        });
+        card.addEventListener("pointermove", (event) => {
+          if (pointerStart?.id !== event.pointerId) return;
+          if (!ghost) {
+            if (Math.hypot(event.clientX - pointerStart.x, event.clientY - pointerStart.y) < 8) return;
+            ghost = el("div", file.title, "evidence-card drag-ghost");
+            ghost.setAttribute("aria-hidden", "true");
+            ghost.style.width = `${card.offsetWidth}px`;
+            document.body.append(ghost);
+            card.classList.add("dragging");
+          }
+          ghost.style.left = `${Math.max(0, Math.min(event.clientX + 12, innerWidth - ghost.offsetWidth))}px`;
+          ghost.style.top = `${Math.max(0, Math.min(event.clientY + 12, innerHeight - ghost.offsetHeight))}px`;
+          const next = document.elementFromPoint(event.clientX, event.clientY)?.closest(".lane");
+          if (next === target) return;
+          target?.classList.remove("drop-target");
+          target = next?.dataset.category !== category ? next : undefined;
+          target?.classList.add("drop-target");
+        });
+        function endDrag(event) {
+          if (pointerStart?.id !== event.pointerId) return;
+          pointerStart = undefined;
+          if (!ghost) return;
+          ghost.remove();
+          ghost = undefined;
+          card.classList.remove("dragging");
+          const destination = target?.dataset.category;
+          target?.classList.remove("drop-target");
+          target = undefined;
+          suppressClick = true;
+          setTimeout(() => { suppressClick = false; }, 0);
+          if (event.type === "pointerup" && destination) move(file.id, destination);
+        }
+        card.addEventListener("pointerup", endDrag);
+        card.addEventListener("pointercancel", endDrag);
+        card.addEventListener("lostpointercapture", endDrag);
+        lane.append(card);
+      }
+      if (selected && (state.readings[selected] || "unsorted") !== category) {
+        const action = button("Move here", () => move(selected, category), "secondary move-here");
+        action.setAttribute("aria-label", `Move selected card to ${name}`);
+        lane.append(action);
+      }
+      return lane;
+    }));
+    moved = undefined;
+  }
+  return { board, refresh };
 }
 
 function deduction(onFile) {
   const section = el("section", undefined, "card deduction");
-  const pending = el("p", "Open the three files and record what each one establishes to unlock your deduction.", "muted");
+  const pending = el("p", "Move all three cards into evidence categories to unlock your deduction.", "muted");
   const form = el("form");
   const verdict = selectInput("verdict", "Your verdict on the whole claim", verdicts, state.verdict);
   verdict.select.required = true;
@@ -276,33 +381,20 @@ function investigation() {
     link("Return to the mission desk", "#missions"),
     el("p", "A04 · Starter mission", "eyebrow"),
     title("h1", "The Missing Evidence"),
-    el("p", "An estimate has three details to check. Open each file, decide what the passage establishes, then file a verdict for the full claim.", "intro")
+    el("p", "Open three files, move their cards into evidence categories, then file a verdict for the full claim.", "intro")
   );
   const claim = el("section", undefined, "card claim");
   claim.append(el("h2", "The claim · Public summary"), el("p", record.claim.text));
   const layout = el("div", undefined, "board-layout");
   const stack = el("section");
-  const board = el("section", undefined, "board");
-  const progress = el("p", "", "status");
-  progress.setAttribute("role", "status");
-  const entries = el("ol");
-  board.append(el("h2", "Investigation board"), progress, entries);
+  const { board, refresh } = investigationBoard(update);
   const filing = deduction(() => {
     render(false);
     document.querySelector("#filed").focus();
   });
   function update() {
-    const discovered = files.filter((file) => state.found[file.id]).length;
     const examined = files.filter((file) => state.readings[file.id]).length;
-    const text = `${discovered}/3 files opened · ${examined}/3 details examined${examined === files.length && !state.filed ? " · Deduction ready" : ""}`;
-    if (progress.textContent !== text) progress.textContent = text;
-    entries.replaceChildren(...files.map((file) => {
-      const item = el("li");
-      item.append(el("strong", file.title), el("span", state.readings[file.id]
-        ? readings[state.readings[file.id]]
-        : state.found[file.id] ? "Open question · Add your reading" : "Unresolved · File unopened"));
-      return item;
-    }));
+    refresh();
     filing.pending.hidden = examined === files.length;
     filing.form.hidden = examined !== files.length;
   }
