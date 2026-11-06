@@ -13,7 +13,7 @@
     "url": null
   },
   "claim": {
-    "text": "Some regions raise livestock using seasonal movement or herding systems that are wholly or partly nomadic.",
+    "text": "Livestock management in some regions may involve seasonal practices or herding that is wholly or partly nomadic.",
     "text_status": "public_summary",
     "text_note": "Public paraphrase. The original Wikipedia revision remains unrecorded.",
     "location_in_article": null,
@@ -22,7 +22,7 @@
   "sub_claims": [
     {
       "sub_claim_id": "a03-sc1",
-      "text": "Some regions raise livestock using seasonal movement or herding systems that are wholly or partly nomadic.",
+      "text": "Livestock management in some regions may involve seasonal practices or herding that is wholly or partly nomadic.",
       "split_type": "none"
     }
   ],

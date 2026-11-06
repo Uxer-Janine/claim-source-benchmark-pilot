@@ -21,9 +21,22 @@
   },
   "sub_claims": [
     {
-      "sub_claim_id": "b09-sc1",
-      "text": "Wikipedia permits editing anonymously without asking for identification or email. A study attributed to Dartmouth College in 2009 reportedly found, unexpectedly, that anonymous editors ranked among the leading producers of valid material on English Wikipedia.",
-      "split_type": "none"
+      "sub_claim_id": "b09.a",
+      "text": "Wikipedia permits anonymous editing.",
+      "split_type": "other",
+      "note": "Anonymous Editing. Later evidence review, with no subclaim verdict assigned: the study describes anonymous participation in its sample, which provides context but does not establish Wikipedia's editing policy."
+    },
+    {
+      "sub_claim_id": "b09.b",
+      "text": "Wikipedia editors do not have to provide identification or an email address.",
+      "split_type": "other",
+      "note": "Identification Requirements. Later evidence review, with no subclaim verdict assigned: the cited study does not establish either the identification or email requirement."
+    },
+    {
+      "sub_claim_id": "b09.c",
+      "text": "A study attributed to Dartmouth College in 2009 reportedly found, unexpectedly, that anonymous editors ranked among the leading producers of valid material on English Wikipedia.",
+      "split_type": "other",
+      "note": "Research Findings on Anonymous Contributions. Later evidence review, with no subclaim verdict assigned: the citation establishes the publication year. The recorded abstract passages do not establish Dartmouth College attribution or an English Wikipedia sample. They discuss the reliability of one-time anonymous contributions and do not establish relative contribution volume."
     }
   ],
   "sources": [
@@ -74,10 +87,8 @@
             "line": "4, 5",
             "raw": "Page: NA | Section: Abstract | Paragraph: not recorded | Line: 4, 5"
           },
-          "supports_sub_claims": [
-            "b09-sc1"
-          ],
-          "note": "The report gives a shared location for both passages."
+          "supports_sub_claims": [],
+          "note": "The report gives a shared location for both passages. This passage was linked to the whole claim in the original assessment. No separate support link was assigned for the later split."
         },
         {
           "evidence_id": "b09-h1-ev2",
@@ -227,7 +238,7 @@
   "needs_review_items": [
     {
       "field": "sub_claims",
-      "reason": "Review the proposed split in docs/HANDOFF.md. Compare the claim's English Wikipedia scope with publisher note 5 and keep reliability separate from productivity."
+      "reason": "Review the evidence gaps for the three recorded subclaims before assigning individual verdicts. Keep the original overall assessment separate."
     },
     {
       "field": "article.revision_id",
