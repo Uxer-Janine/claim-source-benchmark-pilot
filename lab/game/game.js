@@ -1,8 +1,8 @@
 "use strict";
 
 const missions = [
-  { id: "A01", title: "Guided investigation", skill: "Compare an average with an approximate age.", track: "Starter" },
   { id: "A04", title: "The Missing Evidence", skill: "Follow an estimate. Find what the source leaves unresolved.", track: "Starter" },
+  { id: "A01", title: "Guided investigation", skill: "Compare an average with an approximate age.", track: "Starter" },
   { id: "A03", title: "Time and Context", skill: "Check whether evidence applies to the right place and period.", track: "Optional" },
   { id: "A08", title: "The Relevance Test", skill: "Separate a related topic from evidence that answers the question.", track: "Optional" },
   { id: "B09", title: "The Open Investigation", skill: "Separate editing rules from what a study actually measured.", track: "Optional" }
@@ -104,13 +104,37 @@ function selectInput(id, label, choices, value) {
   return { field, select };
 }
 
+function welcome() {
+  const section = el("section", undefined, "welcome");
+  const intro = el("div", undefined, "welcome-intro");
+  const steps = el("ol", undefined, "welcome-steps");
+  for (const [name, description] of [
+    ["Open the evidence", "Uncover what the cited source says."],
+    ["Sort the clues", "Move each card to show what the evidence supports."],
+    ["File a deduction", "Explain your judgment, then compare the reasoning."]
+  ]) {
+    const item = el("li");
+    item.append(el("strong", name), el("span", description));
+    steps.append(item);
+  }
+  intro.append(
+    el("p", "Wikipedia claim–source investigations", "eyebrow"),
+    title("h1", "Evidence Desk"),
+    el("p", "A Wikipedia claim makes an estimate. What does its source actually back up? Follow the clues and make your own judgment.", "welcome-lead"),
+    link("Start investigating", "#missions", "button"),
+    el("p", "Playable now · A04 The Missing Evidence", "status welcome-status")
+  );
+  section.append(intro, steps);
+  return section;
+}
+
 function missionGrid() {
   const hero = el("section", undefined, "hero");
   hero.append(
     el("p", "Wikipedia case files", "eyebrow"),
     title("h1", "The mission desk"),
-    el("p", "Open evidence files, connect them to claim details, and file your own deduction. Check what the cited source supports.", "intro"),
-    el("p", state.filed ? "Playable mission complete · 1 of 1" : "One playable mission · Four mission previews", "status")
+    el("p", "Start with A04, the playable investigation. The other four case files are previews.", "intro"),
+    el("p", state.filed ? "A04 filed · Reopen anytime" : "One playable mission · Four mission previews", "status")
   );
   const grid = el("div", undefined, "grid");
   for (const mission of missions) {
@@ -134,10 +158,11 @@ function preview(mission) {
     el("p", `${mission.id} · Mission preview`, "eyebrow"),
     title("h1", mission.title),
     el("p", mission.skill),
-    el("p", "This mission is available as a lesson in the original lab. The game version is planned.", "muted"),
-    link("Open the original learning lab", "../", "button"),
+    el("p", "The game version is planned. You can explore this case in the Markdown lesson today.", "muted"),
+    link("Investigate A04 now", "#A04", "button"),
+    link("Return to the mission desk", "#missions", "button secondary"),
     el("p"),
-    link("Return to the mission desk", "#missions")
+    link("Read the Markdown lesson", document.querySelector(".topbar nav a[href^='https:']").href)
   );
   return section;
 }
@@ -407,7 +432,8 @@ function investigation() {
 function render(focus = true) {
   const id = location.hash.slice(1);
   const mission = missions.find((item) => item.id === id);
-  view.replaceChildren(...(id === "A04" ? investigation() : mission ? [preview(mission)] : missionGrid()));
+  view.replaceChildren(...(id === "A04" ? investigation()
+    : mission ? [preview(mission)] : id === "missions" ? missionGrid() : [welcome()]));
   if (focus) view.querySelector("h1").focus();
 }
 
