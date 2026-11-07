@@ -2,6 +2,8 @@
 
 Use this guide to check case files, run tests, or reproduce the example evaluation. The [library homepage](../README.md) links to the learning paths and case findings.
 
+The validator checks whether records contain the required information and follow the expected structure. It cannot confirm whether a human judgment is correct. The evaluator compares predictions with reviewed human judgments only when the reference requirements are met. An abstention means a system withheld judgment.
+
 | File | Who uses it and when |
 | --- | --- |
 | [Schema](../schema/claim.schema.json) | Data contributors use these rules when adding or changing a record. Read the [Data Dictionary](DATA_DICTIONARY.md) for field meanings. |

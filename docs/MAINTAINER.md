@@ -11,6 +11,8 @@ Use this guide to review changes, edit case files, or prepare a release. Start w
 
 ## Review and release
 
+An automated check can find missing fields and inconsistent references. Confirming the meaning of the evidence requires human review. A reference decision records which human assessments support the judgment used for scoring.
+
 Keep each reference pending until its evidence and annotations are confirmed. Scoring requires agreement or adjudication based on two or more distinct human assessors with confirmed, documented independent assessments. A single-assessor reference remains provisional and unscored. Record the decision or unresolved disagreement separately. Historical AI assessments stay ineligible as references.
 
 Before publishing, review the public files and reachable Git history for sensitive or private material. Check article attribution, source reuse terms, and the [license notices](../NOTICE.md). Keep source citations and locators where quotations cannot be shared. Summarize data changes and review status in release notes.

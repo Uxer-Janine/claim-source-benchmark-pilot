@@ -8,6 +8,8 @@ A **claim** is a statement to check. Its **cited source** is the work it points 
 
 The claims and evidence below are summaries. Follow the source links to read the passages in context. If a publisher blocks access, you can continue the lesson with the evidence summaries.
 
+One sentence can contain several details. **Partial support** means the source establishes only part of a statement or a narrower version. **Uncertainty** records what could change your judgment. You can reach a provisional conclusion and explain what you still need to check.
+
 ## A01 · American pika
 
 **Learn to compare an approximate claim with an average.**

@@ -2,12 +2,16 @@
 
 Use this packet to make your own assessment or invite someone to review a case. Organizers should share this file by itself before sharing the repository, game, or existing assessments. It contains claim summaries, citations, and recorded passage locations. The locations are starting points and can influence which evidence you notice. Follow the source beyond the locator when relevant. The original Wikipedia revisions are unrecorded.
 
+Your job is to check what the cited source supports and explain your reading. Saving your own judgment first helps show where readers agree or interpret evidence differently. Choose a case whose existing assessment you have not seen. Report any earlier exposure to human or AI judgments.
+
+This is the independent-review route. Keep the library, learning activity, case files, and other assessments closed until you have saved your response.
+
 ## Instructions
 
 1. Choose a case. Read the claim summary and cited source before looking for other assessments. Record what you could access and whether you had already seen a human or AI judgment. Use **unknown** if unsure.
 2. Separate details that can be checked independently. Record what the source establishes for each, where you found it, and what remains uncertain. Keep factual truth and support from this citation separate.
 3. Use the verdict key below. If you cannot access enough material to judge, describe the limitation and leave the verdict unset.
-4. Save your response before discussing the case with others. Use a stable reviewer identifier and share through the organizer’s agreed channel. Include citations and locators. Keep private details and quotations with unresolved reuse rights out of your submission.
+4. Save your response before discussing the case with others. Use a stable reviewer identifier and share through the organizer’s agreed channel. Include citations and passage locations. Keep private details and quotations with unresolved reuse rights out of your submission.
 
 | Verdict | Meaning |
 | --- | --- |
@@ -31,6 +35,8 @@ If all subclaims have judgments, record the overall result in this order. All Su
 
 ## Assessment template
 
+Copy these prompts into a document. For each detail, give the source location and explain what it does or does not establish. If the evidence is ambiguous, describe the readings you considered and what would help you decide.
+
 - **Case ID, reviewer identifier, review date**
 - **Prior exposure:** Had you seen another human assessment? Had you seen an AI assessment? Answer yes, no, or unknown for each.
 - **Source access:** Full, partial, unavailable, or unknown. Give the link or version consulted and say what you could read.
@@ -43,7 +49,11 @@ If all subclaims have judgments, record the overall result in this order. All Su
 
 Would you be willing to independently review one Wikipedia claim against its cited source? The attached packet has five options and a short assessment template. Please save your reasoning before opening any existing assessments, and tell me if you have already seen one. A stable reviewer identifier is enough. Please include any access or uncertainty limits and return the completed template through our agreed channel.
 
-After saving your assessment, see the [library overview](../README.md) for project context. The overview reveals the A04 judgment.
+## After saving your assessment
+
+Submit your saved response through the agreed channel. Your review stays separate from the original assessment. A disagreement remains open until a documented decision resolves it. Before scoring, at least two distinct, independently completed human assessments must be confirmed. Any resolution records who decided, when, and why, without overwriting either review.
+
+You can then open the [library overview](../README.md) for project context. It reveals the A04 judgment.
 
 ## Attribution
 

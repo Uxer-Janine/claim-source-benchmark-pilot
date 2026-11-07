@@ -55,6 +55,8 @@ Required fields must appear even when their value is unknown. Use `null` only wh
 
 ## Review status and unresolved questions
 
+A reference is a human judgment considered for scoring predictions. A candidate can be marked eligible for review while still awaiting confirmation. The evaluator also checks the full [reference decision requirements](../annotation-guidelines.md#independent-review-and-adjudication). A field value alone does not approve a case for scoring.
+
 | Field | Meaning and requirement |
 | --- | --- |
 | `reference_eligible`, `review_status` | Required per assessment. Status is `needs_review` or `confirmed`. AI assessments have `reference_eligible: false`. |

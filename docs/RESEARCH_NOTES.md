@@ -4,6 +4,12 @@
 
 Use these notes to find the cited passages and see what can be checked again. The five records each contain one original human assessment and three historical AI entries. See the [library overview](../README.md#what-i-learned-and-what-remains-open) for review and scoring status.
 
+## Questions and approach
+
+I wanted another reader to be able to follow what a citation supports and how I reached a judgment. I selected five examples from my claim-verification report, preserved the original assessments, and recorded the citations and passage locations. I kept later AI responses separate so their reasoning and access limits could be inspected.
+
+The surrogacy example shows why I kept individual claim details visible. The farming and hair-care examples raise questions about context and relevance. These case observations informed the fields for reasoning, uncertainty, source access, and review status. Missing revisions, source access, and incomplete AI-run records limit what another researcher can reproduce.
+
 ## Public evidence map
 
 The public claim summaries and human reasoning come from the *Claim Verification Report*. Each record’s `provenance.entry_id` points to the corresponding report entry. The public JSON retains citations, passage locations, verdicts, and uncertainty. The full report and withheld quotations stay in the private research copy. The Wikipedia links below identify current articles. The original article revisions and URLs used during the exercise were not recorded.
@@ -39,11 +45,17 @@ Janine’s report describes using AI for additional assessment and reflecting on
 
 ## Methodological checks and open decisions
 
+These are rules and questions for future reviewed comparisons. Synthetic evaluator tests check the rules, including disagreement about details despite matching overall verdicts. They do not supply independent assessments of these five cases.
+
+A roll-up is the rule that combines the verdicts on individual details into one overall verdict. A passage location may also be called a locator in the records.
+
 | Topic | Current handling and recommendation |
 | --- | --- |
 | Contradiction in a compound claim | The current roll-up stays in force. A favorable or compatible subclaim can determine the overall label. Always preserve and visibly flag each contradicted subclaim. The evaluator reports it in its unscored diagnostics. Before reporting scored results, consider requiring that flag alongside the overall label. Changing precedence or introducing a new label would require explicit approval. |
 | Partial support | At subclaim level, the source establishes only part of that detail or a weaker version. At overall level, the label can result from the existing roll-up across different subclaim verdicts. Keep both levels visible. |
 | Agreement on applicable subclaims | Scoring requires at least two distinct, identified, independently completed and confirmed human assessments. For agreement, the overall verdict and every applicable subclaim verdict must match on the same breakdown. Differences require documented adjudication. |
-| Locators and source access | For PDFs, give page and section, adding paragraph or line when stable. For webpages, give heading and paragraph or a stable fragment if available. Keep the original locator, and add a verified alternative separately. When access or material is insufficient to judge, record the limitation and leave the verdict unset. **Not supported** applies when enough material was checked and gave no basis for the claim. |
+| Passage locations and source access | For PDFs, give page and section, adding paragraph or line when stable. For webpages, give heading and paragraph or a stable fragment if available. Keep the original location wording, and add a verified alternative separately. When access or material is insufficient to judge, record the limitation and leave the verdict unset. **Not supported** applies when enough material was checked and gave no basis for the claim. |
 
 Historical assessments and the roll-up rule are preserved.
+
+For the next research step, invite fresh assessments through the [Blind Review Kit](BLIND_REVIEW_KIT.md), confirm the source locations, and document unresolved access or interpretation differences. The [Maintainer Guide](MAINTAINER.md#open-review-work) lists the evidence still needing attention.

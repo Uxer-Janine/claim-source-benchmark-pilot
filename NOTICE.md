@@ -1,5 +1,7 @@
 # Attribution and licensing
 
+Use this notice if you reuse code, documentation, or case material. It explains which license applies to each part. The [library overview](README.md) introduces the project.
+
 Janine Makorre prepared the Claim Verification Report and the original human assessments. The [MIT License](LICENSE) covers original project code, schema, and documentation. The data files include separately attributed material and fall outside that grant.
 
 The claim and subclaim fields are public paraphrases of claims recorded from English Wikipedia. Credit goes to the contributors of the articles below, whose page histories are accessible from each article. The paraphrases are shared under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/). The links identify current pages. The exercise revisions remain unrecorded.

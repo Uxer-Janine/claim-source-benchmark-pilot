@@ -6,7 +6,9 @@ Use this guide to check a claim or review someone else’s assessment. Check wha
 
 ## Terms used in an assessment
 
-A **claim** is the statement being checked. Its **cited source** is the work it points to, and **evidence** is the specific part of that work relevant to the check. A **subclaim** is an independently checkable part of a larger claim. An **assessment** records the evidence, reasoning, verdict, confidence, and uncertainty. A **reference assessment** is a human assessment confirmed for use in evaluation. See the [beginner glossary](README.md#words-youll-see) for examples.
+A **claim** is the statement being checked. Its **citation** identifies the source, and **evidence** is the specific part of that source relevant to the check. A **subclaim** is one detail you can check separately. An **assessment** records evidence, reasoning, a verdict, confidence, and uncertainty. A **verdict** labels how the source supports or conflicts with the claim. A **reference assessment** is a human assessment confirmed for use in evaluation under the [review requirements](#independent-review-and-adjudication).
+
+If you plan to review a case independently, use the [Blind Review Kit](docs/BLIND_REVIEW_KIT.md) first. This guide includes existing case judgments.
 
 ![A fictional trail claim has two subclaims, length and shade. A park survey measures the length but leaves shade open. The illustrative verdict is Partially supported, with high confidence in that judgment.](assets/illustrations/definitions-example.svg)
 
@@ -78,6 +80,8 @@ The surrogacy assessment illustrates how these fields fit together. Its source c
 ![Annotated A04 assessment showing the claim summary, source citation, passage location, revenue subclaim judgment, overall verdict, confidence, reasoning, and review status.](assets/illustrations/assessment-card.svg)
 
 ## Independent review and adjudication
+
+An independent review is completed before seeing other judgments. When reviewers disagree, someone must examine and document how the disagreement is resolved. That decision is called adjudication. The requirements below apply before a reference can be used to score predictions.
 
 Save your own assessment before seeing other judgments, and record any known exposure to human or AI assessments. Add each review separately. Compare verdicts, subclaims, evidence, and context. Keep disagreements and their reasons visible. If reviewers reach agreement or a decision is made to resolve the disagreement, document that result and its rationale separately. Mark open disagreements as unresolved.
 

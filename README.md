@@ -26,7 +26,7 @@ I checked the [cited article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10327345/
 | Was the annual estimate above US$2 billion? | Reports an estimate of US$2.3 billion. |
 | Were there thousands of IVF clinics? | The cited passage does not establish this. |
 
-**My recorded assessment:** Partially supported, with medium confidence. The amount is supported, but the citation does not establish every detail. Missing support for the clinic count does not establish that the count is false.
+**My recorded assessment:** Partially supported, with medium confidence, awaiting independent review. Missing support for the clinic count does not establish that the count is false.
 
 ![The surrogacy claim has three checks. Attribution is partially supported, revenue is supported, and the clinic count is not supported. The overall assessment remains provisional.](assets/illustrations/a04-compound-claim.svg)
 

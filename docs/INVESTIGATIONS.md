@@ -6,13 +6,15 @@ Use these case summaries to find the evidence and try a check before revealing t
 
 Try the check before opening each assessment. These are Janine Makorre’s original documented judgments, all awaiting independent review.
 
+Each case links to its source and record. “Not supported” describes the citation’s limits. It does not establish that the claim is false. After reading, an independent reviewer still needs to check the passage, context, confidence, and reasoning. For a review without exposure to the existing judgments, use the [Blind Review Kit](BLIND_REVIEW_KIT.md) instead.
+
 ## A01 · American pika
 
 **Claim summary:** Young American pikas typically first open their eyes at approximately nine days old.
 
 **Evidence summary:** The paper reports an average of nine days and credits earlier work. Find it on page 4, *Ontogeny and reproduction*, paragraph 6, line 3.
 
-[Wikipedia article](https://en.wikipedia.org/wiki/American_pika) · [Cited paper, page 4](https://academic.oup.com/mspecies/article-pdf/doi/10.2307/3504319/8071137/352-1.pdf#page=4) · [Case record](../records/pilot-a01.json)
+[Wikipedia article](https://en.wikipedia.org/wiki/American_pika) · [Smith and Weston, cited paper at page 4](https://academic.oup.com/mspecies/article-pdf/doi/10.2307/3504319/8071137/352-1.pdf#page=4) · [Case record](../records/pilot-a01.json)
 
 <details>
 <summary>Reveal the documented assessment</summary>
@@ -29,7 +31,7 @@ Try the check before opening each assessment. These are Janine Makorre’s origi
 
 **Subclaims to check:** Who made the estimate, whether the amount exceeds US$2 billion, and whether the source gives a clinic count in the thousands.
 
-[Wikipedia article](https://en.wikipedia.org/wiki/Surrogacy_in_India) · [Cited article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10327345/) · [Case record](../records/pilot-a04.json)
+[Wikipedia article](https://en.wikipedia.org/wiki/Surrogacy_in_India) · [Hibino, cited article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10327345/) · [Case record](../records/pilot-a04.json)
 
 <details>
 <summary>Reveal the documented assessment</summary>
@@ -46,7 +48,7 @@ Try the check before opening each assessment. These are Janine Makorre’s origi
 
 **Evidence summary:** The study describes a shift away from partly nomadic herding in Mongolia in the 1960s. The record locates the passage on page 11, paragraph 1, line 2.
 
-[Wikipedia article](https://en.wikipedia.org/wiki/Extensive_farming) · [Cited study](https://doi.org/10.1007/s13280-025-02150-8) · [Case record](../records/pilot-a03.json)
+[Wikipedia article](https://en.wikipedia.org/wiki/Extensive_farming) · [Morales-Reyes and colleagues, cited study](https://doi.org/10.1007/s13280-025-02150-8) · [Case record](../records/pilot-a03.json)
 
 <details>
 <summary>Reveal the documented assessment</summary>
@@ -61,7 +63,7 @@ Try the check before opening each assessment. These are Janine Makorre’s origi
 
 **Evidence summary:** The opening paragraph describes the hair-care method and its longstanding popularity. The record gives paragraph 1, line 1.
 
-[Wikipedia article](https://en.wikipedia.org/wiki/Curly_Girl_Method) · [Cited article](https://www.today.com/shop/curly-girl-method-products-rcna100025) · [Case record](../records/pilot-a08.json)
+[Wikipedia article](https://en.wikipedia.org/wiki/Curly_Girl_Method) · [TODAY, cited article](https://www.today.com/shop/curly-girl-method-products-rcna100025) · [Case record](../records/pilot-a08.json)
 
 <details>
 <summary>Reveal the documented assessment</summary>
@@ -78,7 +80,7 @@ Try the check before opening each assessment. These are Janine Makorre’s origi
 
 **Subclaims to check:** B09.a — Anonymous Editing, B09.b — Identification Requirements, and B09.c — Research Findings on Anonymous Contributions. None has an individual verdict.
 
-[Wikipedia article](https://en.wikipedia.org/wiki/Reliability_of_Wikipedia) · [Cited study](https://journals.sagepub.com/doi/10.1177/1043463109336804) · [Case record](../records/pilot-b09.json)
+[Wikipedia article](https://en.wikipedia.org/wiki/Reliability_of_Wikipedia) · [Anthony, Smith, and Williamson, cited study](https://journals.sagepub.com/doi/10.1177/1043463109336804) · [Case record](../records/pilot-b09.json)
 
 <details>
 <summary>Reveal the original overall assessment</summary>
