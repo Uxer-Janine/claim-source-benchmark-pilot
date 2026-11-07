@@ -1,53 +1,79 @@
 # Claim-verification worksheet
 
-Use this worksheet to check whether a cited source supports a statement in an academic paper, engineering report, or another document. Copy the blank section below before you start. The [reusable learning guide](VERIFICATION_GUIDE.md) explains the five principles. You can use any text editor or a paper copy.
+Use five questions to check whether a source supports a statement. Copy the template into any text editor or write your answers on paper. Checking source support is different from proving that a statement is true.
 
-Checking source support is different from establishing whether a statement is true. Record the source version and test conditions where they matter. When evidence is unavailable, leave the verdict unset and explain the gap.
+<a name="blank-worksheet"></a>
 
-## Blank worksheet
+## Part 1 — A simple five-question worksheet
 
-- **Claim being checked** — Copy its exact wording.
-- **Context** — Who or what does it describe? Note the time, location, test conditions, and intended scope.
-- **Document containing the claim** — Title, author, version or date, and link if available.
-- **Cited source being examined** — Title, author, version or date, and link if available.
+If a statement contains several details, check each one separately. If you cannot access enough evidence, explain the gap and leave the verdict unset.
 
-Copy the following block for each important detail.
+```text
+1. What statement am I checking?
+   Answer:
 
-- **Individual detail to verify**
-- **Evidence location** — Page, section, paragraph, line, or stable link.
-- **What the evidence establishes**
-- **What remains uncertain**
-- **Verdict, if assessable**
+2. Where did the statement come from?
+   Answer:
+   Source I checked:
 
-- **Overall assessment and reasoning** — Explain how the evidence relates to the full statement. Keep the individual judgments visible.
-- **Confidence and uncertainty** — How sure are you about the assessment? What could change it?
-- **Assessor and date** — A stable identifier is enough. Avoid unnecessary personal details.
-- **Independent reviewer and date** — Leave blank until a review is completed.
-- **Review status** — Awaiting independent review. Record later review decisions separately.
-- **Prior exposure** — Before assessing, had you seen another human judgment or AI output? Record yes, no, or unknown for each.
+3. What does the evidence actually say?
+   Answer:
 
-When there is enough evidence to judge, use the existing labels **Supported**, **Partially supported**, **Compatible but unconfirmed**, **Not supported**, or **Contradicted**. See the [verdict definitions and rules for combining judgments](../annotation-guidelines.md#verdicts). Missing evidence alone does not establish that a statement is false.
+4. Does the evidence support all, some, or none of the statement?
+   Answer:
 
-## Hypothetical engineering demonstration
+5. Why did I reach that conclusion?
+   Answer:
+```
 
-**Teaching illustration only.** This is not a research finding, a real report, or an additional pilot record.
+## Part 2 — One completed engineering example
 
-> Our solar-powered irrigation prototype reduces water consumption by 40%, costs less than conventional irrigation, and performs reliably in rural environments.
+**All data below are invented teaching material.** The claim and report are fictional and are outside the research pilot.
 
-**Claim context:** A fictional statement about a solar-powered irrigation prototype. No test setting, report, or source has been supplied. The 40% figure is part of the claim to check, not a measurement presented by this worksheet.
+**1. What statement am I checking?**
 
-| Question to check | Evidence needed and uncertainty to record |
-| --- | --- |
-| Do test results support a 40% reduction in water consumption? | Ask for measurements, a comparison method, and test conditions. No evidence location has been supplied, so the result remains unassessed. |
-| Is there a documented and comparable cost analysis? | Ask which costs and time period were compared. No cost source or passage location has been supplied. |
-| Is there evidence of reliability in the stated environment? | Ask where, for how long, and against which reliability criteria the prototype was tested. The intended rural environment and supporting evidence remain unspecified. |
+> A solar-powered irrigation system reduced water consumption by 40% and lowered operating costs.
 
-**Assessment and reasoning:** Leave the verdict unset until there is enough source material to judge. Evidence from one experimental setting would not establish that a result applies universally.
+**2. Where did the statement come from?**
 
-**Confidence:** Unassigned because no evidence was supplied. **Independent reviewer:** Not yet assigned. **Review status:** Awaiting independent review. These entries describe this teaching exercise, not a research record.
+This is a fictional engineering claim. For this exercise, I check it against this fictional supporting report:
 
-Ask another reader to save their own assessment before seeing yours. Keep any disagreement and its reasons alongside the original judgment.
+> During a controlled test, water consumption decreased from 100 litres to 60 litres. No operating-cost comparison was recorded.
 
-The worksheet carries over the reasoning process, evidence documentation, uncertainty, and independent-review principles. It does not extend the pilot’s records, software, or game to a new field.
+**3. What does the evidence actually say?**
 
-[Back to the written lesson](README.md) · [How to assess a claim](../annotation-guidelines.md) · [Library overview](../README.md)
+- **Water consumption:** The report describes a reduction from 100 to 60 litres. That is 40 fewer litres out of 100, or a 40% reduction.
+- **Operating costs:** The report records no cost comparison. It gives no evidence that operating costs fell.
+
+**4. Does the evidence support all, some, or none of the statement?**
+
+Some of it. My overall conclusion is **Partially supported** by the fictional report.
+
+**5. Why did I reach that conclusion?**
+
+The water figures support the first detail, but the cost detail is **Not supported** by this report. That does not prove costs stayed the same or increased.
+
+The water-use result applies to the stated controlled test. It cannot automatically be generalized to other equipment, locations, or operating conditions.
+
+## Part 3 — Optional research details
+
+Researchers may need these details so another person can find the same evidence, understand the judgment, and review it independently. Add them when useful:
+
+- **Document containing the claim:** Title, author, date, and link.
+- **Source examined and version:** Title, author, date or version, and link.
+- **Context:** Time, location, test conditions, and the scope of the statement.
+- **Individual details and verdicts:** Record a separate judgment for each detail.
+- **Passage location:** Page, section, paragraph, line, or stable link.
+- **Evidence and uncertainty:** What the source establishes, what remains unanswered, and what could change the judgment.
+- **Overall assessment and reasoning:** Explain how the individual checks led to the conclusion.
+- **Confidence:** How sure are you about your assessment, and why?
+- **Assessor and date:** A stable identifier is enough.
+- **Independent reviewer and date:** Leave blank until a review is completed.
+- **Review status:** Start with “Awaiting independent review.” Keep later decisions separate.
+- **Prior exposure:** Had you already seen another human judgment or AI output? Record yes, no, or unknown for each.
+
+The existing verdicts are **Supported**, **Partially supported**, **Compatible but unconfirmed**, **Not supported**, and **Contradicted**. Use the [assessment guidelines](../annotation-guidelines.md#verdicts) for their definitions and the rules for combining individual judgments.
+
+Ask another reader to save their own assessment before seeing yours. Preserve both judgments and any disagreement.
+
+[Reusable learning guide](VERIFICATION_GUIDE.md) · [Written lesson](README.md) · [Library overview](../README.md)
