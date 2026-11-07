@@ -8,6 +8,15 @@ A **claim** is a statement you can check. Its **citation** points to the source 
 
 This exploratory project started with five Wikipedia examples. **The library organizes the research**, keeping claims, sources, and reasoning together. **Evidence Desk helps people practice** the same process through an interactive activity. The five original human assessments still await independent review.
 
+## Who benefits from this project?
+
+These are potential uses. Adoption and impact have not been measured.
+
+- **Students and educators:** Use the examples and Evidence Desk to learn and teach how to check whether a source supports a statement.
+- **Wikipedia contributors:** Examine citations, identify unsupported details, and make article statements clearer.
+- **Researchers:** Explore documented assessments and disagreements. Independently reviewed cases could support future research on claim verification.
+- **AI developers:** Use the structured records and evaluation tools as a starting point for testing automated verification systems once the required independent reviews are complete.
+
 [![Play Evidence Desk, the interactive claim verification lab](assets/evidence-desk-banner.svg)](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)
 
 **Planning an independent review?** Start with the [Blind Review Kit](docs/BLIND_REVIEW_KIT.md). The example below reveals the A04 assessment.
