@@ -6,7 +6,12 @@ Use this guide to check a claim or review someone else’s assessment. Check wha
 
 ## Terms used in an assessment
 
-A **claim** is the statement being checked. Its **citation** identifies the source, and **evidence** is the specific part of that source relevant to the check. A **subclaim** is one detail you can check separately. An **assessment** records evidence, reasoning, a verdict, confidence, and uncertainty. A **verdict** labels how the source supports or conflicts with the claim. A **reference assessment** is a human assessment confirmed for use in evaluation under the [review requirements](#independent-review-and-adjudication).
+- **Claim:** The statement you are checking. A **subclaim** is one detail you can check separately.
+- **Citation:** The information that identifies the source. **Evidence** is the part of that source that bears on the claim.
+- **Inference:** A conclusion the source suggests without stating it directly.
+- **Verdict:** A label for how the evidence supports or conflicts with the claim.
+- **Assessment:** A record of the evidence, reasoning, verdict, confidence, and uncertainty.
+- **Reference assessment:** A human judgment confirmed for use in evaluation under the [review requirements](#independent-review-and-adjudication).
 
 If you plan to review a case independently, use the [Blind Review Kit](docs/BLIND_REVIEW_KIT.md) first. This guide includes existing case judgments.
 

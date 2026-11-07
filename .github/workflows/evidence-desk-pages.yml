@@ -26,6 +26,16 @@ jobs:
       - name: Stage reviewed public files
         run: |
           mkdir -p _site/lab/game _site/records
+          cat > _site/index.html <<'HTML'
+          <!doctype html>
+          <html lang="en">
+          <meta charset="utf-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+          <meta http-equiv="refresh" content="0; url=https://github.com/Uxer-Janine/claim-source-benchmark-pilot#readme">
+          <title>Claim–Source Verification Knowledge Base</title>
+          <a href="https://github.com/Uxer-Janine/claim-source-benchmark-pilot#readme">Open the Claim–Source Verification Knowledge Base</a>
+          </html>
+          HTML
           cp lab/game/index.html lab/game/game.css lab/game/game.js _site/lab/game/
           cp records/pilot-{a01,a03,a04,a08,b09}.json _site/records/
       - uses: actions/upload-pages-artifact@v4

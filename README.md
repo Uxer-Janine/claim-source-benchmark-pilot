@@ -4,7 +4,11 @@ A practical field guide for checking cited evidence, documenting findings, and u
 
 A citation tells you where to look. Verification means reading the relevant passage and checking whether it supports the statement’s exact wording, scope, and details. This skill applies to Wikipedia articles, student papers, engineering reports, and other documents that cite evidence.
 
-After working through the guide and cases, you should be able to identify checkable claims, locate relevant passages, distinguish direct support from inference, explain and document your verdict, and trace why reviewers disagree.
+Use the guide and cases to practice how to:
+
+- Identify checkable claims and find the relevant passages.
+- Separate what a source directly supports from what it only suggests.
+- Document a verdict and explain why reviewers might disagree.
 
 [![Explore Evidence Desk — Start Investigating](assets/evidence-desk-banner.svg)](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)
 

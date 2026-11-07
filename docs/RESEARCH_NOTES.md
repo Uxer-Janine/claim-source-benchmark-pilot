@@ -2,21 +2,30 @@
 
 [Back to the library](../README.md) · [Explore the investigations](INVESTIGATIONS.md)
 
-Use these notes to find the cited passages and see what can be checked again. The five records each contain one original human assessment and three historical AI entries. See the [library overview](../README.md#what-i-learned-and-what-remains-open) for review and scoring status.
+This page brings together my comparison of seven contributor reports and my separate five-case pilot. It explains why readers can reach different judgments and what another reviewer would need to check them.
 
-The original exploration contains five cases. The current [three-case focus](INVESTIGATIONS.md#current-three-case-learning-focus) uses A01 to observe, A04 to practice, and A03 to investigate context. A08 and B09 are preserved exploratory cases for future expansion. The evidence map and counts below describe all five original cases.
+## Comparing Seven Contributor Assessments: Key Findings
 
-## What the contributor reports revealed
+### What did I investigate?
 
-Janine Makorre compared seven publicly shared contributor reports for the Wiki Education Outreachy exercise. She looked for recurring problems and compared the same claim when reports overlapped. The contributors checked different claims and used different labels, so the comparison describes qualitative patterns. The original report credits and links all seven contributors. [Comparing Claim Verification Assessments: Patterns and Insights Across Contributors](https://app.notion.com/p/402fc8205dbf802d8e59c5672679432c)
+I reviewed seven publicly shared reports from the Wiki Education claim-verification exercise. Where reports covered the same claim, I compared how contributors interpreted the evidence, explained their verdicts, and handled uncertainty. The reports covered different claims and used different labels. I looked for patterns rather than calculating an agreement rate. The original report credits and links all seven contributors. [Comparing Claim Verification Assessments: Patterns and Insights Across Contributors](https://app.notion.com/p/402fc8205dbf802d8e59c5672679432c)
 
-- **Partial support and inference.** Mercy Joshua-Firima and Tayyaba Aziz interpreted evidence of juvenile pika development differently when judging independence at four weeks. That is a separate claim from A01’s eye-opening example. The supermarket-distance reports also show why an association may leave a causal claim unconfirmed.
-- **Wording and scope.** Mercy and Gonza Gertrude Agatha differed in their treatment of geographic support for pika distribution. Recording each supported or omitted location makes the difference visible.
-- **Numbers and dates.** Reviewers differed in how they treated the WHO source’s 2021 timeframe against broader annual wording. Matching a number still leaves the period and population to check.
-- **Missing and conflicting evidence.** Solosh Mazando documented an unavailable fur-farming source. Ankit Thakur found census figures that conflicted with claims. Record the access gap and the direct conflict separately.
-- **Human and AI comparisons.** Some reports describe agreement and some describe overlooked wording or details. Compare passages and reasoning before interpreting agreement. An independently confirmed reference is needed for scoring.
+### What did I find?
 
-The [Annotation Guidelines](../annotation-guidelines.md) turn these observations into practical checks for subclaims, passage locations, wording, uncertainty, and reasoning.
+- **The same evidence can lead to different readings.** Mercy Joshua-Firima judged juvenile pika independence at four weeks fully supported and connected the timing with weaning. Tayyaba Aziz judged it partially supported because less contact with the mother and siblings did not establish independence. This is a different claim from the eye-opening example in A01.
+- **Partial support can be easy to miss.** Mercy judged a claim about pika distribution unsupported. Gonza Gertrude Agatha found support for part of the distribution and noted that the source omitted Alberta and Utah. The overall labels alone hide which locations each reviewer checked.
+- **Small words and dates change what the evidence must establish.** Mercy flagged a change from “beneath” to “in” in a claim about pika shelter. In the WHO comparison, Akpan Abraham judged the figures directly supported, while Besong Chanceline and Gonza paid closer attention to the source’s 2021 timeframe and the claim’s broader annual wording.
+- **An association can leave a causal claim open.** Akpan and Besong both judged the supermarket-distance claim partially supported. Their explanations distinguished the relationship the study reported from a stronger causal conclusion.
+- **A source you cannot inspect leaves a different gap from a conflicting source.** Solosh Mazando reported an unavailable source for historical fur-farming figures. Ankit Thakur found two Italian census claims that conflicted with the official figures he examined.
+- **Matching verdicts can hide differences in reasoning.** Akpan and Solosh agreed that an APA article supported the reported counts of appearance and impact dimensions. In human–AI comparisons, Mercy reported that ChatGPT sometimes overlooked wording and details, while Solosh documented agreement on the limits of a shampoo recommendation. A useful comparison examines the passages and assumptions behind each judgment.
+
+### Why do these differences matter?
+
+A verdict alone can hide disagreement about what a claim means, which details matter, or how much a source establishes. Keeping the exact wording, passage location, and reasoning together lets another reader see where interpretations diverge. The seven reports offer examples of these problems. They do not establish how often reviewers disagree or which judgment should serve as a benchmark reference.
+
+### How does this inform the knowledge base?
+
+The guidelines show how to record a separate judgment for each checkable detail and explain uncertainty. The review process below asks readers to save independent assessments before comparing them. The five-case pilot illustrates the method through separate examples and preserves its original judgments for review. [Annotation Guidelines](../annotation-guidelines.md) · [Case Library](INVESTIGATIONS.md)
 
 ## Questions and approach
 
