@@ -1,6 +1,6 @@
-# Explore the investigations
+# Case Library
 
-[Back to the library](../README.md) · [Try the written lesson](../learn/README.md)
+[Back to the library](../README.md) · [Annotation Guidelines](../annotation-guidelines.md)
 
 Use these case summaries to find the evidence and try a check before revealing the recorded judgment. Each case asks what one cited source supports. **Claim summaries** paraphrase the public records. **Evidence summaries** describe the cited material in our own words. The public records give passage locations in place of verbatim excerpts. The article links identify current Wikipedia pages because the exact revisions used in the exercise are unrecorded.
 
@@ -22,7 +22,7 @@ A08 and B09 remain [additional exploratory cases](#additional-exploratory-cases)
 
 ### A01 · American pika
 
-**Observe.** Start with the guided [written example](../learn/README.md#a01--american-pika). The recorded source has returned 403 to automated requests. The source summary and passage location remain available.
+**Observe.** Before opening the assessment, compare the phrase “about nine days” with the reported average. What does the wording allow for? The recorded source has returned 403 to automated requests. The source summary and passage location remain available.
 
 **Claim summary:** Young American pikas typically first open their eyes at approximately nine days old.
 
@@ -33,19 +33,25 @@ A08 and B09 remain [additional exploratory cases](#additional-exploratory-cases)
 <details>
 <summary>Reveal the documented assessment</summary>
 
-**Supported · High confidence.** The average fits an approximate age and leaves room for individual variation. The paper credits Whitworth for the figure, and further context could affect the judgment.
+**Supported · High confidence.** The average fits an approximate age and leaves room for individual variation. The paper credits Whitworth for the figure, and further context could affect the judgment. When checking approximate wording, ask whether the source reports a typical value or a precise threshold.
 
 </details>
 
 ### A04 · The Missing Evidence: Surrogacy in India
 
-**Practice.** Try the [written exercise](../learn/README.md#a04--surrogacy-in-india) or [Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/) before opening the recorded assessment.
+**Practice.** Try the questions below or open [Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/) before opening the recorded assessment.
 
 **Claim summary:** Industry organizations estimated annual surrogacy revenue above US$2 billion, and India had thousands of IVF clinics.
 
 **Evidence summary:** The article names one industry organization, gives its annual estimate of US$2.3 billion, and describes clinics offering surrogacy without giving a total. Find the passage on page 2, *Background*, paragraph 3, line 1.
 
-**Subclaims to check:** Who made the estimate, whether the amount exceeds US$2 billion, and whether the source gives a clinic count in the thousands.
+Before revealing the assessment, write a judgment for each detail:
+
+1. How many organizations does the passage name?
+2. Does the estimate exceed US$2 billion?
+3. Does the passage establish a clinic count in the thousands?
+
+Explain how the three checks lead to your overall verdict. After comparing, ask what additional evidence might change it.
 
 [Wikipedia article](https://en.wikipedia.org/wiki/Surrogacy_in_India) · [Hibino, cited article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10327345/) · [Case record](../records/pilot-a04.json)
 
@@ -71,9 +77,13 @@ A08 and B09 remain [additional exploratory cases](#additional-exploratory-cases)
 <details>
 <summary>Reveal the documented assessment</summary>
 
-**Not supported · High confidence.** The passage discusses a historical change in one place. It does not establish current practices or rule out those practices elsewhere. Unread sections or other sources could affect the assessment.
+**Not supported · High confidence.** The passage discusses a historical change in one place. It does not establish current practices or rule out those practices elsewhere. Unread sections or other sources could affect the assessment. When checking claims in any field, keep a historical example tied to its place and period.
 
 </details>
+
+## Apply the method to your own claim
+
+Use the [assessment template](../annotation-guidelines.md#assessment-template) on a claim from your own field. Carry over the habits you practiced here: check the exact wording, separate details, compare each with the passage, respect the source’s scope, and explain your judgment.
 
 ## Additional exploratory cases
 

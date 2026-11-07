@@ -35,17 +35,9 @@ The current learning focus is A01 → A04 → A03. A08 and B09 remain additional
 | A08 | The claim links more visible natural curls in media, fashion and workplaces to broader acceptance of textured hair in beauty standards. | [TODAY](https://www.today.com/shop/curly-girl-method-products-rcna100025), paragraph 1, line 1 |
 | B09 | Wikipedia permits editing anonymously without asking for identification or email. A study attributed to Dartmouth College in 2009 reportedly found, unexpectedly, that anonymous editors ranked among the leading producers of valid material on English Wikipedia. | [Anthony, Smith, and Williamson](https://journals.sagepub.com/doi/10.1177/1043463109336804), *Abstract*, lines 4–5, a shared locator |
 
-## Assessment template
+## Preparing the blank template
 
-Copy these prompts into a document. For each detail, give the source location and explain what it does or does not establish. If the evidence is ambiguous, describe the readings you considered and what would help you decide.
-
-- **Case ID, reviewer identifier, review date**
-- **Prior exposure:** Had you seen another human assessment? Had you seen an AI assessment? Answer yes, no, or unknown for each.
-- **Source access:** Full, partial, unavailable, or unknown. Give the link or version consulted and say what you could read.
-- **Evidence locations:** Give page, section, paragraph, line, or stable fragment where available. Note other evidence you checked.
-- **Proposed subclaims:** List each checkable detail. For each, give the verdict if assessable, evidence location, and reason. Flag any contradiction explicitly.
-- **Overall verdict and reasoning:** Explain how the details contribute. Leave the verdict unset if you cannot judge.
-- **Confidence and uncertainty:** High means you expect another assessor to reach the same conclusion. Medium allows a reasonable difference in interpretation. Low reflects unclear or incomplete evidence. Say what could change your assessment.
+Organizers should copy only the blank assessment template from Annotation Guidelines into a separate file and send it with this packet. Reviewers should work from the supplied blank copy. Ask the organizer for it if it is missing.
 
 ## Invitation template
 
@@ -55,7 +47,7 @@ Would you be willing to independently review one Wikipedia claim against its cit
 
 Submit your saved response through the agreed channel. Your review stays separate from the original assessment. A disagreement remains open until a documented decision resolves it. Before scoring, at least two distinct, independently completed human assessments must be confirmed. Any resolution records who decided, when, and why, without overwriting either review.
 
-You can then open the [library overview](../README.md) for project context. It reveals the A04 judgment.
+You can then open the [library overview](../README.md) for project context. You can open the Case Library afterward to see the documented judgments.
 
 ## Attribution
 

@@ -1,6 +1,6 @@
 # How to Assess a Claim
 
-[Back to the library](README.md) · [Practice on a case](learn/README.md)
+[Back to the library](README.md) · [Practice on a case](docs/INVESTIGATIONS.md)
 
 Use this guide to check a claim or review someone else’s assessment. Check what the cited source establishes. A statement might be true for other reasons even if its citation does not support it. Record facts you know from elsewhere separately as context.
 
@@ -20,6 +20,18 @@ If you plan to review a case independently, use the [Blind Review Kit](docs/BLIN
 4. Record the verdict, reasoning, and limits. Save your independent assessment before reading someone else’s.
 
 ![Seven steps from identifying the claim through independent review. Record uncertainty with the verdict and confidence. If you cannot access enough of the source to judge, record that limit and leave the verdict unset.](assets/illustrations/assessment-workflow.svg)
+
+## Difficult decisions
+
+| Situation | What to check |
+| --- | --- |
+| Partial support or a compound claim | Identify which details the source establishes. Apply the overall verdict rules after recording the individual checks. |
+| Approximate wording or inference | Ask whether the evidence supports the degree of precision or certainty in the claim. An average may support an approximate age, while an association may leave a causal claim unconfirmed. |
+| Time, place, and numbers | Compare the dates, population, geography, units, and denominator. Check the calculation and whether the claim extends beyond the source’s scope. |
+| Inaccessible or incomplete evidence | Record what you could inspect and leave the verdict unset when you cannot judge. If you have enough material to establish that the source gives no basis, use the verdict rules. |
+| Contradiction | Identify the passage that directly conflicts with the claim. Record any contradiction even if other details support a different overall verdict. |
+
+The [Case Library](docs/INVESTIGATIONS.md) illustrates these decisions. [Research & Review](docs/RESEARCH_NOTES.md) explains how different readings surfaced in the contributor comparison.
 
 ## Compound claims
 
@@ -70,6 +82,68 @@ Keep each contradicted subclaim visible and flag it even when the overall verdic
 Confidence is separate from the verdict. **High** means you expect a second assessor to reach the same conclusion. **Medium** allows reasonable differences in interpretation. **Low** reflects unclear or incomplete evidence. Describe what might change the judgment in the uncertainty note. Preserve the original confidence and uncertainty text from the *Claim Verification Report*.
 
 ![Five verdicts describe source support or conflict. Insufficient source material leaves the verdict unset. High, medium, and low confidence describe how sure the assessor is, separately from the verdict.](assets/illustrations/verdicts-confidence.svg)
+
+## Assessment template
+
+Copy the five questions. Answer each in plain language for a first check. Use the extra fields when another person needs to reproduce or review your assessment. Keep the source’s publication date, the date you accessed it, your assessment date, and dates relevant to the claim separate.
+
+```text
+1. What statement am I checking?
+   Claim ID and exact wording:
+   Checkable subclaims and IDs:
+
+2. Where did the statement come from?
+   Article or document, link, revision or version:
+   Claim context, scope, and relevant dates:
+   Cited source title, author, citation, and publication date:
+   Source version, access date, and what I could access:
+
+3. What does the evidence actually say?
+   For each subclaim, record the source and precise passage location:
+   Verbatim excerpt where permitted, or labeled summary and locator:
+   What this passage establishes, leaves open, or conflicts with:
+
+4. Does the evidence support all, some, or none of the statement?
+   Individual verdicts and associated evidence:
+   Overall verdict, if assessable:
+
+5. Why did I reach that conclusion?
+   Reasoning, confidence, uncertainty, and missing evidence:
+   Assessor identifier and assessment date:
+   Prior exposure to human or AI judgments, separately:
+   Independent reviewer and date, if known, and review status:
+```
+
+A verbatim passage and precise location let another reader check your interpretation. Keep private transcriptions in the private research copy. In public material, use a labeled summary and locator when quotation rights are unclear. Record unknown details as unknown and preserve original judgments separately from later reviews.
+
+## Completed fictional engineering example
+
+**All data below are invented teaching material.** The claim and report are fictional and are outside the research pilot.
+
+**1. What statement am I checking?**
+
+> A solar-powered irrigation system reduced water consumption by 40% and lowered operating costs.
+
+**2. Where did the statement come from?**
+
+This is a fictional engineering claim. For this exercise, I check it against this fictional supporting report:
+
+> During a controlled test, water consumption decreased from 100 litres to 60 litres. No operating-cost comparison was recorded.
+
+**3. What does the evidence actually say?**
+
+- **Water consumption:** The report describes a reduction from 100 to 60 litres. That is 40 fewer litres out of 100, or a 40% reduction.
+- **Operating costs:** The report records no cost comparison. It gives no evidence that operating costs fell.
+
+**4. Does the evidence support all, some, or none of the statement?**
+
+Some of it. My overall conclusion is **Partially supported** by the fictional report.
+
+**5. Why did I reach that conclusion?**
+
+The water figures support the first detail, but the cost detail is **Not supported** by this report. That does not prove costs stayed the same or increased.
+
+The water-use result applies to the stated controlled test. It cannot automatically be generalized to other equipment, locations, or operating conditions.
 
 ## Read an assessment
 
