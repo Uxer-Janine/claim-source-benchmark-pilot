@@ -1,6 +1,6 @@
 # Technical Guide
 
-For contributors editing data and researchers trying the evaluator. The [library homepage](../README.md) links to the learning paths and case findings.
+Use this guide to check case files, run tests, or reproduce the example evaluation. The [library homepage](../README.md) links to the learning paths and case findings.
 
 | File | Who uses it and when |
 | --- | --- |

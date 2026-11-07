@@ -2,7 +2,7 @@
 
 [Back to the library](../README.md) · [Run the technical checks](TECHNICAL.md)
 
-One JSON file describes one investigation. It identifies the Wikipedia article, records the claim and its cited sources, and keeps each assessment with its reasoning and evidence. Review fields show what remains unresolved and whether a judgment can be considered for evaluation.
+Use this reference to read or edit the case files. JSON is a text format that labels pieces of information so people and tools can find them. One JSON file describes one investigation. It identifies the Wikipedia article, records the claim and its cited sources, and keeps each assessment with its reasoning and evidence. Review fields show what remains unresolved and whether a judgment can be considered for evaluation.
 
 Here are three fields from the [American pika record](../records/pilot-a01.json). This excerpt omits other required fields.
 

@@ -2,7 +2,7 @@
 
 [Back to the library](../README.md) · [Try the written lesson](../learn/README.md)
 
-Each case below asks what a particular cited source supports. **Claim summaries** paraphrase the public records. **Evidence summaries** describe the cited material in our own words. The public records give passage locations in place of verbatim excerpts. The article links identify current Wikipedia pages because the exact revisions used in the exercise are unrecorded.
+Use these case summaries to find the evidence and try a check before revealing the recorded judgment. Each case asks what one cited source supports. **Claim summaries** paraphrase the public records. **Evidence summaries** describe the cited material in our own words. The public records give passage locations in place of verbatim excerpts. The article links identify current Wikipedia pages because the exact revisions used in the exercise are unrecorded.
 
 Try the check before opening each assessment. These are Janine Makorre’s original documented judgments, all awaiting independent review.
 

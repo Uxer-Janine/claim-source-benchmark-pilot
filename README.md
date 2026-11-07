@@ -1,89 +1,99 @@
 # Wikipedia Claim–Source Verification Library
 
-**Does the cited source actually support what a Wikipedia claim says?**
+**Does the source actually support what Wikipedia says?**
 
-Wikipedia articles often point to sources so readers can check what they say. Sometimes a source backs one detail but leaves another open. This library lets you practice spotting the difference with five real cases from Janine Makorre’s Wiki Education Outreachy contribution.
+A **claim** is a statement you can check. A **citation** points to the source behind it. A source can be relevant and still support only part of the statement. Checking a citation means finding what it supports. To find out whether the statement itself is true, you may need other evidence.
 
-[![Evidence Desk interactive claim verification lab. Become an evidence investigator. Start investigating.](assets/evidence-desk-banner.svg)](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)
+I started with five Wikipedia examples. **The library organizes the research** by keeping each claim, source, and assessment together. **Evidence Desk teaches the process** through a short interactive investigation. This is an exploratory pilot, with five original assessments still awaiting independent review.
 
-[Start the five-minute Markdown lesson](learn/README.md) · [Explore the investigations](#explore-the-investigations)
+[![Play Evidence Desk, the interactive claim verification lab](assets/evidence-desk-banner.svg)](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)
 
-## Find your starting point
+Start with [one example](#one-example-three-details), try the [five-minute written lesson](learn/README.md), or [jump to the research and tools](#explore-the-project).
 
-- **Learn the basics.** Follow the [written lesson](learn/README.md) for a worked example and a practice case.
-- **Try an investigation.** In [Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/), open evidence files, sort clues, and explain your verdict. The surrogacy case is playable.
-- **Explore the findings.** Read the [five case summaries](docs/INVESTIGATIONS.md), with citations, passage locations, and assessments you can reveal after forming your own view.
-- **Understand the method.** Read [How to Assess a Claim](annotation-guidelines.md) for evidence, verdicts, and independent review.
-- **Use the data.** Start with the [Data Dictionary](docs/DATA_DICTIONARY.md), then use the [Technical Guide](docs/TECHNICAL.md) to check records or run the example evaluator.
-- **Contribute.** See [what to include in feedback or a review](CONTRIBUTING.md).
+**Planning an independent review?** Start with the [Blind Review Kit](docs/BLIND_REVIEW_KIT.md). The example below reveals the A04 assessment.
 
-## How verification works
+## One example, three details
 
-1. Read the claim. If it makes several checkable statements, separate them.
-2. Open the cited source and find the part relevant to each statement.
-3. Compare the wording. Check details such as who, how many, where, when, and words like “about” or “may.”
-4. Record what the source supports, where you found it, and what remains uncertain.
+**What Wikipedia said, in summary.** Industry organizations estimated that surrogacy in India brought in more than US$2 billion a year, and India had thousands of IVF clinics.
 
-A claim can be true even when the cited source fails to support it. Finding out whether it is true may require other evidence.
+**What the source says.** The [cited article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10327345/) names one industry organization and reports its estimate of US$2.3 billion a year. It describes clinics offering surrogacy. The relevant passage gives no nationwide clinic count.
 
-![Four linked steps lead from a Wikipedia claim to its cited source, relevant evidence, and an assessment. Deciding whether the claim is true may require other evidence.](assets/illustrations/verification-chain.svg)
+**How I checked it.** The amount clears the stated threshold. Naming one organization gives partial support to the wording about multiple organizations. The clinic count remains unsupported by the passage. My recorded judgment was **partially supported**, with medium confidence. It still awaits independent review. See the [case and passage location](docs/INVESTIGATIONS.md#a04--the-missing-evidence-surrogacy-in-india).
 
-## Words you’ll see
+![The surrogacy claim splits into three checks. The attribution is partly supported, the revenue amount is supported, and the clinic count is not supported. The overall assessment is partially supported, with medium confidence, and awaits independent review.](assets/illustrations/a04-compound-claim.svg)
 
-- **Claim** — A statement you can check, such as an approximate age.
-- **Cited source** — The article, book, or other work the claim points to.
-- **Evidence** — The specific part of that source that bears on the claim, such as a reported average.
-- **Subclaim** — One independently checkable part of a larger claim, such as who made an estimate.
-- **Assessment** — The full account of a check, including evidence, reasoning, and a verdict if one can be reached.
-- **Verdict** — A label for how the cited source relates to the claim, such as **Partially supported**.
-- **Confidence** — How sure an assessor is about their judgment.
-- **Uncertainty** — What might change the judgment, such as missing context or ambiguous wording.
-- **Reference assessment** — A human assessment considered for evaluation. Scoring requires agreement or adjudication based on at least two distinct, independent, confirmed human assessments. The five pilot assessments still await review.
+*Notice that the same citation supports the number more clearly than it supports who gave it or how many clinics there were.*
 
-<a name="what-the-verdicts-mean"></a>
+## Who can use it?
 
-See the [verdict key](annotation-guidelines.md#verdicts) for the five labels and what to do when you cannot access enough evidence.
+- **Students and beginners** can practice telling what a source says from what a claim adds.
+- **Educators** can ask learners to defend different parts of a claim with evidence.
+- **Wikipedia contributors** can use the same steps to decide whether wording or a citation needs another look.
+- **Researchers** can inspect how judgments were made and add their own reviews.
+- **Developers** can inspect the case files and try the tools for checking records and comparing predictions.
+
+## Questions I wanted to explore
+
+1. Which details does a citation actually support?
+2. What changes when I check several facts in a sentence one at a time?
+3. What should I record so someone else can follow or challenge my reasoning?
+4. What would need to happen before these records could help evaluate automated tools?
+
+## What I did
+
+I assessed Wikipedia claims during the Wiki Education Outreachy contribution exercise. Some sources were hard to access, and some answered only part of the question. I then started this separate five-case pilot to make those decisions easier to review. I recorded where I looked, what I found, and what could change my judgment. I built Evidence Desk as a way to practice the same steps and documented what independent reviewers would need to check.
+
+<a name="how-verification-works"></a>
+
+## How the library works
+
+Read the claim. Find its cited source. If a sentence makes several statements, check each important detail. Record where you found the evidence, what you concluded, and how sure you are. Leave enough information for another person to make and explain their own judgment.
+
+![Four steps connect a Wikipedia claim to its cited source, evidence, and an assessment. Checking whether the claim is true may require other sources.](assets/illustrations/verification-chain.svg)
+
+*The process follows one citation from the statement it accompanies to the passage used to judge it.*
 
 <a name="browse-the-five-cases"></a>
 
-## Explore the investigations
+## What the pilot produced
 
-The short IDs identify the five investigations in the records and guides. Start with the pika example, practice on surrogacy, then explore time, relevance, and research scope.
+- **[Five case summaries](docs/INVESTIGATIONS.md) and [structured records](records/).** Each keeps the source, passage location, and reasoning together. The [case index](#explore-the-investigations) offers a suggested reading order.
+- **[An assessment guide](annotation-guidelines.md) and [a review packet](docs/BLIND_REVIEW_KIT.md).** The guide explains the judgments you can record. The packet helps reviewers make their own judgments before seeing mine.
+- **[Record checks and an example evaluator](docs/TECHNICAL.md).** One tool checks how records are put together. The other shows which predictions could be compared with a reviewed human assessment and why the current examples are skipped.
+- **[Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/).** Open evidence files, sort the details of the surrogacy claim, and explain your judgment before comparing it with the recorded assessment.
 
-1. **A01 — American pika.** Can a reported average support an approximate age? [Worked example](learn/README.md#a01--american-pika)
-2. **A04 — The Missing Evidence: Surrogacy in India.** Who made the revenue estimate, does it clear the stated threshold, and does the source give a clinic count? [Written practice](learn/README.md#a04--surrogacy-in-india)
-3. **A03 — Extensive farming.** Does a historical example from Mongolia support a broader statement about herding? [Case summary](docs/INVESTIGATIONS.md#a03--extensive-farming)
-4. **A08 — Curly Girl Method.** Does evidence about a hair-care method’s popularity support a claim about changing beauty standards? [Case summary](docs/INVESTIGATIONS.md#a08--curly-girl-method)
-5. **B09 — Reliability of Wikipedia.** What does a study of anonymous contributions establish about reliability, productivity, and editing rules? [Case summary](docs/INVESTIGATIONS.md#b09--reliability-of-wikipedia)
+![Live Evidence Desk surrogacy investigation with opened evidence files and cards sorted into Supported, Narrower support, and Needs more evidence.](assets/evidence-desk-a04.jpg)
 
-A04 is the only playable Evidence Desk investigation in the current release. The other four can be explored in the written lesson or case summaries and records.
+*In the live activity, each detail has its own card. This screenshot shows one way to sort them.*
 
-## What the library preserves
+## What I learned and what remains open
 
-- **Separate checks for complex claims.** The surrogacy case separates who made the estimate, the amount, and the clinic count. This lets a reviewer see which detail led to partial support.
-- **A route back to the evidence.** Citations and recorded page, section, paragraph, or line details help others revisit the same passage.
-- **Reasoning alongside verdicts.** Confidence and uncertainty explain how firmly the assessor holds a judgment and what might change it.
-- **Distinct voices and review history.** Original human and historical AI assessments remain separate. Independent reviews can be added without replacing earlier judgments, and disagreements can be recorded.
-- **Records people and tools can inspect.** The [public case files](records/) use a consistent JSON structure so readers can trace decisions and researchers can check or process them.
+The surrogacy example shows why an overall label can hide which details a citation supports. Writing down the passage location and the reason for each judgment gives the next reader something concrete to check. These are observations from the pilot cases.
 
-## Put the Library to Work
+All five original human assessments are provisional. Independent reviews are pending, and all 14 example predictions remain unscored. Some sources have access limits, the original Wikipedia revisions are missing, and the historical AI runs are only partly documented. Evidence Desk has one playable investigation, A04, and four previews. The pilot has yet to measure model performance or learner outcomes. The full *Claim Verification Report* remains private.
 
-- **Learners:** Try the [surrogacy exercise](learn/README.md#a04--surrogacy-in-india), write a reason, and compare it with the documented assessment.
-- **Educators:** Ask pairs to defend which surrogacy detail the source supports and name evidence that would settle the clinic count. Use the [case findings](docs/INVESTIGATIONS.md#a04--the-missing-evidence-surrogacy-in-india) to guide discussion afterward.
-- **Wikipedia contributors:** Use the [farming case](docs/INVESTIGATIONS.md#a03--extensive-farming) to practice checking time and place before suggesting a narrower sentence or a stronger citation.
-- **Researchers:** Compare the recorded human and AI reasoning in the [case files](records/), or use the [review method](annotation-guidelines.md#independent-review-and-adjudication) to document an independent judgment.
-- **Developers:** Use the [Technical Guide](docs/TECHNICAL.md) to validate the JSON files and run the example evaluation.
+<a name="project-status-and-roadmap"></a>
 
-![Five paths through the same library. Learners practice, educators teach, Wikipedia contributors check citations, researchers compare reasoning, and developers validate records.](assets/illustrations/audience-paths.svg)
+## What comes next
 
-## Project status and roadmap
+Invite independent reviews, confirm passage locations, and recover the original Wikipedia revisions where possible. Test the written lesson and Evidence Desk with beginners, then use what we learn to choose and document additional cases. The [roadmap](docs/NEXT_STEPS.md) separates current priorities from longer-term ideas.
 
-This is an exploratory pilot. All five original human assessments await independent review and are excluded from scoring. The five cases cannot establish how well a verification tool performs. Original Wikipedia revisions and some AI run details are missing. Public records use labeled claim summaries and passage locations. The full *Claim Verification Report* remains with the private research materials.
+## Explore the project
 
-See [research coverage and evidence](docs/RESEARCH_NOTES.md) for the five-case evidence map, what can be reproduced, and the limits of the historical human–AI comparison. See the [roadmap](docs/NEXT_STEPS.md) for next steps. If a source link fails or an explanation is unclear, [share feedback](CONTRIBUTING.md).
+- **Learn or teach:** [Play Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/) or [try the written lesson](learn/README.md).
+- **Inspect the research:** [Five cases](docs/INVESTIGATIONS.md), [Research Notes and evidence map](docs/RESEARCH_NOTES.md), and [assessment method](annotation-guidelines.md).
+- **Review or contribute:** [Blind Review Kit](docs/BLIND_REVIEW_KIT.md) and [contribution guide](CONTRIBUTING.md). If you plan to review independently, open the kit before reading the existing assessments.
+- **Run the code:** [Technical Guide](docs/TECHNICAL.md), [Data Dictionary](docs/DATA_DICTIONARY.md), and [Maintainer Guide](docs/MAINTAINER.md).
+- **See the contribution summary:** [Portfolio Handover](docs/PORTFOLIO_HANDOVER.md).
 
-- **Independent reviewers:** Start with the [Blind Review Kit](docs/BLIND_REVIEW_KIT.md) before opening the existing assessments.
-- **Mentors and portfolio readers:** See the [Portfolio Handover](docs/PORTFOLIO_HANDOVER.md) for a public summary of the contribution, deliverables, and limitations.
+### Explore the investigations
+
+Start with [A01, a worked example](learn/README.md#a01--american-pika), and [A04, a practice check](learn/README.md#a04--surrogacy-in-india). Then try [A03 on time and place](docs/INVESTIGATIONS.md#a03--extensive-farming), [A08 on relevance](docs/INVESTIGATIONS.md#a08--curly-girl-method), and [B09 on editing and research](docs/INVESTIGATIONS.md#b09--reliability-of-wikipedia).
+
+<a name="words-youll-see"></a>
+<a name="what-the-verdicts-mean"></a>
+
+For terms and verdicts, see the [assessment guide](annotation-guidelines.md#terms-used-in-an-assessment) and its [verdict key](annotation-guidelines.md#verdicts).
 
 ## Contribution and AI assistance
 

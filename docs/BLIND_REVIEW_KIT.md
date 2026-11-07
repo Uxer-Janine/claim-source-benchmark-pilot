@@ -1,6 +1,6 @@
 # Independent claim–source review packet
 
-Share this file by itself before sharing the repository, game, or existing assessments. It contains claim summaries, citations, and recorded passage locations. The locations are starting points and can influence which evidence you notice. Follow the source beyond the locator when relevant. The original Wikipedia revisions are unrecorded.
+Use this packet to make your own assessment or invite someone to review a case. Organizers should share this file by itself before sharing the repository, game, or existing assessments. It contains claim summaries, citations, and recorded passage locations. The locations are starting points and can influence which evidence you notice. Follow the source beyond the locator when relevant. The original Wikipedia revisions are unrecorded.
 
 ## Instructions
 
@@ -42,6 +42,8 @@ If all subclaims have judgments, record the overall result in this order. All Su
 ## Invitation template
 
 Would you be willing to independently review one Wikipedia claim against its cited source? The attached packet has five options and a short assessment template. Please save your reasoning before opening any existing assessments, and tell me if you have already seen one. A stable reviewer identifier is enough. Please include any access or uncertainty limits and return the completed template through our agreed channel.
+
+After saving your assessment, see the [library overview](../README.md) for project context. The overview reveals the A04 judgment.
 
 ## Attribution
 

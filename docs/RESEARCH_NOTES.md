@@ -2,7 +2,7 @@
 
 [Back to the library](../README.md) · [Explore the investigations](INVESTIGATIONS.md)
 
-The pilot contains five real cases and five original human assessments. The records preserve three historical AI entries per case. All five human assessments still await independent review. There are no scoring-eligible references, and the example evaluator skips all 14 prediction rows.
+Use these notes to find the cited passages and see what can be checked again. The five records each contain one original human assessment and three historical AI entries. See the [library overview](../README.md#what-i-learned-and-what-remains-open) for review and scoring status.
 
 ## Public evidence map
 

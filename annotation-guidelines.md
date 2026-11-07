@@ -2,7 +2,7 @@
 
 [Back to the library](README.md) · [Practice on a case](learn/README.md)
 
-Check what the cited source establishes. A statement might be true for other reasons even if its citation does not support it. Record facts you know from elsewhere separately as context.
+Use this guide to check a claim or review someone else’s assessment. Check what the cited source establishes. A statement might be true for other reasons even if its citation does not support it. Record facts you know from elsewhere separately as context.
 
 ## Terms used in an assessment
 
@@ -21,7 +21,7 @@ A **claim** is the statement being checked. Its **cited source** is the work it 
 
 ## Compound claims
 
-Keep the complete claim verbatim in the research record. Split substantive statements that can be checked independently. Give each subclaim a stable ID and its relevant verbatim fragment. Use ellipses to mark cuts. For a single unsplit claim, record one subclaim with identical text. Agree on the split before comparing independent reviews. Public copies can use labeled summaries where verbatim material is withheld.
+Keep the exact wording of the full claim in the research record. Separate the important details that can be checked independently. Give each subclaim a stable ID and the exact words it covers. Use ellipses to mark cuts. For a single unsplit claim, record one subclaim with identical text. Agree on the split before comparing independent reviews. Public copies can use labeled summaries where verbatim material is withheld.
 
 [The surrogacy case](docs/INVESTIGATIONS.md#a04--the-missing-evidence-surrogacy-in-india) separates attribution, revenue, and clinic count. The original assessment judged them partially supported, supported, and not supported, respectively. Its mapping awaits individual review. [The Wikipedia reliability case](docs/INVESTIGATIONS.md#b09--reliability-of-wikipedia) has three subclaims with no individual verdicts. Its original overall verdict remains separate.
 
