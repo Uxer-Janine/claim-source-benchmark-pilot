@@ -4,14 +4,14 @@
 
 [Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/) is published. **The Missing Evidence**, the surrogacy case identified as A04, is playable. The other four game missions are previews. The [written lesson](../learn/README.md) and [case summaries](INVESTIGATIONS.md) remain available. The five original human assessments still await independent review.
 
-This pilot is a separate Outreachy contribution. The official application and compulsory claim-verification microtask have their own submission processes.
+Use this roadmap to see where you can help or what still needs research. This pilot is a separate Outreachy contribution. The official application and compulsory claim-verification microtask have their own submission processes.
 
 ## Next improvements
 
 - **Test the experience with first-time learners.** Observe whether learners find the source, explain their judgment before revealing the documented assessment, and understand its review status. Check phone use, keyboard navigation, and screen-reader announcements.
 - **Extend guided learning and the playable cases.** Guided practice with the pika case and additional investigations are future public updates. Keep the written route available as the game grows.
 - **Invite independent reviews.** Keep each assessment and disagreement visible. Record the reasons for any review decision. See [how to contribute](../CONTRIBUTING.md#submit-an-independent-assessment).
-- **Improve evidence traceability.** Recover original Wikipedia revisions where possible, confirm recorded passage locations, and document remaining source-access and reuse limits. See the [open review work](MAINTAINER.md#open-review-work).
+- **Make evidence easier to find.** Recover original Wikipedia revisions where possible, confirm recorded passage locations, and document remaining source-access and reuse limits. See the [open review work](MAINTAINER.md#open-review-work).
 
 ## Future research
 

@@ -1,12 +1,14 @@
 # Try claim–source verification in five minutes
 
-**Prefer to play? [Open Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)** to sort evidence and file a deduction in the surrogacy investigation.
+**Prefer to play? [Open Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)** to sort evidence and explain your judgment in the surrogacy investigation.
 
 In this written lesson, you’ll work through an example, check another claim on your own, and compare your reasoning with the documented assessment. You can use the same steps whenever you want to check a Wikipedia citation.
 
 A **claim** is a statement to check. Its **cited source** is the work it points to. **Evidence** is the part of that work that bears on the claim. Ask what this source supports. Deciding whether the claim is true may require other evidence.
 
 The claims and evidence below are summaries. Follow the source links to read the passages in context. If a publisher blocks access, you can continue the lesson with the evidence summaries.
+
+One sentence can contain several details. **Partial support** means the source establishes only part of a statement or a narrower version. **Uncertainty** records what could change your judgment. You can reach a provisional conclusion and explain what you still need to check.
 
 ## A01 · American pika
 

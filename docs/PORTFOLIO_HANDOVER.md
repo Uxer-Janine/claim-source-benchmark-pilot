@@ -1,5 +1,7 @@
 # Portfolio and Outreachy handover
 
+This summary is for mentors and portfolio readers who want to see the contribution, its limits, and the next steps. Start with the [library overview](../README.md) for a worked example of checking a citation.
+
 ## Problem and motivation
 
 A Wikipedia sentence can sound plausible while its citation supports only part of it. Janine Makorre’s Outreachy contribution exercise surfaced the practical difficulty of separating exact wording, evidence, and inference. Cases such as the surrogacy estimate show why checking the amount alone can miss gaps in who made the estimate and how many clinics the source describes.

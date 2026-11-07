@@ -2,7 +2,7 @@
 
 [Back to the library](../README.md) · [Run the technical checks](TECHNICAL.md)
 
-One JSON file describes one investigation. It identifies the Wikipedia article, records the claim and its cited sources, and keeps each assessment with its reasoning and evidence. Review fields show what remains unresolved and whether a judgment can be considered for evaluation.
+Use this reference to read or edit the case files. JSON is a text format that labels pieces of information so people and tools can find them. One JSON file describes one investigation. It identifies the Wikipedia article, records the claim and its cited sources, and keeps each assessment with its reasoning and evidence. Review fields show what remains unresolved and whether a judgment can be considered for evaluation.
 
 Here are three fields from the [American pika record](../records/pilot-a01.json). This excerpt omits other required fields.
 
@@ -54,6 +54,8 @@ Required fields must appear even when their value is unknown. Use `null` only wh
 | `sub_claim_judgments` | Optional. Each entry needs `sub_claim_id`, `label`, and `review_status`. A compound reference needs complete, confirmed judgments to be scored. |
 
 ## Review status and unresolved questions
+
+A reference is a human judgment considered for scoring predictions. A candidate can be marked eligible for review while still awaiting confirmation. The evaluator also checks the full [reference decision requirements](../annotation-guidelines.md#independent-review-and-adjudication). A field value alone does not approve a case for scoring.
 
 | Field | Meaning and requirement |
 | --- | --- |

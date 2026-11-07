@@ -1,6 +1,6 @@
 # Maintainer Guide
 
-For maintainers who review contributions, edit case files, and prepare releases. For feedback or a first assessment, start with [Share Feedback or Contribute](../CONTRIBUTING.md). See the [public roadmap](NEXT_STEPS.md) for development priorities.
+Use this guide to review changes, edit case files, or prepare a release. Start with the [library overview](../README.md) for project context. For feedback or a first assessment, start with [Share Feedback or Contribute](../CONTRIBUTING.md). See the [public roadmap](NEXT_STEPS.md) for development priorities.
 
 ## Update a case
 
@@ -10,6 +10,8 @@ For maintainers who review contributions, edit case files, and prepare releases.
 4. Validate the records and run the tests using the [Technical Guide](TECHNICAL.md). Check links and update any learning example that refers to the change.
 
 ## Review and release
+
+An automated check can find missing fields and inconsistent references. Confirming the meaning of the evidence requires human review. A reference decision records which human assessments support the judgment used for scoring.
 
 Keep each reference pending until its evidence and annotations are confirmed. Scoring requires agreement or adjudication based on two or more distinct human assessors with confirmed, documented independent assessments. A single-assessor reference remains provisional and unscored. Record the decision or unresolved disagreement separately. Historical AI assessments stay ineligible as references.
 
