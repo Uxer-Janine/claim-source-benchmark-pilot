@@ -4,6 +4,8 @@ Use this guide to check case files, run tests, or reproduce the example evaluati
 
 The validator checks whether records contain the required information and follow the expected structure. It cannot confirm whether a human judgment is correct. The evaluator compares predictions with reviewed human judgments only when the reference requirements are met. An abstention means a system withheld judgment.
 
+The [case index](INVESTIGATIONS.md#current-three-case-learning-focus) selects A01, A04, and A03 for the current learning focus. All five original files remain in `records/`, including A08 and B09 for future expansion. The commands below validate all five records and process all 14 historical predictions. Active status does not change scoring eligibility or filter the evaluator input.
+
 | File | Who uses it and when |
 | --- | --- |
 | [Schema](../schema/claim.schema.json) | Data contributors use these rules when adding or changing a record. Read the [Data Dictionary](DATA_DICTIONARY.md) for field meanings. |

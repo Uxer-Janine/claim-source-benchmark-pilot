@@ -4,6 +4,8 @@
 
 Use these notes to find the cited passages and see what can be checked again. The five records each contain one original human assessment and three historical AI entries. See the [library overview](../README.md#what-i-learned-and-what-remains-open) for review and scoring status.
 
+The original exploration contains five cases. The current [three-case focus](INVESTIGATIONS.md#current-three-case-learning-focus) uses A01 to observe, A04 to practice, and A03 to investigate context. A08 and B09 are preserved exploratory cases for future expansion. The evidence map and counts below describe all five original cases.
+
 ## Questions and approach
 
 I wanted another reader to be able to follow what a citation supports and how I reached a judgment. I selected five examples from my claim-verification report, preserved the original assessments, and recorded the citations and passage locations. I kept later AI responses separate so their reasoning and access limits could be inspected.

@@ -14,6 +14,8 @@ The pilot checks source support rather than factual truth in general. It records
 
 ## What exists and what it shows
 
+The original five-case exploration now has a three-case learning focus, A01 → A04 → A03. A08 and B09 remain additional exploratory cases. This is a selection for learning and review, with all five assessments still provisional.
+
 - **Published library:** five structured case records, an assessment guide, a written lesson, and educational illustrations.
 - **Tools:** schema validation and an evaluator with example predictions. The example checks the workflow and produces zero scored comparisons.
 - **Published learning experience:** Evidence Desk has one playable case, A04, and four previews. Learners open evidence files, sort claim details, and compare their reasoning with a documented assessment awaiting independent review.

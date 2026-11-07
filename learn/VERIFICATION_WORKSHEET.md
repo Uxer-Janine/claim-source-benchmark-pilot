@@ -1,12 +1,13 @@
 # Claim-verification worksheet
 
-Use this worksheet to check whether a cited source supports a statement in an academic paper, engineering report, or another document. Copy the blank section below before you start. See the [library overview](../README.md#applying-this-approach-beyond-wikipedia) for the five principles.
+Use this worksheet to check whether a cited source supports a statement in an academic paper, engineering report, or another document. Copy the blank section below before you start. The [reusable learning guide](VERIFICATION_GUIDE.md) explains the five principles. You can use any text editor or a paper copy.
 
 Checking source support is different from establishing whether a statement is true. Record the source version and test conditions where they matter. When evidence is unavailable, leave the verdict unset and explain the gap.
 
 ## Blank worksheet
 
 - **Claim being checked** — Copy its exact wording.
+- **Context** — Who or what does it describe? Note the time, location, test conditions, and intended scope.
 - **Document containing the claim** — Title, author, version or date, and link if available.
 - **Cited source being examined** — Title, author, version or date, and link if available.
 
@@ -33,15 +34,17 @@ When there is enough evidence to judge, use the existing labels **Supported**, *
 
 > Our solar-powered irrigation prototype reduces water consumption by 40%, costs less than conventional irrigation, and performs reliably in rural environments.
 
-Imagine that a technical report documents the water-use reduction under its test conditions but contains no meaningful cost comparison or rural reliability study.
+**Claim context:** A fictional statement about a solar-powered irrigation prototype. No test setting, report, or source has been supplied. The 40% figure is part of the claim to check, not a measurement presented by this worksheet.
 
-| Question to check | What to look for |
+| Question to check | Evidence needed and uncertainty to record |
 | --- | --- |
-| Does the report establish a 40% reduction in water consumption? | The measurements, comparison method, and conditions under which the reduction was measured. |
-| Does it contain a meaningful cost comparison? | Costs for both approaches, with a clear basis for comparison. |
-| Does it provide evidence of reliability in rural environments? | Recorded tests in the stated environment and an explanation of what counted as reliable. |
+| Do test results support a 40% reduction in water consumption? | Ask for measurements, a comparison method, and test conditions. No evidence location has been supplied, so the result remains unassessed. |
+| Is there a documented and comparable cost analysis? | Ask which costs and time period were compared. No cost source or passage location has been supplied. |
+| Is there evidence of reliability in the stated environment? | Ask where, for how long, and against which reliability criteria the prototype was tested. The intended rural environment and supporting evidence remain unspecified. |
 
-In this imagined situation, the water-use result could support the numerical detail within those conditions. The other details would remain unsupported by the report. An overall assessment could be **Partially supported**, with reasoning that keeps the cost and reliability gaps visible. If the report is unavailable or too incomplete to assess, leave the verdict unset instead.
+**Assessment and reasoning:** Leave the verdict unset until there is enough source material to judge. Evidence from one experimental setting would not establish that a result applies universally.
+
+**Confidence:** Unassigned because no evidence was supplied. **Independent reviewer:** Not yet assigned. **Review status:** Awaiting independent review. These entries describe this teaching exercise, not a research record.
 
 Ask another reader to save their own assessment before seeing yours. Keep any disagreement and its reasons alongside the original judgment.
 

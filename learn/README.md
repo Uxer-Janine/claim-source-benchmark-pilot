@@ -4,6 +4,8 @@
 
 In this written lesson, you’ll work through an example, check another claim on your own, and compare your reasoning with the documented assessment. You can use the same steps whenever you want to check a Wikipedia citation.
 
+The five-minute starter covers **Observe — A01** and **Practice — A04**. Continue with **Investigate — A03**, then apply the worksheet and invite review. The [reusable guide](VERIFICATION_GUIDE.md) connects **Understand → Observe → Practice → Apply → Review**.
+
 A **claim** is a statement to check. Its **cited source** is the work it points to. **Evidence** is the part of that work that bears on the claim. Ask what this source supports. Deciding whether the claim is true may require other evidence.
 
 The claims and evidence below are summaries. Follow the source links to read the passages in context. If a publisher blocks access, you can continue the lesson with the evidence summaries.
@@ -57,11 +59,23 @@ Janine noted that wording about industry groups and clinic numbers leaves room f
 
 ## Explore another case
 
-Try these in order. Read the source and note the evidence before opening the case record, which contains the assessments.
+After A01 and A04, investigate A03. Read the source and note the evidence before opening the case record, which contains the assessments.
 
 ### A03 · Extensive farming
 
 **Learn to check time and place.** Find the Mongolia example on page 11, paragraph 1, line 2, as recorded in the report. Ask what the passage says about earlier practices and what it establishes about current herding in other places. [Read the study](https://doi.org/10.1007/s13280-025-02150-8) · [Open the A03 record](../records/pilot-a03.json)
+
+## Apply
+
+Copy the [verification worksheet](VERIFICATION_WORKSHEET.md) to check a claim in your own field. The fictional irrigation example shows practical evidence questions, without supplying a source, measurements, or a verdict. Keep the conditions of a claim visible rather than assuming a result applies everywhere.
+
+## Review
+
+Ask another reader to save their judgment before seeing yours. Compare the evidence and reasons, preserve both assessments, and record what remains unresolved. If you want to review a pilot case independently, choose an unfamiliar case through the [Blind Review Kit](../docs/BLIND_REVIEW_KIT.md).
+
+## Additional exploratory cases
+
+A08 and B09 are reserved for future expansion. They are outside the active A01 → A04 → A03 learning sequence. Their original notes and records remain below for readers who want to explore further.
 
 ### A08 · Curly Girl Method
 

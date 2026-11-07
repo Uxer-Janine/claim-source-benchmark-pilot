@@ -8,7 +8,21 @@ Try the check before opening each assessment. These are Janine Makorre’s origi
 
 Each case links to its source and record. “Not supported” describes the citation’s limits. It does not establish that the claim is false. After reading, an independent reviewer still needs to check the passage, context, confidence, and reasoning. For a review without exposure to the existing judgments, use the [Blind Review Kit](BLIND_REVIEW_KIT.md) instead.
 
-## A01 · American pika
+## Current three-case learning focus
+
+The original exploration contains five cases. The current active sequence is **A01 → A04 → A03**. This selection describes the learning and research focus. It does not approve an assessment for scoring.
+
+| Case | Role | What to examine |
+| --- | --- | --- |
+| [A01](#a01--american-pika) | Observe | How approximate wording relates to an average. |
+| [A04](#a04--the-missing-evidence-surrogacy-in-india) | Practice | How to check separate details in a complex claim. |
+| [A03](#a03--extensive-farming) | Investigate | How time, location, and context affect interpretation. |
+
+A08 and B09 remain [additional exploratory cases](#additional-exploratory-cases) for future expansion. All five original files stay at their existing paths. The validator and historical evaluation example still use the complete collection.
+
+### A01 · American pika
+
+**Observe.** Start with the guided [written example](../learn/README.md#a01--american-pika). The recorded source has returned 403 to automated requests. The source summary and passage location remain available.
 
 **Claim summary:** Young American pikas typically first open their eyes at approximately nine days old.
 
@@ -23,7 +37,9 @@ Each case links to its source and record. “Not supported” describes the cita
 
 </details>
 
-## A04 · The Missing Evidence: Surrogacy in India
+### A04 · The Missing Evidence: Surrogacy in India
+
+**Practice.** Try the [written exercise](../learn/README.md#a04--surrogacy-in-india) or [Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/) before opening the recorded assessment.
 
 **Claim summary:** Industry organizations estimated annual surrogacy revenue above US$2 billion, and India had thousands of IVF clinics.
 
@@ -42,7 +58,9 @@ Each case links to its source and record. “Not supported” describes the cita
 
 </details>
 
-## A03 · Extensive farming
+### A03 · Extensive farming
+
+**Investigate.** Compare the full wording with the historical Mongolia passage. Does the recorded reasoning address the scope of “some regions” and “may”? This question remains open to independent review.
 
 **Claim summary:** Livestock management in some regions may involve seasonal practices or herding that is wholly or partly nomadic.
 
@@ -57,7 +75,11 @@ Each case links to its source and record. “Not supported” describes the cita
 
 </details>
 
-## A08 · Curly Girl Method
+## Additional exploratory cases
+
+These two cases are reserved for future expansion, outside the current three-case focus. Their records, evidence, assessments, and historical predictions are preserved. The existing game previews remain for compatibility.
+
+### A08 · Curly Girl Method
 
 **Claim summary:** Greater visibility of natural curls in media, fashion, and workplaces reflects broader acceptance of textured hair in beauty standards.
 
@@ -72,7 +94,7 @@ Each case links to its source and record. “Not supported” describes the cita
 
 </details>
 
-## B09 · Reliability of Wikipedia
+### B09 · Reliability of Wikipedia
 
 **Claim summary:** Wikipedia permits anonymous editing without identification or email. The claim also attributes a 2009 study to Dartmouth College and says it ranked anonymous contributors among the most productive on English Wikipedia.
 

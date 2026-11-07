@@ -2,6 +2,8 @@
 
 Use this guide to review changes, edit case files, or prepare a release. Start with the [library overview](../README.md) for project context. For feedback or a first assessment, start with [Share Feedback or Contribute](../CONTRIBUTING.md). See the [public roadmap](NEXT_STEPS.md) for development priorities.
 
+The [case index](INVESTIGATIONS.md#current-three-case-learning-focus) is the documented source of the active sequence, A01 → A04 → A03. Keep A08 and B09 at their original paths as exploratory cases. Continue validating all five files and retaining all historical predictions. Learning selection does not grant scoring approval.
+
 ## Update a case
 
 1. Identify the case and the report entry or source behind the change. Record the Wikipedia revision if verified.

@@ -6,10 +6,12 @@
 
 Use this roadmap to see where you can help or what still needs research. This pilot is a separate Outreachy contribution. The official application and compulsory claim-verification microtask have their own submission processes.
 
+The current focus is [A01 → A04 → A03](INVESTIGATIONS.md#current-three-case-learning-focus). A08 and B09 remain available for future expansion. The [reusable guide](../learn/VERIFICATION_GUIDE.md) connects understanding, observation, practice, application in another field, and review. The five original records remain the complete historical dataset.
+
 ## Next improvements
 
 - **Test the experience with first-time learners.** Observe whether learners find the source, explain their judgment before revealing the documented assessment, and understand its review status. Check phone use, keyboard navigation, and screen-reader announcements.
-- **Extend guided learning and the playable cases.** Guided practice with the pika case and additional investigations are future public updates. Keep the written route available as the game grows.
+- **Extend guided game learning and playable cases.** A01 already has a written guided example. Guided game practice with A01 and additional playable investigations are future possibilities. Keep the written route available as the game grows.
 - **Invite independent reviews.** Keep each assessment and disagreement visible. Record the reasons for any review decision. See [how to contribute](../CONTRIBUTING.md#submit-an-independent-assessment).
 - **Make evidence easier to find.** Recover original Wikipedia revisions where possible, confirm recorded passage locations, and document remaining source-access and reuse limits. See the [open review work](MAINTAINER.md#open-review-work).
 

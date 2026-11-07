@@ -6,6 +6,8 @@ Use this reference to read or edit the case files. JSON is a text format that la
 
 Here are three fields from the [American pika record](../records/pilot-a01.json). This excerpt omits other required fields.
 
+The [active and exploratory case distinction](INVESTIGATIONS.md#current-three-case-learning-focus) is recorded in the documentation. It does not add a field to these records or change their review status.
+
 ```json
 {
   "schema_version": "0.1.0",

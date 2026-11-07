@@ -1,4 +1,4 @@
-# Wikipedia Claim–Source Verification Library
+# Claim–Source Verification Library
 
 ## The problem
 
@@ -6,7 +6,7 @@
 
 A **claim** is a statement you can check. Its **citation** points to the source behind it. But a source can discuss the same topic without supporting every detail. Checking the citation means finding what it supports. Deciding whether the claim itself is true may require other evidence.
 
-This exploratory project started with five Wikipedia examples. **The library organizes the research**, keeping claims, sources, and reasoning together. **Evidence Desk helps people practice** the same process through an interactive activity. The five original human assessments still await independent review.
+This reusable method is demonstrated through a **three-case Wikipedia learning focus: A01 → A04 → A03**. It grew from an original five-case exploration. A08 and B09 remain additional exploratory cases for future expansion, with every record preserved. **The library organizes the research. Evidence Desk helps people practice.** All five original human assessments await independent review.
 
 ## Who benefits from this project?
 
@@ -45,14 +45,22 @@ I checked the [cited article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10327345/
 
 This grew out of my participation in the Wiki Education Outreachy claim-verification exercise. Reaching a verdict was only part of the challenge. Explaining how I reached it, and making that explanation easy for someone else to check, mattered just as much.
 
-I started this separate five-case pilot to explore how to record that reasoning. I kept passage locations, uncertainty, and the different assessments together so a later reviewer could follow or question a decision. I developed Evidence Desk as a companion activity for trying the process. The pilot was self-initiated, separate from the assigned exercise.
+I started a separate five-case exploration to record that reasoning, then selected three cases for the current learning focus. I kept passage locations, uncertainty, and assessments together so a later reviewer could question a decision. Evidence Desk is a companion activity. This work was self-initiated, separate from the assigned exercise.
 
 <a name="how-verification-works"></a>
 <a name="how-the-library-works"></a>
 
-## How the verification process works
+<a name="how-the-verification-process-works"></a>
 
-Read the claim, find its cited source, and check each important detail. Record where you found the evidence, your judgment, and what remains uncertain. Then invite someone else to check independently. Wikipedia contributors can use the same steps when reviewing a citation.
+## The five principles of claim–source verification
+
+1. **Identify the claim.** What exactly is being stated?
+2. **Break it down.** Which details need separate checks?
+3. **Examine the evidence.** What does the cited source establish?
+4. **Make a reasoned judgment.** What is supported, contradicted, or uncertain?
+5. **Document and review.** Can another reader follow the reasoning independently?
+
+Follow [Understand → Observe → Practice → Apply → Review](learn/VERIFICATION_GUIDE.md) for explanations and a route through the learning materials.
 
 ![A Wikipedia claim leads to its cited source, relevant evidence, and an assessment. Establishing truth may require other evidence.](assets/illustrations/verification-chain.svg)
 
@@ -62,17 +70,11 @@ Read the claim, find its cited source, and check each important detail. Record w
 
 The reasoning can also help examine claims in academic papers, engineering reports, and research projects.
 
-**Illustration only, not a sixth assessed case:** “Our solar-powered irrigation prototype reduces water consumption by 40%, costs less than conventional irrigation, and performs reliably in rural environments.”
+**Fictional teaching example:** “Our solar-powered irrigation prototype reduces water consumption by 40%, costs less than conventional irrigation, and performs reliably in rural environments.”
 
-A hypothetical report might establish the water-saving result while leaving cost and reliability unanswered. Check the 40% reduction, a meaningful cost comparison, and evidence of reliability in rural environments separately.
+Ask for test results, a comparable cost analysis, and evidence of reliability in the stated environment. A result under particular test conditions would not establish universal performance.
 
-1. Identify the claim.
-2. Separate the details that can be checked.
-3. Find evidence for each detail.
-4. Explain what it supports and what remains uncertain.
-5. Record your reasoning for independent review.
-
-These principles transfer across settings. The five Wikipedia records, evaluation tools, and Evidence Desk remain specific to this pilot. Their use in other fields has not been validated.
+The reasoning process, evidence notes, uncertainty, and independent review are reusable. The Wikipedia records, schema, evaluator, historical AI assessments, and game remain specific to this pilot. Their use in other fields has not been validated.
 
 [Use the reusable verification worksheet](learn/VERIFICATION_WORKSHEET.md).
 
@@ -81,7 +83,7 @@ These principles transfer across settings. The five Wikipedia records, evaluatio
 
 ## What I built
 
-- **[Five case records](records/)** make it possible to revisit a decision. They connect each claim with its source, passage locations, reasoning, and uncertainty.
+- **[Three active cases and two preserved exploratory cases](docs/INVESTIGATIONS.md)** connect claims with sources, passage locations, reasoning, and uncertainty. All [five original records](records/) remain available.
 - **[Assessment guidelines](annotation-guidelines.md)** explain how to record support, partial support, contradiction, or insufficient information. **[The review kit](docs/BLIND_REVIEW_KIT.md)** lets someone make their own assessment before seeing mine.
 - **[Consistency and evaluation tools](docs/TECHNICAL.md)** flag missing or inconsistent information and check whether assessments meet the review requirements for scoring. The evaluator explains why a prediction is skipped or compares it with a human judgment that meets those requirements.
 - **[Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)** lets learners investigate the surrogacy claim, sort evidence cards, and explain their judgment before comparing it with the recorded assessment.
@@ -100,7 +102,7 @@ A verdict alone leaves important questions unanswered. In the surrogacy case, ch
 
 I also made the scoring safeguards explicit. Synthetic test cases show how matching overall verdicts can hide disagreement about individual details. These are tests of the tools, rather than completed independent reviews of the pilot.
 
-All five human assessments remain provisional. No independent reference reviews are complete, and all 14 example predictions remain unscored. Some sources have access limits. Original Wikipedia revisions and some historical AI-run information are missing. Evidence Desk has one playable investigation and four previews. Model performance and learning outcomes have not been measured. The full *Claim Verification Report* stays private.
+All five human assessments remain provisional. No independent reference reviews are complete, and all 14 historical predictions remain unscored. Active status describes the learning focus, not scoring approval. Source access, missing Wikipedia revisions, and incomplete AI-run information remain limitations. Evidence Desk keeps A04 playable and four previews for compatibility. Model performance and learning outcomes have not been measured. The full *Claim Verification Report* stays private.
 
 Next, I want to invite independent reviews, confirm passage locations and original revisions where possible, and test the learning materials with beginners. Those steps should guide further cases and development. See the [roadmap](docs/NEXT_STEPS.md).
 
@@ -108,8 +110,8 @@ Next, I want to invite independent reviews, confirm passage locations and origin
 
 <a name="explore-the-investigations"></a>
 
-- **Beginners and educators:** Try [Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/) or the [written lesson](learn/README.md). The lesson works through [A01, American pika](learn/README.md#a01--american-pika), before [A04, surrogacy](learn/README.md#a04--surrogacy-in-india).
-- **Researchers:** Read the [case summaries](docs/INVESTIGATIONS.md), [Research Notes](docs/RESEARCH_NOTES.md), and [methodology](annotation-guidelines.md). Continue with [A03 on context](docs/INVESTIGATIONS.md#a03--extensive-farming), [A08 on relevance](docs/INVESTIGATIONS.md#a08--curly-girl-method), or [B09 on editing and research](docs/INVESTIGATIONS.md#b09--reliability-of-wikipedia).
+- **Beginners and educators:** [Understand the method](learn/VERIFICATION_GUIDE.md), observe [A01](learn/README.md#a01--american-pika), practice [A04](learn/README.md#a04--surrogacy-in-india), then investigate [A03](docs/INVESTIGATIONS.md#a03--extensive-farming). [Apply the worksheet](learn/VERIFICATION_WORKSHEET.md) to your own claim and invite a fresh review.
+- **Researchers:** Read the [case index](docs/INVESTIGATIONS.md), [Research Notes](docs/RESEARCH_NOTES.md), and [methodology](annotation-guidelines.md). [A08](docs/INVESTIGATIONS.md#a08--curly-girl-method) and [B09](docs/INVESTIGATIONS.md#b09--reliability-of-wikipedia) are preserved for future expansion.
 - **Independent reviewers:** Use the [Blind Review Kit](docs/BLIND_REVIEW_KIT.md) for a case whose assessment you have not seen.
 - **Developers:** Start with the [Technical Guide](docs/TECHNICAL.md), [Data Dictionary](docs/DATA_DICTIONARY.md), or [Maintainer Guide](docs/MAINTAINER.md).
 - **Contributors:** [Suggest a correction or submit a review](CONTRIBUTING.md). The [Portfolio Handover](docs/PORTFOLIO_HANDOVER.md) summarizes the contribution.
