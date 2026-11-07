@@ -6,6 +6,8 @@ A citation tells you where to look. Verification means reading the relevant pass
 
 After working through the guide and cases, you should be able to identify checkable claims, locate relevant passages, distinguish direct support from inference, explain and document your verdict, and trace why reviewers disagree.
 
+[![Explore Evidence Desk — Start Investigating](assets/evidence-desk-banner.svg)](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/)
+
 ## Explore the knowledge base
 
 | Destination | What to do there |
