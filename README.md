@@ -58,6 +58,24 @@ Read the claim, find its cited source, and check each important detail. Record w
 
 *The judgment should lead the next reader back to a passage.*
 
+## Applying this approach beyond Wikipedia
+
+The reasoning can also help examine claims in academic papers, engineering reports, and research projects.
+
+**Illustration only, not a sixth assessed case:** “Our solar-powered irrigation prototype reduces water consumption by 40%, costs less than conventional irrigation, and performs reliably in rural environments.”
+
+A hypothetical report might establish the water-saving result while leaving cost and reliability unanswered. Check the 40% reduction, a meaningful cost comparison, and evidence of reliability in rural environments separately.
+
+1. Identify the claim.
+2. Separate the details that can be checked.
+3. Find evidence for each detail.
+4. Explain what it supports and what remains uncertain.
+5. Record your reasoning for independent review.
+
+These principles transfer across settings. The five Wikipedia records, evaluation tools, and Evidence Desk remain specific to this pilot. Their use in other fields has not been validated.
+
+[Use the reusable verification worksheet](learn/VERIFICATION_WORKSHEET.md).
+
 <a name="browse-the-five-cases"></a>
 <a name="what-the-pilot-produced"></a>
 
