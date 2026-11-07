@@ -1,8 +1,22 @@
-# Research coverage and evidence
+# Research & Review
 
 [Back to the library](../README.md) · [Explore the investigations](INVESTIGATIONS.md)
 
 Use these notes to find the cited passages and see what can be checked again. The five records each contain one original human assessment and three historical AI entries. See the [library overview](../README.md#what-i-learned-and-what-remains-open) for review and scoring status.
+
+The original exploration contains five cases. The current [three-case focus](INVESTIGATIONS.md#current-three-case-learning-focus) uses A01 to observe, A04 to practice, and A03 to investigate context. A08 and B09 are preserved exploratory cases for future expansion. The evidence map and counts below describe all five original cases.
+
+## What the contributor reports revealed
+
+Janine Makorre compared seven publicly shared contributor reports for the Wiki Education Outreachy exercise. She looked for recurring problems and compared the same claim when reports overlapped. The contributors checked different claims and used different labels, so the comparison describes qualitative patterns. The original report credits and links all seven contributors. [Comparing Claim Verification Assessments: Patterns and Insights Across Contributors](https://app.notion.com/p/402fc8205dbf802d8e59c5672679432c)
+
+- **Partial support and inference.** Mercy Joshua-Firima and Tayyaba Aziz interpreted evidence of juvenile pika development differently when judging independence at four weeks. That is a separate claim from A01’s eye-opening example. The supermarket-distance reports also show why an association may leave a causal claim unconfirmed.
+- **Wording and scope.** Mercy and Gonza Gertrude Agatha differed in their treatment of geographic support for pika distribution. Recording each supported or omitted location makes the difference visible.
+- **Numbers and dates.** Reviewers differed in how they treated the WHO source’s 2021 timeframe against broader annual wording. Matching a number still leaves the period and population to check.
+- **Missing and conflicting evidence.** Solosh Mazando documented an unavailable fur-farming source. Ankit Thakur found census figures that conflicted with claims. Record the access gap and the direct conflict separately.
+- **Human and AI comparisons.** Some reports describe agreement and some describe overlooked wording or details. Compare passages and reasoning before interpreting agreement. An independently confirmed reference is needed for scoring.
+
+The [Annotation Guidelines](../annotation-guidelines.md) turn these observations into practical checks for subclaims, passage locations, wording, uncertainty, and reasoning.
 
 ## Questions and approach
 
@@ -58,4 +72,27 @@ A roll-up is the rule that combines the verdicts on individual details into one 
 
 Historical assessments and the roll-up rule are preserved.
 
-For the next research step, invite fresh assessments through the [Blind Review Kit](BLIND_REVIEW_KIT.md), confirm the source locations, and document unresolved access or interpretation differences. The [Maintainer Guide](MAINTAINER.md#open-review-work) lists the evidence still needing attention.
+For the next research step, invite fresh assessments through the [Blind Review Kit](BLIND_REVIEW_KIT.md), confirm the source locations, and document unresolved access or interpretation differences. The [Maintainer Guide](#open-review-work) lists the evidence still needing attention.
+
+## Open review work
+
+- Confirm each human assessment against its evidence, context, and uncertainty. Preserve independent reviews and their decisions.
+- Verify the original Wikipedia revisions and the assessment context, assessor identifier, and known exposure to other judgments.
+- Verify A04’s three judgment mappings and check the two incomplete monetary passages in the private historical AI transcripts.
+- Review B09’s evidence gaps with the report owner before assigning any of its three subclaim judgments. Its original overall assessment is recorded separately.
+- Recover original AI run details and A08’s search notes if available. A01 ChatGPT has no explicit verdict, and A08 Gemini’s response is recorded as an abstention.
+
+The [case files](../records/) retain the 46 individual review items.
+
+
+## Independent review and disagreement
+
+Send the standalone [Blind Review Kit](BLIND_REVIEW_KIT.md) and a separately copied blank assessment template through the agreed private channel. Ask each reviewer to save their own assessment and record prior exposure before seeing other judgments. Share existing assessments only after their response is saved.
+
+Compare the claim wording, decomposition, source version, passages, inference, and verdict rule. Preserve each original assessment. Keep the case pending when decomposition or judgments differ until a documented adjudication identifies who decided, when, and why. Scoring requires at least two distinct, independently completed, confirmed human assessments. Agreement must cover the overall verdict and every applicable subclaim verdict on the same decomposition. See the [full reference rules](../annotation-guidelines.md#independent-review-and-adjudication).
+
+## Next steps
+
+Invite independent reviewers, verify missing revisions and passage locations, and test the written route and Evidence Desk with first-time learners. Use disagreements to refine the documentation and see which distinctions need clearer examples. The [Technical Guide](TECHNICAL.md) covers reproducibility, including the schema, validator, evaluator, and test commands.
+
+Future studies could explore cross-domain and multilingual verification and investigate benchmarking once cases have independently reviewed references. The five-case pilot and the qualitative contributor comparison provide starting material for these studies.

@@ -1,6 +1,6 @@
-# Explore the investigations
+# Case Library
 
-[Back to the library](../README.md) · [Try the written lesson](../learn/README.md)
+[Back to the library](../README.md) · [Annotation Guidelines](../annotation-guidelines.md)
 
 Use these case summaries to find the evidence and try a check before revealing the recorded judgment. Each case asks what one cited source supports. **Claim summaries** paraphrase the public records. **Evidence summaries** describe the cited material in our own words. The public records give passage locations in place of verbatim excerpts. The article links identify current Wikipedia pages because the exact revisions used in the exercise are unrecorded.
 
@@ -8,7 +8,21 @@ Try the check before opening each assessment. These are Janine Makorre’s origi
 
 Each case links to its source and record. “Not supported” describes the citation’s limits. It does not establish that the claim is false. After reading, an independent reviewer still needs to check the passage, context, confidence, and reasoning. For a review without exposure to the existing judgments, use the [Blind Review Kit](BLIND_REVIEW_KIT.md) instead.
 
-## A01 · American pika
+## Current three-case learning focus
+
+The original exploration contains five cases. The current active sequence is **A01 → A04 → A03**. This selection describes the learning and research focus. It does not approve an assessment for scoring.
+
+| Case | Role | What to examine |
+| --- | --- | --- |
+| [A01](#a01--american-pika) | Observe | How approximate wording relates to an average. |
+| [A04](#a04--the-missing-evidence-surrogacy-in-india) | Practice | How to check separate details in a complex claim. |
+| [A03](#a03--extensive-farming) | Investigate | How time, location, and context affect interpretation. |
+
+A08 and B09 remain [additional exploratory cases](#additional-exploratory-cases) for future expansion. All five original files stay at their existing paths. The validator and historical evaluation example still use the complete collection.
+
+### A01 · American pika
+
+**Observe.** Before opening the assessment, compare the phrase “about nine days” with the reported average. What does the wording allow for? The recorded source has returned 403 to automated requests. The source summary and passage location remain available.
 
 **Claim summary:** Young American pikas typically first open their eyes at approximately nine days old.
 
@@ -19,17 +33,25 @@ Each case links to its source and record. “Not supported” describes the cita
 <details>
 <summary>Reveal the documented assessment</summary>
 
-**Supported · High confidence.** The average fits an approximate age and leaves room for individual variation. The paper credits Whitworth for the figure, and further context could affect the judgment.
+**Supported · High confidence.** The average fits an approximate age and leaves room for individual variation. The paper credits Whitworth for the figure, and further context could affect the judgment. When checking approximate wording, ask whether the source reports a typical value or a precise threshold.
 
 </details>
 
-## A04 · The Missing Evidence: Surrogacy in India
+### A04 · The Missing Evidence: Surrogacy in India
+
+**Practice.** Try the questions below or open [Evidence Desk](https://uxer-janine.github.io/claim-source-benchmark-pilot/lab/game/) before opening the recorded assessment.
 
 **Claim summary:** Industry organizations estimated annual surrogacy revenue above US$2 billion, and India had thousands of IVF clinics.
 
 **Evidence summary:** The article names one industry organization, gives its annual estimate of US$2.3 billion, and describes clinics offering surrogacy without giving a total. Find the passage on page 2, *Background*, paragraph 3, line 1.
 
-**Subclaims to check:** Who made the estimate, whether the amount exceeds US$2 billion, and whether the source gives a clinic count in the thousands.
+Before revealing the assessment, write a judgment for each detail:
+
+1. How many organizations does the passage name?
+2. Does the estimate exceed US$2 billion?
+3. Does the passage establish a clinic count in the thousands?
+
+Explain how the three checks lead to your overall verdict. After comparing, ask what additional evidence might change it.
 
 [Wikipedia article](https://en.wikipedia.org/wiki/Surrogacy_in_India) · [Hibino, cited article](https://pmc.ncbi.nlm.nih.gov/articles/PMC10327345/) · [Case record](../records/pilot-a04.json)
 
@@ -42,7 +64,9 @@ Each case links to its source and record. “Not supported” describes the cita
 
 </details>
 
-## A03 · Extensive farming
+### A03 · Extensive farming
+
+**Investigate.** Compare the full wording with the historical Mongolia passage. Does the recorded reasoning address the scope of “some regions” and “may”? This question remains open to independent review.
 
 **Claim summary:** Livestock management in some regions may involve seasonal practices or herding that is wholly or partly nomadic.
 
@@ -53,11 +77,19 @@ Each case links to its source and record. “Not supported” describes the cita
 <details>
 <summary>Reveal the documented assessment</summary>
 
-**Not supported · High confidence.** The passage discusses a historical change in one place. It does not establish current practices or rule out those practices elsewhere. Unread sections or other sources could affect the assessment.
+**Not supported · High confidence.** The passage discusses a historical change in one place. It does not establish current practices or rule out those practices elsewhere. Unread sections or other sources could affect the assessment. When checking claims in any field, keep a historical example tied to its place and period.
 
 </details>
 
-## A08 · Curly Girl Method
+## Apply the method to your own claim
+
+Use the [assessment template](../annotation-guidelines.md#assessment-template) on a claim from your own field. Carry over the habits you practiced here: check the exact wording, separate details, compare each with the passage, respect the source’s scope, and explain your judgment.
+
+## Additional exploratory cases
+
+These two cases are reserved for future expansion, outside the current three-case focus. Their records, evidence, assessments, and historical predictions are preserved. The existing game previews remain for compatibility.
+
+### A08 · Curly Girl Method
 
 **Claim summary:** Greater visibility of natural curls in media, fashion, and workplaces reflects broader acceptance of textured hair in beauty standards.
 
@@ -72,7 +104,7 @@ Each case links to its source and record. “Not supported” describes the cita
 
 </details>
 
-## B09 · Reliability of Wikipedia
+### B09 · Reliability of Wikipedia
 
 **Claim summary:** Wikipedia permits anonymous editing without identification or email. The claim also attributes a 2009 study to Dartmouth College and says it ranked anonymous contributors among the most productive on English Wikipedia.
 
